@@ -7,9 +7,13 @@
 #ifndef _SAMPLERATE_H
 #define _SAMPLERATE_H
 
+#include <iostream>
 #include <string>
 
 class SampleRate {
+  
+private:
+   int samplerate; /* samplerate in Hz */
 
 public:
 /*
@@ -30,7 +34,16 @@ public:
  * These methods returns the samplerate set
  */
    int getSampleRate();
-    
+
+
+/*
+ * Operator: <<
+ * Usage: cout << sr;
+ * ------------------
+ * Overloads the << operator so that it is able to display SampleRate values.
+ */
+   std::ostream & operator<<(std::ostream & os, SampleRate sr);
+
 /*
  * Operator: ==
  * Usage: sr1 == sr2
@@ -43,9 +56,7 @@ public:
  * Operator: !=
  * Usage: sr1 != sr2
  * ---------------
- * This operator implements the != operator for points.  It is good
- * practice to overload this operator whenever you overload == to
- * ensure that clients can perform either test.
+ * This operator implements the != operator for sa_plerat3s.
  */
    bool operator!=(Samplerate sr1, Samplerate sr2);
 
@@ -57,9 +68,9 @@ public:
  */
    std::string toString();
 
-private:
-   int samplerate; /* samplerate in Hz */
-    
+/* friend declaration needed by == operator to access private properties */
+   friend bool operator==(SampleRate sr1, SampleRate sr2);
+
 }; 
 
 #endif /* _SAMPLERATE_H_ */
