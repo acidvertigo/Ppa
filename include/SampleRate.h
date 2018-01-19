@@ -58,7 +58,7 @@ public:
  * ---------------
  * This operator implements the != operator for sa_plerat3s.
  */
-   bool operator!=(Samplerate sr1, Samplerate sr2);
+   bool operator!=(SampleRate sr1, SampleRate sr2);
 
 /*
  * Method: toString

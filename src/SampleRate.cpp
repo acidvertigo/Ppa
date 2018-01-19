@@ -13,12 +13,8 @@ SampleRate::SampleRate(int sampleratec) {
    samplerate = sampleratec;
 }
 
-int SampleRate::getX() {
-   return x;
-}
-
-int SampleRate::getY() {
-   return y;
+int SampleRate::getSamplerate() {
+   return samplerate;
 }
 
 string SampleRate::toString() {
