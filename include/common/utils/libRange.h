@@ -41,7 +41,7 @@ template <typename T>
     range(T min, T max) : m_begin(min), m_end(max) { }
 
     bool contains(int i) { 
-      return m_begin <= i && i m_end >= i;
+      return m_begin <= i && m_end >= i;
     }
      
     bool notContains(int i) {
