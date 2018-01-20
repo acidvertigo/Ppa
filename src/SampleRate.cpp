@@ -6,6 +6,7 @@
 #include <string>
 #include "SampleRate.h"
 #include "libString.h"
+using namespace std;
 
 SampleRate::SampleRate() {
    samplerate = 0;
