@@ -7,7 +7,7 @@
 #include "common/utils/utils.h"
 
 int main() {
-  Test::SampleRateTest();
+  SampleRateTest();
   Test::Common::Utils::libStringTest();
   Test::Common::Utils::libRangeTest();
   return 0;
