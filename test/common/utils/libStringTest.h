@@ -1,11 +1,11 @@
-#include "libRangeTest.h"
-#include "libStringTest.h"
+#include "libString.h"
 
 namespace Test {
   namespace Common {   
     namespace Utils {
       
-      
+      int NumberToStringTest();
+      int StringToNumberTest();
     
     }   
   } 

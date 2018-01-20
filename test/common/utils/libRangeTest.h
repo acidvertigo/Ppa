@@ -1,5 +1,4 @@
-#include "libRangeTest.h"
-#include "libStringTest.h"
+#include "libRange.h"
 
 namespace Test {
   namespace Common {   

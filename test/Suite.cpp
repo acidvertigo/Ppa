@@ -7,6 +7,7 @@
 
 int main() {
   Test::SampleRateTest();
+  Test::Common::Utils::libStringTest();
 
   return 0;
 }
