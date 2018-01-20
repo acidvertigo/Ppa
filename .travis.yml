@@ -4,3 +4,4 @@ compiler: gcc
 script: 
   - make
   - make test
+  - make clean
