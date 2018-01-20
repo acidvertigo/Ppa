@@ -41,11 +41,11 @@ template <typename T>
     range(T min, T max) : m_begin(min), m_end(max) { }
 
     static bool contains(int i) { 
-      return min <= i && i max >= i;
+      return m_begin <= i && i m_end >= i;
     }
      
     static bool notContains(int i) {
-      return min > i && max < i;
+      return m_begin > i && m_end < i;
     }
    
     iter begin() const { return iter(m_begin); }
