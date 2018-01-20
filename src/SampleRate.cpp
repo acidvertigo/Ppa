@@ -8,8 +8,9 @@
 #include "libString.h"
 
 SampleRate::SampleRate() {
-   SampleRate = 0;
+   Samplerate = 0;
 }
+
 SampleRate::SampleRate(int sampleratec) {
    samplerate = sampleratec;
 }
@@ -18,7 +19,7 @@ int SampleRate::getSamplerate() {
    return samplerate;
 }
 
-string SampleRate::toString() {
+std::string SampleRate::toString() {
    return NumberToString(samplerate);
 }
 
