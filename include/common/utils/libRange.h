@@ -31,7 +31,7 @@ template <typename T>
         bool operator!=(const iter &other) const {
           return m_x != other.m_x;
         }
-      };
+      };
 
       T m_begin;
       T m_end;

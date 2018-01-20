@@ -6,7 +6,7 @@
 #include "SampleRateTest.h"
 #include "common/utils/utils.h"
 
-int min() {
+int main() {
   static_assert(Test::SampleRateTest(), "SampleRateTest Error");
   static_assert(Test::Common::Utils::libStringTest(), "LibStringTest Error");
   static_assert(Test::Common::Utils::libRangeTest(), "libRangeTestError");
