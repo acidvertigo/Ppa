@@ -4,8 +4,14 @@ namespace Test {
       
       int libStringTest()
       {
-         NumberToString()
-         StringToNumber();
+         NumberToStringTest();
+         StringToNumberTest();
+      }
+      
+      int libRangeTest()
+      {
+         containsTest();
+         notContainsTest();
       }
     
     }   

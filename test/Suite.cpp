@@ -8,6 +8,6 @@
 int main() {
   Test::SampleRateTest();
   Test::Common::Utils::libStringTest();
-
+  Test::Common::Utils::libRangeTest();
   return 0;
 }
