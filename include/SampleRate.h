@@ -33,7 +33,7 @@ public:
  * -------------------------
  * These methods returns the samplerate set
  */
-   int getSampleRate();
+   int getSamplerate();
 
 
 /*
