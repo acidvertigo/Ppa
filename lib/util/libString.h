@@ -1,5 +1,5 @@
 /*
- * File: libStr.h
+ * File: libString.h
  * -------------
  * This interface exports the libStr utility functions to work with strings
  */
