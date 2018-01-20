@@ -54,7 +54,7 @@ public:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream & os, SampleRate sr);
+   ostream & operator<<(std::ostream & os, SampleRate sr);
 
 /*
  * Operator: ==
