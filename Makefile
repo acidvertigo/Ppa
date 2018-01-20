@@ -21,14 +21,14 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 
 clean:
 	@echo " Cleaning..."; 
-	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
-	@echo " $(RM) -r $(BUILDDIR) bin/test"; $(RM) -r $(BUILDDIR) bin/test
+	@echo " $(RM) -r $(BUILDDIR) $(TARGET) bim/test"; $(RM) -r $(BUILDDIR) $(TARGET) bin/test
+	@echo "ls"
 
 # Tests
 test:
 	@echo " Linking test..."
 	@echo " $(CC) $^ -o bin/test $(LIB)"; $(CC) $^ -o bin/test $(LIB)
-	$(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -c -o bin/test
+	$(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -o bin/test
 
 # Spikes
 #ticket:
