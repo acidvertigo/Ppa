@@ -3,9 +3,9 @@
 namespace Test {
   namespace Common {   
     namespace Utils {
-      containsTest();
-      notContainsTest();
-      iteratorTest();
+      int containsTest();
+      int static_assert();
+      int iteratorTest();
     }   
   } 
 }
