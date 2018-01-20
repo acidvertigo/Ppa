@@ -22,7 +22,7 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 clean:
 	@echo " Cleaning..."; 
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
-    @echo " $(RM) -r bin/test"; $(RM) -r bin/test
+	@echo " $(RM) -r bin/test"; $(RM) -r bin/test
 
 # Tests
 test:
