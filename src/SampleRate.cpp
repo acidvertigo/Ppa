@@ -30,6 +30,6 @@ bool operator!=(SampleRate s1, SampleRate s2) {
    return !(s1 == s2);
 }
 
-ostream & operator<<(ostream & os, SampleRate sr) {
+ostream & operator<<(ostream & os, SampleRate& sr) {
    return os << sr.toString();
 }
