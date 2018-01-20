@@ -20,14 +20,13 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:
-	@echo " Cleaning..."; 
+	@echo " Cleaning...";
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET) bin/test"; $(RM) -r $(BUILDDIR) $(TARGET) bin/test
-
-.PHONY: clean
 
 # Tests
 test:
 	@echo " Linking test..."
+    @echo " $(CC) $^ -o bin/test $(LIB)"; $(CC) $^ -o bin/test $(LIB)
 	@echo " $(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -o bin/test"; $(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -o bin/test
 
 # Spikes
@@ -35,3 +34,4 @@ test:
 #	$(CC) $(CFLAGS) spikes/ticket.cpp $(INC) $(LIB) -o #bin/ticket
 
 .PHONY: all test clean
+.PHONY: clean
