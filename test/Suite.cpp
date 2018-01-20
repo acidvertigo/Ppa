@@ -7,8 +7,8 @@
 #include "common/utils/utils.h"
 
 int main() {
-  static_assert(Test::SampleRateTest(), "SampleRateTest Error");
-  static_assert(Test::Common::Utils::libStringTest(), "LibStringTest Error");
-  static_assert(Test::Common::Utils::libRangeTest(), "libRangeTestError");
+  Test::SampleRateTest();
+  Test::Common::Utils::libStringTest();
+  Test::Common::Utils::libRangeTest();
   return 0;
 }
