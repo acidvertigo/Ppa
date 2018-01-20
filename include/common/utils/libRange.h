@@ -33,7 +33,7 @@ template <typename T>
         }
       };
 
-      T m_begin;
+      T m_begin;
       T m_end;
 
   public:
