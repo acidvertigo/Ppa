@@ -23,6 +23,8 @@ clean:
 	@echo " Cleaning..."; 
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET) bin/test"; $(RM) -r $(BUILDDIR) $(TARGET) bin/test
 
+.PHONY: clean
+
 # Tests
 test:
 	@echo " Linking test..."
@@ -33,4 +35,3 @@ test:
 #	$(CC) $(CFLAGS) spikes/ticket.cpp $(INC) $(LIB) -o #bin/ticket
 
 .PHONY: all test clean
-.PHONY: clean
