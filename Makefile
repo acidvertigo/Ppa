@@ -7,17 +7,17 @@ TARGET := bin/runner
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-CFLAGS := -c -g # -Wall
+CFLAGS := -g # -Wall
 LIB := -pthread -L lib
 INC := -I include -I include/common/utils
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."
-	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
+	@echo " $(CC) $^ -shared -o $(TARGET) $(LIB)"; $(CC) $^ -shared -o $(TARGET) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)
-	@echo " $(CC) $(CFLAGS) $(INC) -shared -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
+	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:
 	@echo " Cleaning..."; 
