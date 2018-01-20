@@ -26,6 +26,8 @@ clean:
 
 # Tests
 test:
+	@echo " Linking..."
+	@echo " $(CC) $^ -o bin/test $(LIB)"; $(CC) $^ -o bin/test $(LIB)
 	$(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -c -o bin/test
 
 # Spikes
