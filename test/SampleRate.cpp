@@ -4,11 +4,8 @@
 namespace Test {
   
   int SampleRateTest() {
-    SampleRate obj = new SampleRate;
-    if (obj == 0)
-      return 0;
-    else
-      return -1;
+    SampleRate obj = new SampleRate();
+    static_assert(obj == 0, "SampleRate ctor does not set 0 to samplerate property");
   }
   
 }
