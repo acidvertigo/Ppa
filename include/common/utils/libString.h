@@ -9,7 +9,7 @@
 #include <sstream>
 
 template <typename T>
-  std::string IntToString ( T Number )
+  std::string NumberToString ( T Number )
   {
      std::ostringstream ss;
      ss << Number;
