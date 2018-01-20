@@ -22,7 +22,6 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 clean:
 	@echo " Cleaning..."; 
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET) bin/test"; $(RM) -r $(BUILDDIR) $(TARGET) bin/test
-	@echo " $(LS)" $(LS)
 
 # Tests
 test:
@@ -34,4 +33,5 @@ test:
 #ticket:
 #	$(CC) $(CFLAGS) spikes/ticket.cpp $(INC) $(LIB) -o #bin/ticket
 
+.PHONY: all test clean
 .PHONY: clean
