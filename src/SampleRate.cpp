@@ -8,7 +8,7 @@
 #include "libString.h"
 
 SampleRate::SampleRate() {
-   Samplerate = 0;
+   samplerate = 0;
 }
 
 SampleRate::SampleRate(int sampleratec) {
