@@ -9,6 +9,6 @@
 int main() {
   static_assert(Test::SampleRateTest(), "SampleRateTest Error");
   static_assert(Test::Common::Utils::libStringTest(), "LibStringTest Error");
-  static_assert(Test::Common::Utils::libRangeTest(), "libRangeTestError");
-  retrn 0;
+  static_assert(Test::Common::Utils::libRangeTest(), "libRangeTestError");
+  return 0;
 }

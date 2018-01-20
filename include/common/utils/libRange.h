@@ -16,8 +16,8 @@ template <typename T>
   class range 
   {
   private:
-
-    class iter {
+  
+    class iter {
       private:
         T m_x;
       
