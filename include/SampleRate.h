@@ -42,7 +42,7 @@ public:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream & os, const SampleRate& sr);
+   std::ostream & operator<<(std::ostream & os, SampleRate sr);
 
 /*
  * Operator: ==
