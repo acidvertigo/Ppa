@@ -5,6 +5,7 @@
  */
 #include <string>
 #include "SampleRate.h"
+#include "libString.h"
 
 SampleRate::SampleRate() {
    SampleRate = 0;
@@ -18,7 +19,7 @@ int SampleRate::getSamplerate() {
 }
 
 string SampleRate::toString() {
-   return integerToString(samplerate);
+   return NumberToString(samplerate);
 }
 
 bool operator==(SampleRate s1, SampleRate s2) {
