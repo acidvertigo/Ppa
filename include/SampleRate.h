@@ -35,6 +35,18 @@ public:
  */
    int getSamplerate();
 
+/*
+ * Method: toString
+ * Usage: string str = pt.toString();
+ * ----------------------------------
+ * Returns a string representation of the samplerate.
+ */
+   std::string toString();
+
+/* friend declaration needed by == operator to access private properties */
+   friend bool operator==(SampleRate sr1, SampleRate sr2);
+
+};
 
 /*
  * Operator: <<
@@ -59,18 +71,5 @@ public:
  * This operator implements the != operator for sa_plerat3s.
  */
    bool operator!=(SampleRate sr1, SampleRate sr2);
-
-/*
- * Method: toString
- * Usage: string str = pt.toString();
- * ----------------------------------
- * Returns a string representation of the samplerate.
- */
-   std::string toString();
-
-/* friend declaration needed by == operator to access private properties */
-   friend bool operator==(SampleRate sr1, SampleRate sr2);
-
-}; 
 
 #endif /* _SAMPLERATE_H_ */
