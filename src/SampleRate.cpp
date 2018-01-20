@@ -18,15 +18,15 @@ int SampleRate::getSamplerate() {
 }
 
 string SampleRate::toString() {
-   return "(" + integerToString(x) + "," + integerToString(y) + ")";
+   return integerToString(samplerate);
 }
 
 bool operator==(SampleRate s1, SampleRate s2) {
-   return p1.x == p2.x && p1.y == p2.y;
+   return s1.samplerate == s2.samplerate;
 }
 
 bool operator!=(SampleRate s1, SampleRate s2) {
-   return !(p1 == p2);
+   return !(s1 == s2);
 }
 
 ostream & operator<<(ostream & os, SampleRate sr) {
