@@ -40,11 +40,11 @@ template <typename T>
     
     range(T min, T max) : m_begin(min), m_end(max) { }
 
-    static bool contains(int i) { 
+    bool contains(int i) { 
       return m_begin <= i && i m_end >= i;
     }
      
-    static bool notContains(int i) {
+    bool notContains(int i) {
       return m_begin > i && m_end < i;
     }
    
