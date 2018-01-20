@@ -25,7 +25,7 @@ template <typename T>
  * Template to comvert integer to string
  */
 template <typename T>
-  T StringToNumber ( const string &Text )
+  T StringToNumber ( const std::string &Text )
   {
      istringstream ss(Text);
      T result;

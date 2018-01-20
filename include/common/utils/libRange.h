@@ -16,10 +16,11 @@ template <typename T>
   class range 
   {
   private:
+
     class iter {
       private:
         T m_x;
-
+      
       public:
         iter(T x) : m_x(x) { }
 
@@ -31,25 +32,25 @@ template <typename T>
           return m_x != other.m_x;
         }
       };
-   
-       T m_begin;
-       T m_end;
-   
-   public:
-   
-     range(T min, T max) : m_begin(min), m_end(max) { }
 
-     static bool contains(int i) { 
-       return min <= i && i max >= i;
-     }
-     
-     static bool notContains(int i) {
-       return min > i && max < i;
-     }
-   
-     iter begin() const { return iter(m_begin); }
-     iter end()   const { return iter(m_end  ); }
+      T m_begin;
+      T m_end;
+
+  public:
     
-   };
+    range(T min, T max) : m_begin(min), m_end(max) { }
+
+    static bool contains(int i) { 
+      return min <= i && i max >= i;
+    }
+     
+    static bool notContains(int i) {
+      return min > i && max < i;
+    }
+   
+    iter begin() const { return iter(m_begin); }
+    iter end()   const { return iter(m_end  ); }
+  
+  };
 
 #endif /* _LIBRANGE_H_ */
