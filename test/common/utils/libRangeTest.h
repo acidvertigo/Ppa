@@ -1,4 +1,5 @@
 #include "libRange.h"
+#include <vector>
 
 namespace Test {
   namespace Common {   
