@@ -1,19 +1,15 @@
-namespace Test {
-  namespace Common {   
-    namespace Utils {
+#include "utils.h"
+
+using Test::Common::Utils;
+
+  int libStringTest()
+  {
+    NumberToStringTest();
+    StringToNumberTest();
+  }
       
-      int libStringTest()
-      {
-         NumberToStringTest();
-         StringToNumberTest();
-      }
-      
-      int libRangeTest()
-      {
-        containsTest();
-        notContainsTest();
-      }
-    
-    }   
-  } 
-}
+  int libRangeTest()
+  {
+    containsTest();
+    notContainsTest();
+  }
