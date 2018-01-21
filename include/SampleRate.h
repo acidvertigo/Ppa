@@ -23,7 +23,7 @@ public:
  * Creates a SampleRate object.  The parameter sets the samplerate;
  * default value is 0.
  */
-   SampleRate(int sampleratec);
+   SampleRate(int sampleratec = 0);
 
 /*
  * Methods: getSampleRate
