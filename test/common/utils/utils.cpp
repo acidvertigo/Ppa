@@ -6,10 +6,12 @@ using Test::Common::Utils;
   {
     NumberToStringTest();
     StringToNumberTest();
+    return 0;
   }
       
   int libRangeTest()
   {
     containsTest();
     notContainsTest();
+    return 0;
   }
