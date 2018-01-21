@@ -24,7 +24,13 @@ clean:
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET) bin/test"; $(RM) -r $(BUILDDIR) $(TARGET) bin/test
 
 # Tests
-test:
+
+SRCDIR := src/test
+SRCEXT := cpp
+SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
+OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
+
+test: $(OBJECTS)
 	@echo " Linking test..."
 	@echo " $(CC) $^ -o bin/test $(LIB)"; $(CC) $^ -o bin/test $(LIB)
 	@echo " $(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -o bin/test"; $(CC) $(CFLAGS) test/Suite.cpp $(INC) $(LIB) -o bin/test
