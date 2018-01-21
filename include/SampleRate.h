@@ -24,7 +24,6 @@ public:
  * Creates a SampleRate object.  The default constructor sets the coordinates
  * to 0; the second form sets the samplerate.
  */
-   SampleRate();
    SampleRate(int sampleratec);
 
 /*

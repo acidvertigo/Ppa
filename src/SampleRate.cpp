@@ -8,11 +8,7 @@
 #include "libString.h"
 using namespace std;
 
-SampleRate::SampleRate() {
-   constexpr samplerate = 0;
-}
-
-SampleRate::SampleRate(int sampleratec) {
+SampleRate::SampleRate(int sampleratec = 0) {
    samplerate = sampleratec;
 }
 
