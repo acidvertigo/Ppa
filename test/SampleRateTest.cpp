@@ -3,7 +3,7 @@
 
 int Test::SampleRateTest() 
 {
-  SampleRate obj = new SampleRate();
-  static_assert(obj.getSamplerate() == 0, "SampleRate ctor does not set 0 to samplerate property");
+  SampleRate sr();
+  static_assert(sr.getSamplerate() == 0, "SampleRate ctor does not set 0 to samplerate property");
     return 0;
 }
