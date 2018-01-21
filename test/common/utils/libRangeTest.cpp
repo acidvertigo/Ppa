@@ -2,7 +2,7 @@
 #include "libRangeTest.h"
 
      int Test::Common::Utils::containsTest() {
-        assert(range<int>(1,10));
+        assert(range<int>(1,10).contains(5));
         return 0;
       }
 
