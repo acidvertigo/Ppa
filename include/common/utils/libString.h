@@ -20,16 +20,16 @@ template <typename T>
      return ss.str();
   }
 
-/* Usage: StringToNumber<Type> ( String );
+/* Usage: StringToNumber<Type> ( string );
  * -------------
  * Template to comvert integer to string
  */
-template <typename T>
-  T StringToNumber ( const std::string &Text )
+template <typename T> 
+  T StringToNumber(const std::string & text)
   {
-     std::istringstream ss(Text);
-     T result;
-     return ss >> result ? result : 0;
+    std::stringstream ss(text);
+    T number;
+	return (ss >> number)?number:0;
   }
 
 #endif /* _LIBSTR_H_ */
