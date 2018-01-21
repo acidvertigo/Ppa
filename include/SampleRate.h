@@ -21,9 +21,8 @@ public:
  * Usage: Samplerate sr(sampleratec);
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
- * default value is 0.
  */
-   SampleRate(int sampleratec = 0);
+   SampleRate(int sampleratec);
 
 /*
  * Methods: getSampleRate
