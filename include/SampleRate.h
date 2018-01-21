@@ -18,11 +18,10 @@ private:
 public:
 /*
  * Constructor: SampleRate
- * Usage: SampleRate origin;
- *        Samplerate sr(sampleratec);
+ * Usage: Samplerate sr(sampleratec);
  * ------------------------
- * Creates a SampleRate object.  The default constructor sets the coordinates
- * to 0; the second form sets the samplerate.
+ * Creates a SampleRate object.  The parameter sets the samplerate;
+ * default value is 0.
  */
    SampleRate(int sampleratec);
 
