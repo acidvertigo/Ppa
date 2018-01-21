@@ -25,7 +25,7 @@ clean:
 
 # Tests
 
-SRCDIR := src/test
+SRCDIR := test
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
