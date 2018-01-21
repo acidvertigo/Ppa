@@ -16,7 +16,7 @@
         std::vector<int> testvector = {1,2,3,4,5};
  
         for (auto i :range<int>(1,5))
-          myvector.push_back (i);
+          myvector.push_back(i);
         
         assert(myvector == testvector);     
         return 0;
