@@ -7,7 +7,7 @@
   }
       
   int Test::Common::Utils::StringToNumberTest() {
-    int i = StringToNumber<std::string>("70");
-    assert( i == 70);
+    int i = StringToNumber<std::string>(70);
+    assert( i == 70)
     return 0;
   }
