@@ -1,4 +1,5 @@
 #include "libString.h"
+#include <assert.h>
 
 namespace Test {
   namespace Common {   
