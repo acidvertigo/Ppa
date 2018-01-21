@@ -9,7 +9,7 @@
 using namespace std;
 
 SampleRate::SampleRate() {
-   const samplerate = 0;
+   constexpr samplerate = 0;
 }
 
 SampleRate::SampleRate(int sampleratec) {
