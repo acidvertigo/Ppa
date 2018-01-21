@@ -10,8 +10,8 @@ namespace Test {
       
       int libRangeTest()
       {
-         containsTest();
-         notContainsTest();
+        containsTest();
+        notContainsTest();
       }
     
     }   
