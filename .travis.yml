@@ -3,5 +3,5 @@ compiler: gcc
 
 script: 
   - make
-  - make bin/test
+  - make test
   - make clean
