@@ -29,7 +29,7 @@ SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 
-test: $(OBJECTS)
+bin/test: $(OBJECTS)
 	@echo " Linking test..."
 	@echo " $(CC) $^ -o bin/test $(LIB)"; $(CC) $^ -o bin/test $(LIB)
 	$(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
