@@ -2,7 +2,7 @@
 
   int Test::Common::Utils::NumberToStringTest() {
     std::string str = NumberToString(56);
-    assert(str == "56")
+    assert(str == "56");
     return 0;
   }
       
