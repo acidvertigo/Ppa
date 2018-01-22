@@ -24,7 +24,7 @@ clean:
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET) bin/test"; $(RM) -r $(BUILDDIR) $(TARGET) bin/test
 
 ### Tests
-SRCDIR := test
+SRCDIR := src
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
