@@ -2,7 +2,7 @@ language: cpp
 compiler: gcc
 install:
   - sudo apt-get update
-  - sudo apt-get install libcppunit-dev libcppunit-1.14
+  - sudo apt-get install libcppunit-dev libcppunit-1.14-0
 script: 
   - make
   - make test
