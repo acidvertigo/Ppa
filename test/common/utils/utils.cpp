@@ -1,15 +1,17 @@
 #include "utils.h"
+#include "libRangeTest.h"
+#include "libStringTest.h"
 
-  int libStringTest()
+  int Test::Common::Utils::libStringTest()
   {
-    NumberToStringTest();
-    StringToNumberTest();
+    Test::Common::Utils::NumberToStringTest();
+    Test::Common::Utils::StringToNumberTest();
     return 0;
   }
       
-  int libRangeTest()
+  int Test::Common::Utils::libRangeTest()
   {
-    containsTest();
-    notContainsTest();
+    Test::Common::Utils::containsTest();
+    Test::Common::Utils::notContainsTest();
     return 0;
   }
