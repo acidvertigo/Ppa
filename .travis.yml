@@ -1,9 +1,15 @@
+dist: trusty
+sudo: false
 language: cpp
-compiler: gcc
-install:
-  - sudo apt-get update
-  - sudo apt-get install libcppunit-dev libcppunit-1.14-0
-script: 
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-6 
+
+script:
   - make
   - make test
   - make clean
