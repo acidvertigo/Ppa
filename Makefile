@@ -35,7 +35,7 @@ test: $(OBJECTS)
     
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)/common/utils
-    @ls $(BUILDDIR)
+	@ls $(BUILDDIR)
 	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
 .PHONY: all test clean
