@@ -31,7 +31,7 @@ OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 
 test: $(OBJECTS)
 	@echo " Linking test..."
-	@echo " $(CC) $^ -o bin/test $(LIB)"; $(CC) $^ -o bin/test $(LIB)
+	@echo " $(CC) $^ -o test $(LIB)"; $(CC) $^ -o test $(LIB)
     
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)/common/utils
