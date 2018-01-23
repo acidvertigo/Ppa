@@ -87,7 +87,7 @@ set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
 
-configure_file(src/appinfo.h.in appinfo.h @ONLY NEWLINE_STYLE UNIX)
+#configure_file(src/appinfo.h.in appinfo.h @ONLY NEWLINE_STYLE UNIX)
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
