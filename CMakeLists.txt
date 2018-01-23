@@ -14,6 +14,10 @@ list(APPEND HEADER_FILES
 
 )
 
+list(APPEND INCLUDE_DIRS
+/include
+)
+
 # .cpp files
 #list(APPEND SOURCE_FILES
 #src/Main.cpp
@@ -86,8 +90,6 @@ set(APPLICATION_NAME ${TARGET_NAME})
 set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
-
-#configure_file(src/appinfo.h.in appinfo.h @ONLY NEWLINE_STYLE UNIX)
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
