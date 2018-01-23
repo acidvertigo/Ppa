@@ -18,6 +18,5 @@ script:
   - export CXX=/usr/bin/g++-6
   - gcc -v && g++ -v && cmake --version
   - mkdir -p src/build
-  - cd src/build
   - cmake .
   - make
