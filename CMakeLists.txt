@@ -90,7 +90,7 @@ set(APPLICATION_NAME ${TARGET_NAME})
 set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
-target_include_directories("${ROOT_SOURCE_DIR}/include")
+target_include_directories(PUBLIC "${ROOT_SOURCE_DIR}/include")
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
