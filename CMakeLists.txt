@@ -14,10 +14,6 @@ list(APPEND HEADER_FILES
 
 )
 
-list(APPEND INCLUDE_DIRS
-/include
-)
-
 # .cpp files
 #list(APPEND SOURCE_FILES
 #src/Main.cpp
