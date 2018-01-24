@@ -86,12 +86,10 @@ set(APPLICATION_NAME ${TARGET_NAME})
 set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
-set(INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/include)
-
-get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRS)
-foreach(dir ${dirs})
-  message(STATUS "dir='${dir}'")
-endforeach()
+set(INCLUDE_DIRS 
+  ${CMAKE_SOURCE_DIR}/include
+  ${CMAKE_SOURCE_DIR}/include/common/utils
+)
 
 
 #-------------------------------------------------------------------------------
