@@ -90,7 +90,7 @@ set(INCLUDE_DIRS
   ${CMAKE_SOURCE_DIR}/include
   ${CMAKE_SOURCE_DIR}/include/common/utils
 )
-
+add_subdir(${CMAKE_SOURCE_DIR}/test);
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
