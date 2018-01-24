@@ -17,7 +17,6 @@ script:
   - export CC=/usr/bin/gcc-6
   - export CXX=/usr/bin/g++-6
   - gcc -v && g++ -v && cmake --version
-  - mkdir -p src/build
-  - cd src/build
-  - cmake ./../../
-  - make
+  - mkdir -p build
+  - cd build
+  - ${DEPS_DIR}/cmake/bin/cmake .. && make
