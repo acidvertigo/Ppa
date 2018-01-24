@@ -114,13 +114,13 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 #-------------------------------------------------------------------------------
 
 # Set additional include directories
-include_directories(${INCLUDE_DIRS})
+include_directories(BEFORE ${INCLUDE_DIRS})
 
 # Generate the executable
 add_executable(${TARGET_NAME} ${SOURCE_FILES} ${RESOURCES})
 
 # link libraries
-target_link_libraries(BEFORE ${TARGET_NAME} ${LIBRARIES})
+target_link_libraries(${TARGET_NAME} ${LIBRARIES})
 
 # Use the automatically determined RPATH values
 set_target_properties(${TARGET_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE)
