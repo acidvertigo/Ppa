@@ -88,6 +88,11 @@ set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
 set(INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/include)
 
+get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRS)
+foreach(dir ${dirs})
+  message(STATUS "dir='${dir}'")
+endforeach()
+
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
@@ -116,11 +121,6 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 
 # Set additional include directories
 include_directories(${INCLUDE_DIRS})
-
-get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRS)
-foreach(dir ${dirs})
-  message(STATUS "dir='${dir}'")
-endforeach()
 
 # Generate the executable
 add_executable(${TARGET_NAME} ${SOURCE_FILES} ${RESOURCES})
