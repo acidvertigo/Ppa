@@ -86,8 +86,7 @@ set(APPLICATION_NAME ${TARGET_NAME})
 set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
-set(INCLUDE_DIRS include)
-add_subdirectory(include)
+set(INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
