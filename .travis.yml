@@ -18,4 +18,6 @@ script:
   - export CXX=/usr/bin/g++-6
   - gcc -v && g++ -v && cmake --version
   - mkdir build
-  - cmake . && make
+  - cd build
+  - cmake -DCMAKE_BUILD_TYPE=Release
+  - make
