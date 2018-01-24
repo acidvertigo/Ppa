@@ -19,4 +19,4 @@ script:
   - gcc -v && g++ -v && cmake --version
   - mkdir -p build
   - cd build
-  - ${DEPS_DIR}/cmake/bin/cmake .. && make
+  - cmake .. && make
