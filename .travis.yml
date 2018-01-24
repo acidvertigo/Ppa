@@ -19,5 +19,5 @@ script:
   - gcc -v && g++ -v && cmake --version
   - mkdir -p src/build
   - cd src/build
-  - cmake ..
+  - cmake ./../../
   - make
