@@ -19,5 +19,4 @@ script:
   - gcc -v && g++ -v && cmake --version
   - mkdir build
   - cd build
-  - cmake -DCMAKE_BUILD_TYPE=Release
-  - make
+  - cmake .. && make
