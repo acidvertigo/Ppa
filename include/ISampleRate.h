@@ -20,7 +20,7 @@ public:
 /*
  * Destructor
  */
-   virtual ~ISamplerate() { };
+   virtual ~ISampleRate() { };
 
 /*
  * Methods: getSampleRate
@@ -49,7 +49,7 @@ public:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream & os, ISampleRate sr);
+   virtual std::ostream & operator<<(std::ostream & os, ISampleRate sr);
 
 /*
  * Operator: ==
@@ -65,6 +65,6 @@ public:
  * ---------------
  * This operator implements the != operator for sa_plerat3s.
  */
-   bool operator!=(ISampleRate sr1, ISampleRate sr2);
+   virtual bool operator!=(ISampleRate sr1, ISampleRate sr2);
 
 #endif /* _ISAMPLERATE_H_ */
