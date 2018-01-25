@@ -19,8 +19,9 @@ script:
   - gcc -v && g++ -v && cmake --version
   - mkdir test/googletest-download
   - mkdir build/Debug && mkdir build/Release
-  - cd build
-  - cmake -D CMAKE_BUILD_TYPE=Debug .. && make
+  - cd build/Debug
+  - cmake -D CMAKE_BUILD_TYPE=Debug ../../ && make
   - ctest
-  - cmake -D CMAKE_BUILD_TYPE=Release .. && make
+  - cd build/Release
+  - cmake -D CMAKE_BUILD_TYPE=Release ../../ && make
   - ctest
