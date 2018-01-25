@@ -12,20 +12,10 @@
 
 class ISampleRate {
   
-private:
+protected:
    int samplerate; /* samplerate in Hz */
 
 public:
-/*
- * Constructor: SampleRate
- * Usage: Samplerate sr(sampleratec);
- * ------------------------
- * Creates a SampleRate object.  The parameter sets the samplerate;
- */
-  SampleRate(int sampleratec) {
-    samplerate = sampleratec;
-  }
-
 /*
  * Destructor
  */
