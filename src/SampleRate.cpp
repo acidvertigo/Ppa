@@ -21,7 +21,7 @@ public:
     samplerate = sampleratec;
   }
   
-  ~Samplerate() override { };
+  ~SampleRate() override { };
 
   int getSamplerate() override {
     return samplerate;

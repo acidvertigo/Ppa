@@ -27,7 +27,7 @@ public:
 /*
  * Destructor
  */
-   virtual ~Samplerate() { };
+   virtual ~SampleRate() { };
   
 
 /*
