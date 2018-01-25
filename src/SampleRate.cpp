@@ -14,6 +14,8 @@ public:
   SampleRate(int sampleratec) {
     samplerate = sampleratec;
   }
+  
+  ~ISamplerate() { };
 
   int getSamplerate() {
     return samplerate;
