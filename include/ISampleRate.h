@@ -37,9 +37,6 @@ public:
  */
    virtual std::string toString() = 0;
 
-/* friend declaration needed by == operator to access private properties */
-   friend bool operator==(ISampleRate sr1, ISampleRate sr2);
-
 /*
  * Operator: <<
  * Usage: cout << sr;
@@ -54,7 +51,7 @@ public:
  * ---------------
  * This operator supports equality testing for samplerates.
  */
-   bool operator==(ISampleRate sr1, ISampleRate sr2);
+   virtual bool operator==(ISampleRate sr1, ISampleRate sr2) = 0;
 
 /*
  * Operator: !=

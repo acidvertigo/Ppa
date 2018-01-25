@@ -32,7 +32,7 @@ public:
     return NumberToString(samplerate);
   }
 
-bool operator==(SampleRate s1, SampleRate s2) {
+bool operator==(SampleRate s1, SampleRate s2) override {
  return s1.samplerate == s2.samplerate;
 }
 
