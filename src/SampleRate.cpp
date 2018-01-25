@@ -15,7 +15,7 @@ public:
     samplerate = sampleratec;
   }
   
-  ~ISamplerate() { };
+  ~ISamplerate() override { };
 
   int getSamplerate() {
     return samplerate;
