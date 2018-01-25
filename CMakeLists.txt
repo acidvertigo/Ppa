@@ -112,6 +112,11 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 # # Remove duplicate library dependencies. 
 # list(REMOVE_DUPLICATES LIBRARIES)
 
+#-------------------------------------------------------------------------------
+#	TEST
+#-------------------------------------------------------------------------------
+
+enable_testing()
 add_subdirectory(test)
 
 #-------------------------------------------------------------------------------
