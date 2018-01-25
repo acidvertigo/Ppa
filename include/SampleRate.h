@@ -17,14 +17,6 @@ private:
 
 public:
 /*
- * Constructor: SampleRate
- * Usage: Samplerate sr(sampleratec);
- * ------------------------
- * Creates a SampleRate object.  The parameter sets the samplerate;
- */
-   SampleRate(int sampleratec);
-
-/*
  * Destructor
  */
    virtual ~SampleRate() { };
@@ -47,7 +39,7 @@ public:
    virtual std::string toString();
 
 /* friend declaration needed by == operator to access private properties */
-   friend bool operator==(SampleRate sr1, SampleRate sr2);
+   friend bool operator==(ISampleRate sr1, ISampleRate sr2);
 
 };
 
