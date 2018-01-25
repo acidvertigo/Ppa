@@ -27,9 +27,10 @@ public:
     return samplerate;
   }
 
-  std::string toString() override {
+  std::string toString() override {
     return NumberToString(samplerate);
   }
+
 }
 
 bool operator==(SampleRate s1, SampleRate s2) {
