@@ -15,7 +15,7 @@ public:
     samplerate = sampleratec;
   }
   
-  ~ISamplerate() override { };
+  ~Samplerate() override { };
 
   int getSamplerate() override {
     return samplerate;
@@ -26,14 +26,14 @@ public:
   }
 }
 
-bool operator==(ISampleRate s1, ISampleRate s2) {
+bool operator==(SampleRate s1, SampleRate s2) {
  return s1.samplerate == s2.samplerate;
 }
 
-bool operator!=(ISampleRate s1, ISampleRate s2) {
+bool operator!=(SampleRate s1, SampleRate s2) {
  return !(s1 == s2);
 }
 
-std::ostream & operator<<(ostream & os, ISampleRate sr) {
+std::ostream & operator<<(ostream & os, SampleRate sr) {
  return os << sr.toString();
 }
