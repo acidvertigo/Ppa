@@ -16,19 +16,11 @@ private:
    int samplerate; /* samplerate in Hz */
 
 public:
-/*
- * Constructor: SampleRate
- * Usage: Samplerate sr(sampleratec);
- * ------------------------
- * Creates a SampleRate object.  The parameter sets the samplerate;
- */
-   ISampleRate(int sampleratec);
 
 /*
  * Destructor
  */
    virtual ~ISamplerate() { };
-  
 
 /*
  * Methods: getSampleRate
