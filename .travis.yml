@@ -10,6 +10,7 @@ addons:
       - gcc-6
       - g++-6
       - cmake
+      - cppcheck
 
 script:
   - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
@@ -26,3 +27,4 @@ script:
   - cd ../Release
   - cmake -D CMAKE_BUILD_TYPE=Release ../../ && make
   - ctest
+  - cppcheck --quiet --error-exitcode=1 ../../
