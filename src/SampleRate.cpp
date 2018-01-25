@@ -24,14 +24,14 @@ public:
   }
 }
 
-bool operator==(SampleRate s1, SampleRate s2) {
+bool operator==(ISampleRate s1, ISampleRate s2) {
    return s1.samplerate == s2.samplerate;
 }
 
-bool operator!=(SampleRate s1, SampleRate s2) {
+bool operator!=(ISampleRate s1, ISampleRate s2) {
    return !(s1 == s2);
 }
 
-std::ostream & operator<<(ostream & os, SampleRate sr) {
+std::ostream & operator<<(ostream & os, ISampleRate sr) {
    return os << sr.toString();
 }
