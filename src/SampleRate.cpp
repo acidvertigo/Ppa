@@ -11,16 +11,7 @@ using namespace std;
 class SampleRate: public ISampleRate
 {
 public:
-/*
- * Constructor: SampleRate
- * Usage: Samplerate sr(sampleratec);
- * ------------------------
- * Creates a SampleRate object.  The parameter sets the samplerate;
- */
-  SampleRate(int sampleratec) {
-    samplerate = sampleratec;
-  }
-  
+
   ~SampleRate() override { };
 
   int getSamplerate() override {
