@@ -15,7 +15,7 @@ public:
   ~SampleRate() override { };
 
   int getSamplerate() override {
-    return samplerate;
+    return getSamplerate();
   }
 
   std::string toString() override {
