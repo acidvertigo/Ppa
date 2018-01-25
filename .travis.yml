@@ -23,6 +23,6 @@ script:
   - cd build/Debug
   - cmake -D CMAKE_BUILD_TYPE=Debug ../../ && make
   - ctest
-  - cd build/Release
+  - cd ../Release
   - cmake -D CMAKE_BUILD_TYPE=Release ../../ && make
   - ctest
