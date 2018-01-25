@@ -27,4 +27,4 @@ script:
   - cd ../Release
   - cmake -D CMAKE_BUILD_TYPE=Release ../../ && make
   - ctest
-  - cppcheck --force -itest/googletest-src --quiet --error-exitcode=1 ../../
+  - cppcheck --force -ibuild/Debug -ibuild/Release --quiet --error-exitcode=1 ../../
