@@ -1,5 +1,5 @@
 # Download and unpack googletest at configure time
-configure_file(test/CMakeLists.txt.in googletest-download/CMakeLists.txt)
+configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
   RESULT_VARIABLE result
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
@@ -31,6 +31,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(example test/example.cpp)
+add_executable(example example.cpp)
 target_link_libraries(example gmock_main)
 add_test(NAME example_test COMMAND example)
