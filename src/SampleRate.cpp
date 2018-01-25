@@ -34,7 +34,7 @@ public:
 }
 
 bool operator==(SampleRate s1, SampleRate s2) {
- return s1.samplerate == s2.samplerate;
+ return s1.getSamplerate() == s2.getSamplerate();
 }
 
 bool operator!=(SampleRate s1, SampleRate s2) {
