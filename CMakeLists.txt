@@ -112,7 +112,7 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 # # Remove duplicate library dependencies. 
 # list(REMOVE_DUPLICATES LIBRARIES)
 
-add_subdirectory(test);
+add_subdirectory(test)
 
 #-------------------------------------------------------------------------------
 #	GENERATE EXECUTABLE
