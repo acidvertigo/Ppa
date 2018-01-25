@@ -17,11 +17,11 @@ public:
   
   ~ISamplerate() override { };
 
-  int getSamplerate() {
+  int getSamplerate() override {
     return samplerate;
   }
 
-  std::string toString() {
+  std::string toString() override {
     return NumberToString(samplerate);
   }
 }
