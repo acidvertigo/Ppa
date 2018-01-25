@@ -32,7 +32,7 @@ public:
     return NumberToString(samplerate);
   }
 
-}
+};
 
 bool operator==(SampleRate s1, SampleRate s2) {
  return s1.samplerate == s2.samplerate;
