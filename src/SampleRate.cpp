@@ -4,20 +4,24 @@
  * This file implements the SampleRate.h interface.
  */
 #include <string>
-#include "SampleRate.h"
+#include "ISampleRate.h"
 #include "libString.h"
 using namespace std;
 
-SampleRate::SampleRate(int sampleratec) {
-   samplerate = sampleratec;
-}
+class SampleRate: public ISampleRate
+{
+public:
+  SampleRate(int sampleratec) {
+    samplerate = sampleratec;
+  }
 
-int SampleRate::getSamplerate() {
-   return samplerate;
-}
+  int getSamplerate() {
+    return samplerate;
+  }
 
-std::string SampleRate::toString() {
-   return NumberToString(samplerate);
+  std::string toString() {
+    return NumberToString(samplerate);
+  }
 }
 
 bool operator==(SampleRate s1, SampleRate s2) {
