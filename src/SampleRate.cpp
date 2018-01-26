@@ -41,6 +41,6 @@ bool operator!=(const SampleRate &s1, const SampleRate &s2) {
  return !(s1 == s2);
 }
 
-std::ostream & operator<<(ostream & os, SampleRate sr) {
+std::ostream & operator<<(ostream & os, const SampleRate &sr) {
  return os << sr.toString();
 }
