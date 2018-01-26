@@ -35,7 +35,7 @@ public:
  * ----------------------------------
  * Returns a string representation of the samplerate.
  */
-   virtual std::string toString() = 0;
+   virtual std::string toString() const = 0;
   
    friend bool operator==(const ISampleRate &sr1, const ISampleRate &sr2);
 };
