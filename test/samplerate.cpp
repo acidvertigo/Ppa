@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
-#include "ISampleRate.php"
+#include "ISampleRate.h"
 
 // Mock class
 class MockSampleRate : public ISampleRate
