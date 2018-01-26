@@ -29,7 +29,7 @@ public:
   }
   
   bool equalsTo(SampleRate const& other) const override {
-    return a == other.samplerate;
+    return samplerate == other.samplerate;
   }
   
   std::string toString() const override {
