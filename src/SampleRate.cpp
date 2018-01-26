@@ -28,7 +28,7 @@ public:
     return samplerate;
   }
 
-  bool equalsTo(const SampleRate &other) const override {
+  virtual bool equalsTo(const SampleRate &other) const override {
     return samplerate == other.samplerate;
   }
   
