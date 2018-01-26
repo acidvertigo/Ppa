@@ -34,10 +34,11 @@ public:
  */
    virtual std::string toString() const;
   
-   friend bool operator==(const ISampleRate&, const ISampleRate&);
+   
   
   protected:
    int samplerate; /* samplerate in Hz */
+   friend bool operator==(const ISampleRate&, const ISampleRate&);
 };
 
 /*
