@@ -18,13 +18,13 @@ public:
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-  SampleRate(int sampleratec) {
+  SampleRate(const int &sampleratec) {
     samplerate = sampleratec;
   }
 
   ~SampleRate() override { };
 
-  int getSamplerate() override {
+  int getSamplerate() const override {
     return samplerate;
   }
 

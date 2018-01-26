@@ -25,7 +25,7 @@ public:
  * -------------------------
  * These methods returns the samplerate set
  */
-   virtual int getSamplerate() = 0;
+   virtual int getSamplerate() const = 0;
   
 /*
  * Method: equalsTo
