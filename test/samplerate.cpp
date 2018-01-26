@@ -7,8 +7,8 @@
 class MockSampleRate : public ISampleRate
 {
 public:
-    MOCK_METHOD2(makeCoffee,    int(bool milk, double sugars));
-    MOCK_METHOD0(makeHerbalTea, int());
+    MockSamplerate() : SampleRate(44100) {};
+    MOCK_CONST_METHOD0(getSamplerate, int());
 };
 
 
@@ -19,11 +19,6 @@ using ::testing::_;
 TEST(ISampleRateTest, SrCheck)
 {
     MockSampleRate  sampleRate;
-    EXPECT_CALL(sampleRate, makeCoffee(_,_))
-        .WillOnce(Return(2))
-        .WillOnce(Return(1));
-    EXPECT_CALL(sampleRate, makeHerbalTea())
-        .WillOnce(Return(3));
-
-    EXPECT_LE(srCheck.morningTea(), 6);
+    EXPECT_CALL(sampleRate, getSamplerate())
+        .WillOnce(Return(44100))
 }
