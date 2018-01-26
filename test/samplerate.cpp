@@ -7,7 +7,7 @@
 class MockSampleRate : public ISampleRate
 {
 public:
-    MockSampleRate() : SampleRate(44100) {}
+    MOCK_METHOD0(construct, int());
     MOCK_CONST_METHOD0(getSamplerate, int());
     MOCK_CONST_METHOD1(equalTo, bool(const ISampleRate &other));
 };
@@ -19,7 +19,7 @@ using ::testing::_;
 // Mocked test
 TEST(ISampleRateTest, SrCheck)
 {
-    MockSampleRate  sampleRate;
+    MockSampleRate  sampleRate(44100);
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100))
     EXPECT_CALL(sampleRate, equalTo(_,_))
