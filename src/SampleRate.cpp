@@ -33,11 +33,11 @@ public:
   }
 };
 
-bool operator==(SampleRate s1, SampleRate s2) {
+bool operator==(const SampleRate &s1, const SampleRate &s2) {
  return s1.samplerate == s2.samplerate;
 }
 
-bool operator!=(SampleRate s1, SampleRate s2) {
+bool operator!=(const SampleRate &s1, const SampleRate &s2) {
  return !(s1 == s2);
 }
 
