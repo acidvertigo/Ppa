@@ -37,14 +37,14 @@ public:
   }
 };
 
-bool operator==(const SampleRate &s1, const SampleRate &s2) override {
+bool operator==(const SampleRate &s1, const SampleRate &s2) {
  return s1.equalsTo(s2);
 }
 
-bool operator!=(const SampleRate &s1, const SampleRate &s2) override {
+bool operator!=(const SampleRate &s1, const SampleRate &s2) {
  return !(s1 == s2);
 }
 
-std::ostream & operator<<(ostream & os, const SampleRate &sr) override {
+std::ostream & operator<<(ostream & os, const SampleRate &sr) {
  return os << sr.toString();
 }
