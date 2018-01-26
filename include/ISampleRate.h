@@ -43,7 +43,7 @@ protected:
  * ----------------------------------
  * Returns true if properties are equal
  */
-   virtual bool equalsTo(ISampleRate const &other) const = 0;
+   virtual bool equalsTo(ISampleRate const &other) const;
 };  
 
 /*
