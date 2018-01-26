@@ -25,6 +25,14 @@ public:
  * These methods returns the samplerate set
  */
    virtual int getSamplerate() = 0;
+  
+/*
+ * Method: equalsTo
+ * Usage: bool x = sr1.equalsTo(sr2);
+ * ----------------------------------
+ * Returns true if properties are equal
+ */
+   virtual bool equalsTo(ISampleRate const &other) const = 0;
 
 /*
  * Method: toString
@@ -36,14 +44,7 @@ public:
 
 protected:
    int samplerate; /* samplerate in Hz */
-  
-/*
- * Method: equalsTo
- * Usage: bool x = sr1.equalsTo(sr2);
- * ----------------------------------
- * Returns true if properties are equal
- */
-   virtual bool equalsTo(ISampleRate const &other) const = 0;
+
 };  
 
 /*
