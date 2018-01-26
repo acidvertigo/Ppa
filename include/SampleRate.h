@@ -4,19 +4,23 @@
  * This interface exports the SampleRate class, which represents audio
  * sample rate frequency.
  */
-#ifndef _ISAMPLERATE_H
-#define _ISAMPLERATE_H
+#ifndef _SAMPLERATE_H
+#define _SAMPLERATE_H
 
 #include <iostream>
 #include <string>
 
 class ISampleRate {
   
+private:
+   int samplerate; /* samplerate in Hz */
+
 public:
 /*
  * Destructor
  */
-   virtual ~ISampleRate() { };
+   virtual ~SampleRate() { };
+  
 
 /*
  * Methods: getSampleRate
@@ -24,7 +28,7 @@ public:
  * -------------------------
  * These methods returns the samplerate set
  */
-   virtual int getSamplerate() = 0;
+   virtual int getSamplerate();
 
 /*
  * Method: toString
@@ -32,12 +36,11 @@ public:
  * ----------------------------------
  * Returns a string representation of the samplerate.
  */
-   virtual std::string toString() const;
-  
-   friend bool operator==(const ISampleRate&, const ISampleRate&);
-  
-  protected:
-   int samplerate; /* samplerate in Hz */
+   virtual std::string toString();
+
+/* friend declaration needed by == operator to access private properties */
+   friend bool operator==(ISampleRate sr1, ISampleRate sr2);
+
 };
 
 /*
@@ -46,7 +49,7 @@ public:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream & os, const ISampleRate &sr);
+   std::ostream & operator<<(std::ostream & os, SampleRate sr);
 
 /*
  * Operator: ==
@@ -54,7 +57,7 @@ public:
  * ---------------
  * This operator supports equality testing for samplerates.
  */
-  bool operator==(const ISampleRate &sr1, const ISampleRate &sr2);
+   bool operator==(SampleRate sr1, SampleRate sr2);
 
 /*
  * Operator: !=
@@ -62,6 +65,6 @@ public:
  * ---------------
  * This operator implements the != operator for sa_plerat3s.
  */
-   bool operator!=(const ISampleRate &sr1, const ISampleRate &sr2);
+   bool operator!=(SampleRate sr1, SampleRate sr2);
 
-#endif /* _ISAMPLERATE_H_ */
+#endif /* _SAMPLERATE_H_ */
