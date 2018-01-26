@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+using namespace std;
 
 class ISampleRate {
   
@@ -32,7 +33,7 @@ public:
  * ----------------------------------
  * Returns true if properties are equal
  */
-   virtual bool equalsTo(ISampleRate const &other) const = 0;
+   virtual bool equalsTo(const ISampleRate &other) const = 0;
 
 /*
  * Method: toString
