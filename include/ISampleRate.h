@@ -36,6 +36,9 @@ public:
  * Returns a string representation of the samplerate.
  */
    virtual std::string toString() = 0;
+  
+   friend operator==(ISampleRate& sr1, const ISampleRate& sr2);
+};
 
 /*
  * Operator: <<
@@ -43,7 +46,7 @@ public:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   virtual std::ostream & operator<<(std::ostream & os, ISampleRate& sr);
+   std::ostream & operator<<(std::ostream & os, const ISampleRate& sr);
 
 /*
  * Operator: ==
@@ -51,7 +54,7 @@ public:
  * ---------------
  * This operator supports equality testing for samplerates.
  */
-  virtual bool operator==(ISampleRate& sr1, ISampleRate& sr2);
+  bool operator==(ISampleRate& sr1, const ISampleRate& sr2);
 
 /*
  * Operator: !=
@@ -59,6 +62,6 @@ public:
  * ---------------
  * This operator implements the != operator for sa_plerat3s.
  */
-   virtual bool operator!=(ISampleRate& sr1, ISampleRate& sr2);
-};
+   bool operator!=(const ISampleRate& sr1, const ISampleRate& sr2);
+
 #endif /* _ISAMPLERATE_H_ */
