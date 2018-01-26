@@ -33,13 +33,18 @@ public:
  * Returns a string representation of the samplerate.
  */
    virtual std::string toString() const;
-  
-   
-  
+
   protected:
    int samplerate; /* samplerate in Hz */
-   friend bool operator==(const ISampleRate&, const ISampleRate&);
-};
+  
+/*
+ * Method: equalsTo
+ * Usage: bool x = sr1.equalsTo(sr2);
+ * ----------------------------------
+ * Returns true if properties are equal
+ */
+   virtual bool equal_to(Samplerate const& other) const = 0;
+};  
 
 /*
  * Operator: <<

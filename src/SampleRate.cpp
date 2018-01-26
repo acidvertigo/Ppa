@@ -27,20 +27,24 @@ public:
   int getSamplerate() override {
     return samplerate;
   }
-
+  
+  bool equalsTo(Samplerate const& other) const override {
+    return a == other.samplerate;
+  }
+  
   std::string toString() const override {
     return NumberToString(samplerate);
   }
 };
 
-bool SampleRate::operator==(const SampleRate &s1, const SampleRate &s2) {
- return s1.samplerate == s2.samplerate;
+bool operator==(const SampleRate &s1, const SampleRate &s2) {
+ return s1.equalsTo(s2);
 }
 
-bool SampleRate::operator!=(const SampleRate &s1, const SampleRate &s2) {
+bool operator!=(const SampleRate &s1, const SampleRate &s2) {
  return !(s1 == s2);
 }
 
-std::ostream & SampleRate::operator<<(ostream & os, const SampleRate &sr) {
+std::ostream & operator<<(ostream & os, const SampleRate &sr) {
  return os << sr.toString();
 }
