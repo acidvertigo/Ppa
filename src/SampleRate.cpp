@@ -27,7 +27,7 @@ public:
   int getSamplerate() override {
     return samplerate;
   }
-  
+
   bool equalsTo(SampleRate const& other) const override {
     return samplerate == other.samplerate;
   }
