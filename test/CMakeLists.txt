@@ -38,4 +38,4 @@ add_executable(samplerate samplerate.cpp)
 target_link_libraries(example gmock_main)
 
 add_test(NAME example_test COMMAND example)
-add_test(NAME example_test COMMAND samplerate)
+add_test(NAME samplerate_test COMMAND samplerate)
