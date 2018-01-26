@@ -28,7 +28,7 @@ public:
     return samplerate;
   }
 
-  std::string toString() override {
+  std::string toString() const override {
     return NumberToString(samplerate);
   }
 };
