@@ -7,6 +7,7 @@
 class MockSampleRate : public ISampleRate
 {
 public:
+    MockSampleRate() : SampleRate(44100) {}
     MOCK_CONST_METHOD0(getSamplerate, int());
     MOCK_CONST_METHOD1(equalTo, bool(const ISampleRate &other));
 };
