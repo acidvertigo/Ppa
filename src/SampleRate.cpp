@@ -28,11 +28,11 @@ public:
     return samplerate;
   }
 
-  bool equalsTo(SampleRate const& other) const override {
+  bool equalsTo(SampleRate const& other) override {
     return samplerate == other.samplerate;
   }
   
-  std::string toString() const override {
+  std::string toString() override {
     return NumberToString(samplerate);
   }
 };

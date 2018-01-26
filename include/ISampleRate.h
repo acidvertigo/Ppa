@@ -32,9 +32,9 @@ public:
  * ----------------------------------
  * Returns a string representation of the samplerate.
  */
-   virtual std::string toString() const;
+   virtual std::string toString();
 
-  protected:
+protected:
    int samplerate; /* samplerate in Hz */
   
 /*
@@ -43,7 +43,7 @@ public:
  * ----------------------------------
  * Returns true if properties are equal
  */
-  virtual bool equalsTo(ISampleRate const& other) const = 0;
+   virtual bool equalsTo(ISampleRate const& other) = 0;
 };  
 
 /*
