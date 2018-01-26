@@ -33,9 +33,9 @@ endif()
 # Now simply link against gtest or gtest_main as needed. Eg
 
 add_executable(example example.cpp)
-add_executable(samplerate samplerate.cpp)
-
 target_link_libraries(example gmock_main)
-
 add_test(NAME example_test COMMAND example)
+
+add_executable(samplerate samplerate.cpp)
+target_link_libraries(samplerate gmock_main)
 add_test(NAME samplerate_test COMMAND samplerate)
