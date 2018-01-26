@@ -21,4 +21,6 @@ TEST(ISampleRateTest, SrCheck)
     MockSampleRate  sampleRate;
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100))
+    EXPECT_CALL(sampleRate, equalTo(_,_))
+        .WillOnce(Return(true))
 }
