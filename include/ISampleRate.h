@@ -37,7 +37,7 @@ public:
  */
    virtual std::string toString() const;
   
-   friend bool operator==(const ISampleRate &sr1, const ISampleRate &sr2);
+   friend bool operator==(const ISampleRate&, const ISampleRate&);
 };
 
 /*
