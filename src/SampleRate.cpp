@@ -28,7 +28,7 @@ public:
     return samplerate;
   }
   
-  bool equalsTo(Samplerate const& other) const override {
+  bool equalsTo(SampleRate const& other) const override {
     return a == other.samplerate;
   }
   
