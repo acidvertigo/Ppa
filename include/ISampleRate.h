@@ -43,7 +43,7 @@ public:
  * ----------------------------------
  * Returns true if properties are equal
  */
-  virtual bool equal_to(ISampleRate const& other) const = 0;
+  virtual bool equalsTo(ISampleRate const& other) const = 0;
 };  
 
 /*
