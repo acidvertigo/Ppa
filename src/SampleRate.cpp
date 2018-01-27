@@ -25,7 +25,7 @@ using namespace std;
     return samplerate;
   }
 
-  bool SampleRate::equalTo(const ISampleRate &other) const : ISampleRate::equalTo(other) {
+  bool SampleRate::equalTo(const ISampleRate &other) const {
     return samplerate == other.samplerate;
   }
   

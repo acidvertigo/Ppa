@@ -20,6 +20,8 @@ public:
     int getSamplerate() const override;
     bool equalTo(const ISampleRate &) const override;
     std::string toString() const;
+protected:
+    int samplerate; /* samplerate in Hz */
 };
 
 //--------------------------------------

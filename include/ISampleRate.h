@@ -37,10 +37,6 @@ public:
  * Returns a string representation of the samplerate.
  */
    virtual std::string toString() const = 0;
-
-protected:
-   int samplerate; /* samplerate in Hz */
-
 };  
 
 #endif /* _ISAMPLERATE_H_ */
