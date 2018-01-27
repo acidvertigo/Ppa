@@ -1,11 +1,12 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
+#include "ISampleRate.h"
 #include "SampleRate.h"
 #include "libString.h"
   
 // Mock class
-class MockSampleRate : public SampleRate
+class MockSampleRate : public ISampleRate
 {
 public:
     MOCK_METHOD1(SampleRate, int(const int &sampleratec));
