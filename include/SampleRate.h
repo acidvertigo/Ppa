@@ -1,5 +1,5 @@
-#ifndef _ISAMPLERATE_H
-#define _ISAMPLERATE_H
+#ifndef _SAMPLERATE_H_
+#define _SAMPLERATE_H_
 
 #include <iostream>
 #include "ISampleRate.h"

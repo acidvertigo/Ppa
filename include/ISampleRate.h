@@ -4,8 +4,8 @@
  * This interface exports the SampleRate class, which represents audio
  * sample rate frequency.
  */
-#ifndef _ISAMPLERATE_H
-#define _ISAMPLERATE_H
+#ifndef _ISAMPLERATE_H_
+#define _ISAMPLERATE_H_
 
 #include <string>
 
