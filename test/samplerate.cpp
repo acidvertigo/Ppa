@@ -6,12 +6,13 @@
 #include "libString.h"
   
 // Mock class
-class MockSampleRate : public ISampleRate
-{
+class MockSampleRate : public ISampleRate {
 public:
     MOCK_METHOD1(SampleRate, int(const int &sampleratec));
     MOCK_METHOD0(getSamplerate, int());
     MOCK_METHOD1(equalTo, bool(const SampleRate &other));
+    MOCK_METHOD0(toString, bool())
+ 
 };
 
 using ::testing::Return;
@@ -20,7 +21,7 @@ using ::testing::_;
 // Mocked test
 TEST(SampleRateTest, SrCheck)
 {
-    SampleRate  sampleRate(44100);
+    MockSampleRate  sampleRate(44100);
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100));
     EXPECT_CALL(sampleRate, equalTo(_))
