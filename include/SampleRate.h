@@ -18,10 +18,13 @@ public:
     SampleRate(const int &);
     virtual ~SampleRate() override;
     int getSamplerate() const override;
-    bool equalTo(const ISampleRate &) const override;
     std::string toString() const;
+
 protected:
     int samplerate; /* samplerate in Hz */
+  
+friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
+
 };
 
 //--------------------------------------

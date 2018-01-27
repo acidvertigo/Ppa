@@ -21,14 +21,6 @@ public:
  * These methods returns the samplerate set
  */
    virtual int getSamplerate() const = 0;
-  
-/*
- * Method: equalTo
- * Usage: bool x = sr1.equalsTo(sr2);
- * ----------------------------------
- * Returns true if properties are equal
- */
-   virtual bool equalTo(const ISampleRate &) const = 0;
 
 /*
  * Method: toString

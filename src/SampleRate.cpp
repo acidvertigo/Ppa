@@ -25,10 +25,6 @@ using namespace std;
     return samplerate;
   }
 
-  bool SampleRate::equalTo(const ISampleRate &other) const {
-    return samplerate == other.samplerate;
-  }
-  
   std::string SampleRate::toString() const {
     return NumberToString(samplerate);
   }
@@ -36,7 +32,7 @@ using namespace std;
 //------------------------------------
 
 bool operator==(const SampleRate &s1, const SampleRate &s2) {
- return s1.equalTo(s2);
+ return s1.samplerate == s2.samplerate;
 }
 
 bool operator!=(const SampleRate &s1, const SampleRate &s2) {
