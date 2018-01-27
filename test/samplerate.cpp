@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
-#include "ISampleRate.h"
+//#include "ISampleRate.h"
 #include "SampleRate.h"
 #include "libString.h"
   
@@ -10,6 +10,7 @@ class MockSampleRate : public SampleRate {
 public:
     MockSampleRate(const int &sampleratec) : SampleRate::SampleRate(sampleratec) {};
     virtual ~MockSampleRate() {};
+    
     MOCK_METHOD1(SampleRate, int(const int &sampleratec));
     MOCK_METHOD0(getSamplerate, int());
     MOCK_METHOD0(toString, bool());
