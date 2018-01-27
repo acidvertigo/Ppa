@@ -75,6 +75,6 @@ protected:
 /*
  * Child classes definitions
  */
-   class Samplerate : public ISampleRate;
+   class SampleRate;
 
 #endif /* _ISAMPLERATE_H_ */
