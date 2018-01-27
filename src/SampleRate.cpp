@@ -20,7 +20,7 @@ using namespace std;
     samplerate = sampleratec;
   }
 
-  SampleRate::~SampleRate() override { };
+  SampleRate::~SampleRate() { };
 
   int SampleRate::getSamplerate() const {
     return samplerate;
