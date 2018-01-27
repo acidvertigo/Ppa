@@ -29,7 +29,7 @@ using namespace std;
     return samplerate == other.samplerate;
   }
   
-  std::string SampleRate::toString() const {
+  std::string SampleRate::toString() const override {
     return NumberToString(samplerate);
   }
 
