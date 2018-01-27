@@ -3,6 +3,10 @@
 
 #include "ISampleRate.h"
 
+usign ::ISampleRate::SampleRate;
+usign ::ISampleRate::getSamplerate;
+usign ::ISampleRate::toString;
+
 // Mock class
 class MockSampleRate : public ISampleRate {
 public:
