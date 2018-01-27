@@ -19,9 +19,9 @@ using namespace std;
     samplerate = sampleratec;
   }
 
-  SampleRate::~SampleRate() override { };
+  SampleRate::~SampleRate() { };
 
-  int SampleRate::getSamplerate() const override {
+  int SampleRate::getSamplerate() const {
     return samplerate;
   }
 
@@ -29,7 +29,7 @@ using namespace std;
     return samplerate == other.samplerate;
   }
   
-  std::string SampleRate::toString() const override {
+  std::string SampleRate::toString() const {
     return NumberToString(samplerate);
   }
 
