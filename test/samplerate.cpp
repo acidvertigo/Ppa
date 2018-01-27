@@ -3,7 +3,7 @@
 
 #include "ISampleRate.h"
 
-using ::ISampleRate::SampleRate;
+using ::ISampleRate::ISampleRate;
 using ::ISampleRate::getSamplerate;
 using ::ISampleRate::toString;
 
