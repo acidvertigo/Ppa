@@ -43,7 +43,7 @@ public:
 
 class MockTurtle : public Turtle {
  public:
-  MockTurtle();
+ // MockTurtle();
   virtual ~MockTurtle() = default;
   MOCK_METHOD0(PenUp, void());
   MOCK_METHOD0(PenDown, void());
