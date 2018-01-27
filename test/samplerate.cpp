@@ -2,8 +2,6 @@
 #include "gmock/gmock.h"
 
 #include "ISampleRate.h"
-//#include "SampleRate.h"
-//include "libString.h"
 
 // Mock class
 class MockSampleRate : public ISampleRate {
@@ -12,8 +10,8 @@ public:
     virtual ~MockSampleRate() = default;
 
     MOCK_METHOD1(ISampleRate::ISampleRate, int(const int &sampleratec));
-    MOCK_STATIC_METHOD0(getSamplerate, int());
-    MOCK_STATIC_METHOD0(toString, bool());
+    MOCK_STATIC_METHOD0(ISampleRate::getSamplerate, int());
+    MOCK_STATIC_METHOD0(ISampleRate::toString, bool());
 };
 
 using ::testing::Return;
