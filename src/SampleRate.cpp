@@ -22,15 +22,15 @@ using namespace std;
 
   SampleRate::~SampleRate() override { };
 
-  int SampleRate::getSamplerate() const override {
+  int SampleRate::getSamplerate() const {
     return samplerate;
   }
 
-  bool SampleRate::equalTo(const SampleRate &other) const override {
+  bool SampleRate::equalTo(const SampleRate &other) const {
     return samplerate == other.samplerate;
   }
   
-  std::string SampleRate::toString() const override {
+  std::string SampleRate::toString() const {
     return NumberToString(samplerate);
   }
 
