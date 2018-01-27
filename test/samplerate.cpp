@@ -10,7 +10,7 @@ class MockSampleRate : public ISampleRate {
 public:
     MOCK_METHOD1(ISampleRate, int(const int &sampleratec));
     MOCK_METHOD0(getSamplerate, int());
-    MOCK_METHOD1(equalTo, bool(const ISampleRate &other));
+    MOCK_METHOD1(equalTo, bool(const MockSampleRate &other));
     MOCK_METHOD0(toString, bool());
  
 };
