@@ -13,15 +13,13 @@
 class ISampleRate {
   
 public:
-/*
- * Destructor
- */
+
    virtual ~ISampleRate() { };
 
 /*
  * Methods: getSampleRate
  * Usage: int x = sr.getSampleRate();
- * -------------------------
+ * ----------------------------------
  * These methods returns the samplerate set
  */
    virtual int getSamplerate() const = 0;
@@ -52,25 +50,7 @@ protected:
 /*
  * Derived classes definitions
  */   
-class SampleRate: public ISampleRate
-{
-public:
-/*
- * Constructor: SampleRate
- * Usage: Samplerate sr(sampleratec);
- * ------------------------
- * Creates a SampleRate object.  The parameter sets the samplerate;
- */
-  SampleRate(const int &sampleratec);
-
-  ~SampleRate() override { };
-
-  int getSamplerate() const override;
-
-  bool equalTo(const SampleRate &other) const;
-  
-  std::string toString() const override;
-};
+class SampleRate: public ISampleRate { };
 
 //--------------------------------------
 
@@ -88,7 +68,7 @@ public:
  * -----------------
  * This operator supports equality testing for samplerates.
  */
-  bool operator==(const ISampleRate &sr1, const ISampleRate &sr2);
+   bool operator==(const ISampleRate &sr1, const ISampleRate &sr2);
 
 /*
  * Operator: !=
