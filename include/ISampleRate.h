@@ -14,7 +14,7 @@ class ISampleRate {
   
 public:
 
-   virtual ~ISampleRate() { };
+   virtual ~ISampleRate() = 0;
 
 /*
  * Methods: getSampleRate
