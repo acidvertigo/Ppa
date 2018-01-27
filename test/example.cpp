@@ -36,6 +36,17 @@ public:
     MOCK_METHOD0(makeHerbalTea, int());
 };
 
+class Turtle {
+  virtual ~Turtle() {}
+  virtual void PenUp() = 0;
+  virtual void PenDown() = 0;
+  virtual void Forward(int distance) = 0;
+  virtual void Turn(int degrees) = 0;
+  virtual void GoTo(int x, int y) = 0;
+  virtual int GetX() const = 0;
+  virtual int GetY() const = 0;
+};
+
 class MockTurtle : public Turtle {
  public:
   MOCK_METHOD0(PenUp, void());
@@ -61,7 +72,6 @@ TEST(PainterTest, CanDrawSomething) {
 
   EXPECT_TRUE(painter.DrawCircle(0, 0, 10));
 } 
-
 // Mocked test
 TEST(TeaBreakTest, MorningTea)
 {
