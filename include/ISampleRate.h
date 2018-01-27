@@ -1,8 +1,7 @@
 /*
- * File: SampleRate.h
+ * File: ISampleRate.h
  * -------------
- * This interface exports the SampleRate class, which represents audio
- * sample rate frequency.
+ * Interface for the SampleRate class.
  */
 #ifndef _ISAMPLERATE_H_
 #define _ISAMPLERATE_H_
