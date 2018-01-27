@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
-#include "ISampleRate.h"
+//#include "ISampleRate.h"
 #include "SampleRate.h"
 #include "libString.h"
   
@@ -26,5 +26,5 @@ TEST(SampleRateTest, SrCheck)
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100));
    // EXPECT_CALL(sampleRate, equalTo(_))
-        .WillOnce(Return(true));
+    //    .WillOnce(Return(true));
 }
