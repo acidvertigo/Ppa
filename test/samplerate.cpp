@@ -18,7 +18,7 @@ using ::testing::_;
 // Mocked test
 TEST(ISampleRateTest, SrCheck)
 {
-    ISampleRate::SampleRate  sampleRate(44100);
+    SampleRate  sampleRate(44100);
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100));
     EXPECT_CALL(sampleRate, equalTo(_))

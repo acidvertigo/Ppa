@@ -72,4 +72,9 @@ protected:
  */
    bool operator!=(const ISampleRate &sr1, const ISampleRate &sr2);
 
+/*
+ * Child classes definitions
+ */
+   class Samplerate : public ISampleRate;
+
 #endif /* _ISAMPLERATE_H_ */
