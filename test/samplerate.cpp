@@ -6,7 +6,7 @@
 #include "libString.h"
   
 // Mock class
-class MockSampleRate : virtual SampleRate {
+class MockSampleRate : public SampleRate {
 public:
     MockSampleRate(const int &sampleratec) : SampleRate::SampleRate(sampleratec) {};
     virtual ~MockSampleRate() {};
