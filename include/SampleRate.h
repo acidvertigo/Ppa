@@ -10,7 +10,7 @@
 class SampleRate: public ISampleRate {  
 public:
     SampleRate(const int &);
-    virtual ~SampleRate() override;
+    ~SampleRate() override;
     int getSamplerate() const override;
     bool equalTo(const SampleRate &) const;
     std::string toString() const;
