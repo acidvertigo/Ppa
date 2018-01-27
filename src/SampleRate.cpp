@@ -9,8 +9,6 @@
 
 using namespace std;
 
-class SampleRate: public ISampleRate
-{
 public:
 /*
  * Constructor: SampleRate
@@ -18,24 +16,23 @@ public:
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-  SampleRate(const int &sampleratec) {
+  SampleRate::SampleRate(const int &sampleratec) {
     samplerate = sampleratec;
   }
 
-  ~SampleRate() override { };
+  SampleRate::~SampleRate() override { };
 
-  int getSamplerate() const override {
+  int SampleRate::getSamplerate() const override {
     return samplerate;
   }
 
-  bool equalTo(const SampleRate &other) const {
+  bool SampleRate::equalTo(const SampleRate &other) const {
     return samplerate == other.samplerate;
   }
   
-  std::string toString() const override {
+  std::string SampleRate::toString() const override {
     return NumberToString(samplerate);
   }
-};
 
 bool operator==(const SampleRate &s1, const SampleRate &s2) {
  return s1.equalTo(s2);
