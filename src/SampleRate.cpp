@@ -19,7 +19,7 @@ using namespace std;
     samplerate = sampleratec;
   }
 
-  SampleRate::~SampleRate() = default;
+  virtual SampleRate::~SampleRate();
 
   int SampleRate::getSamplerate() const {
     return samplerate;
