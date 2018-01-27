@@ -53,10 +53,11 @@ protected:
 class SampleRate: public ISampleRate 
 {  
 public:
-  SampleRate(const int &);
-  virtual ~SampleRate() override;
-  int getSamplerate() const override;
-  bool equalTo(const SampleRate &other) const;
+    SampleRate(const int &);
+    virtual ~SampleRate() override;
+    int getSamplerate() const override;
+    bool equalTo(const SampleRate &) const;
+    std::string toString() const override;
 };
 
 //--------------------------------------

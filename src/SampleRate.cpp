@@ -33,6 +33,8 @@ using namespace std;
     return NumberToString(samplerate);
   }
 
+//------------------------------------
+
 bool operator==(const SampleRate &s1, const SampleRate &s2) {
  return s1.equalTo(s2);
 }
