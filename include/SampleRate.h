@@ -18,7 +18,7 @@ public:
     SampleRate(const int &);
     virtual ~SampleRate() override;
     int getSamplerate() const override;
-    bool equalTo(const SampleRate &) const override;
+    bool equalTo(const ISampleRate &) const override;
     std::string toString() const;
 };
 
