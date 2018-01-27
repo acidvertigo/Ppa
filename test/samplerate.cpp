@@ -30,6 +30,7 @@ TEST(SampleRateTest, SrCheck)
 */
 
 class Turtle {
+public:
   virtual ~Turtle() = default;
   virtual void PenUp() = 0;
   virtual void PenDown() = 0;
@@ -43,6 +44,7 @@ class Turtle {
 class MockTurtle : public Turtle {
  public:
   MockTurtle();
+  virtual ~MockTurtle() = default;
   MOCK_METHOD0(PenUp, void());
   MOCK_METHOD0(PenDown, void());
   MOCK_METHOD1(Forward, void(int distance));
