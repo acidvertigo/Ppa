@@ -2,7 +2,7 @@
 #include "gmock/gmock.h"
 
 //#include "ISampleRate.h"
-//#include "SampleRate.h"
+#include "SampleRate.h"
 //#include "libString.h"
   
 // Mock class
