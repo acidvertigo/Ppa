@@ -8,7 +8,7 @@
 // Mock class
 class MockSampleRate : public SampleRate {
 public:
-    MockSampleRate(const int &sampleratec) : SampleRate(sampleratec) {};
+    MockSampleRate(const int &sampleratec) : SampleRate(const int & sampleratec) {};
     virtual ~MockSampleRate() {};
     
     MOCK_METHOD1(SampleRate, int(const int &sampleratec));
