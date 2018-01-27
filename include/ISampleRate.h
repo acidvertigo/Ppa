@@ -28,7 +28,7 @@ public:
  * ----------------------------------
  * Returns true if properties are equal
  */
-   virtual bool equalTo(const ISampleRate &other) const = 0;
+   virtual bool equalTo(const ISampleRate &) const = 0;
 
 /*
  * Method: toString
