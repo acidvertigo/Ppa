@@ -4,7 +4,6 @@
  * This file implements the SampleRate.h interface.
  */
 
-#include "ISampleRate.h"
 #include "SampleRate.h"
 #include "libString.h"
 
