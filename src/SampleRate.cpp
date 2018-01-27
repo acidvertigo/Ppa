@@ -5,7 +5,7 @@
  */
 #include <string>
 #include "ISampleRate.h"
-#incluse "SampleRate.h"
+#include "SampleRate.h"
 #include "libString.h"
 
 using namespace std;
