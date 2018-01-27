@@ -9,9 +9,9 @@ public:
     MockSampleRate(const int &sampleratec) : ISampleRate(sampleratec) {};
     virtual ~MockSampleRate() = default;
 
-    MOCK_METHOD1(ISampleRate, int(const int &sampleratec));
-    MOCK_STATIC_METHOD0(getSamplerate, int());
-    MOCK_STATIC_METHOD0(toString, bool());
+//    MOCK_METHOD1(ISampleRate, int(const int &sampleratec));
+    //MOCK_STATIC_METHOD0(getSamplerate, int());
+  //  MOCK_STATIC_METHOD0(toString, bool());
 };
 
 using ::testing::Return;
