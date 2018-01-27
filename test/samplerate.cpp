@@ -9,7 +9,7 @@
 class MockSampleRate : public SampleRate {
 public:
     MockSampleRate(const int &sampleratec) : SampleRate::SampleRate(sampleratec) {};
-    virtual ~MockSampleRate() : Samplerate::~Samplerate() = default;
+    virtual ~MockSampleRate() = default;
     
     MOCK_METHOD1(SampleRate, int(const int &sampleratec));
     MOCK_METHOD0(getSamplerate, int());
