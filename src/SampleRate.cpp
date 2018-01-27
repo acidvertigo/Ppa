@@ -19,13 +19,13 @@ using namespace std;
     samplerate = sampleratec;
   }
 
-  SampleRate::~SampleRate() { };
+  SampleRate::~SampleRate() override { };
 
-  int SampleRate::getSamplerate() const {
+  int SampleRate::getSamplerate() const override {
     return samplerate;
   }
 
-  bool SampleRate::equalTo(const SampleRate &other) const {
+  bool SampleRate::equalTo(const SampleRate &other) const override {
     return samplerate == other.samplerate;
   }
   
