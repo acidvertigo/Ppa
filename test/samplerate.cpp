@@ -5,7 +5,7 @@
 #include "SampleRate.h"
 #include "libString.h"
 
-using SampleRate;
+using ::SampleRate;
   
 // Mock class
 class MockSampleRate : public SampleRate {
