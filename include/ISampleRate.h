@@ -50,7 +50,14 @@ protected:
 /*
  * Derived classes definitions
  */   
-class SampleRate: public ISampleRate { };
+class SampleRate: public ISampleRate 
+{  
+public:
+  SampleRate(const int &);
+  virtual ~SampleRate() override;
+  int getSamplerate() const override;
+  bool equalTo(const SampleRate &other) const;
+};
 
 //--------------------------------------
 

@@ -9,7 +9,6 @@
 
 using namespace std;
 
-public:
 /*
  * Constructor: SampleRate
  * Usage: Samplerate sr(sampleratec);
