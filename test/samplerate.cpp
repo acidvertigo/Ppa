@@ -5,7 +5,7 @@
 #include "libString.h"
   
 // Mock class
-class MockSampleRate : public ISampleRate
+class MockSampleRate : public SampleRate
 {
 public:
     MOCK_METHOD1(SampleRate, int(const int &sampleratec));
@@ -19,7 +19,7 @@ using ::testing::_;
 // Mocked test
 TEST(ISampleRateTest, SrCheck)
 {
-    SampleRate  sampleRate(44100);
+    MockSampleRate  sampleRate(44100);
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100));
     EXPECT_CALL(sampleRate, equalTo(_))
