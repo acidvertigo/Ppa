@@ -12,20 +12,13 @@ public:
     MOCK_METHOD1(equalTo, bool(const ISampleRate &other));
 };
 
-class AbstractForTest : public ISampleRate {
-    int getSamplerate();
-    int equalTo(const ISampleRate &other);
-    int special();
-};
- 
-
 using ::testing::Return;
 using ::testing::_;
 
 // Mocked test
 TEST(ISampleRateTest, SrCheck)
 {
-    AbstractForTest  sampleRate;
+    SampleRate  sampleRate(44100);
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100));
     EXPECT_CALL(sampleRate, equalTo(_))
