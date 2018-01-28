@@ -27,6 +27,7 @@ TEST(SampleRateTest, SrCheck)
 //---------------------------
 // Operator interface
 class SROperatorInterface {
+public:
   virtual ~SROperatorInterface() = default;
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) = 0;
   virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) = 0;
