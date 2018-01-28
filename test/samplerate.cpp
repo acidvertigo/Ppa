@@ -6,6 +6,7 @@
 using namespace std;
 using namespace Paa;
 
+namespace Test {
 // Mock interface class
 class MockISampleRate : public ISampleRate {
 public:
@@ -64,4 +65,5 @@ TEST(SROperatorTest, SrOperatorCheck)
 
     EXPECT_CALL(opeR, isEqual(opeR, opeR2))
         .WillOnce(Return(true));
+}
 }
