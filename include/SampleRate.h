@@ -10,9 +10,10 @@
 #include <iostream>
 #include "ISampleRate.h"
 
+namespace Paa {
 /*
  * Derived classes definitions
- */   
+ */  
 class SampleRate: public ISampleRate {  
 public:
     SampleRate(const int &);
@@ -52,5 +53,5 @@ friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
  * This operator implements the != operator for sa_plerat3s.
  */
    bool operator!=(const SampleRate &sr1, const SampleRate &sr2);
-
+}
 #endif /* _SAMPLERATE_H_ */

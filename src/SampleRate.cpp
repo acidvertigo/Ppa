@@ -8,6 +8,7 @@
 #include "libString.h"
 
 using namespace std;
+using namespace Paa;
 
 /*
  * Constructor: SampleRate

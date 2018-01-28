@@ -29,6 +29,7 @@ TEST(SampleRateTest, SrCheck)
 class SROperatorInterface {
 public:
   virtual ~SROperatorInterface() = default;
+  virtual bool operator==(const IAm&) = 0;
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) = 0;
   virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) = 0;
   virtual int print(const SampleRate &sr) = 0;
