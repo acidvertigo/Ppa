@@ -4,6 +4,7 @@
 #include "SampleRate.h"
 
 using namespace std;
+using namespace Paa;
 
 // Mock interface class
 class MockISampleRate : public ISampleRate {
