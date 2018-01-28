@@ -41,11 +41,11 @@ public:
     return s1 == s2;
   }
 
-  virtual bool notEqual(const SampleRate &s1, const SampleRate &S2) {
+  virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);  
   }
 
-  virtual std::ostream (ostream & os, const SampleRate &sr) { 
+  virtual std::ostream (ostream &, const SampleRate &sr) { 
     return os << sr;
   }
 };
