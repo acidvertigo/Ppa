@@ -26,12 +26,12 @@ TEST(SampleRateTest, SrCheck)
 
 //---------------------------
 // Operator interface
-class SROperatorInterface : SampleRate {
+class SROperatorInterface {
 public:
   virtual ~SROperatorInterface() = default;
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) = 0;
   virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) = 0;
-  virtual std::ostream print(ostream &, const SampleRate &sr) = 0;
+  virtual std::string print(ostream &, const SampleRate &sr) = 0;
 };
 
 // Mock operator interface class
@@ -54,8 +54,8 @@ public:
 // Mocked interface test
 TEST(SROperatorTest, SrOperatorCheck)
 {
-    SRMockOperator opeRator;
-    SRMockOperator opeRator2;
-    EXPECT_CALL(opeRator, isEqual(opeRator, opeRator2))
+    SRMockOperator opeR;
+    SRMockOperator opeR2;
+    EXPECT_CALL(opeRator, isEqual(opeR, opeR2))
         .WillOnce(Return(true));
 }
