@@ -6,7 +6,7 @@
 // Mock class
 class MockSampleRate : public ISampleRate {
 public:
-    MockSampleRate(const int &sampleratec) : ISampleRate(sampleratec) = default;
+  //  MockSampleRate(const int &sampleratec) : ISampleRate(sampleratec) = default;
     virtual ~MockSampleRate() = default;
 //    MOCK_METHOD1(ISampleRate, int(const int &samplerate
     MOCK_CONST_METHOD0(getSamplerate, int());
@@ -19,7 +19,7 @@ using ::testing::_;
 // Mocked test
 TEST(SampleRateTest, SrCheck)
 {
-    MockSampleRate  sampleRate(44100);
+    MockSampleRate  sampleRate;
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(44100));
    // EXPECT_CALL(sampleRate, equalTo(_))
