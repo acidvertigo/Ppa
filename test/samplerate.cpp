@@ -38,6 +38,7 @@ public:
 class SRMockOperator : public SROperatorInterface {
 public:
   virtual ~SRMockOperator() = default;
+
   bool isEqual(const SampleRate &s1, const SampleRate &s2) {
     return s1 == s2;
   }
@@ -56,6 +57,7 @@ TEST(SROperatorTest, SrOperatorCheck)
 {
     SRMockOperator opeR;
     SRMockOperator opeR2;
-    EXPECT_CALL(opeR, isEqual(opeR, opeR2))
+
+    EXPECT_CALL(opeR, isEqual(_, _))
         .WillOnce(Return(true));
 }
