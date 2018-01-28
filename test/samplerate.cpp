@@ -29,7 +29,7 @@ TEST(SampleRateTest, SrCheck)
 }
 */
 
-class Turtle {
+class ISampleRate {
 public:
   virtual ~Turtle() = default;
   virtual void PenUp() = 0;
@@ -41,10 +41,10 @@ public:
   virtual int GetY() const = 0;
 };
 
-class MockTurtle : public Turtle {
+class MockISampleRate : public ISampleRate {
  public:
  // MockTurtle();
-  virtual ~MockTurtle() = default;
+  virtual ~ISampleRate() = default;
   MOCK_METHOD0(PenUp, void());
   MOCK_METHOD0(PenDown, void());
   MOCK_METHOD1(Forward, void(int distance));
@@ -57,7 +57,7 @@ class MockTurtle : public Turtle {
 using ::testing::AtLeast;                     // #1
 
 TEST(PainterTest, CanDrawSomething) {
-  MockTurtle turtle;                          // #2
+  MockISampleRate turtle;                          // #2
   EXPECT_CALL(turtle, PenDown())              // #3
       .Times(AtLeast(1));
 
