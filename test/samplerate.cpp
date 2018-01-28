@@ -24,3 +24,25 @@ TEST(SampleRateTest, SrCheck)
         .WillOnce(Return(0));
 }
 
+//---------------------------
+class SROperatorInterface {
+  virtual bool operator==(const SampleRate &s1, const SampleRate &s2) = 0;
+  virtual bool operator!=(const SampleRate &s1, const SampleRate &s2) = 0;
+  virtual std::ostream & operator<<(ostream & os, const SampleRate &sr) = 0;
+};
+
+class SRMockOperator : SROperatorInterface {
+public:
+  virtual bool operator==(const SampleRate &s1, const SampleRate &s2) {
+    return s1.samplerate == s2.samplerate;
+  }
+
+  virtual bool operator!=(const SampleRate &s1, const SampleRate &s2) {
+    return !(s1 == s2);  
+  }
+
+  virtual std::ostream & operator<<(ostream & os, const SampleRate &sr) { 
+    return os << sr.toString();
+  }
+};
+
