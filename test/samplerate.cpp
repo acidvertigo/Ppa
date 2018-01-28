@@ -40,20 +40,20 @@ public:
   virtual ~SRMockOperator() = default;
   MOCK_METHOD2(isEqual, bool(const SampleRate &s1, const SampleRate &s2));
   MOCK_METHOD2(notEqual, bool(const SampleRate &s1, const SampleRate &s2));
-  MOCK_METHOD1(print, int(const SampleRate &sr)); 
- 
-  bool isEqual(const SampleRate &s1, const SampleRate &s2) {
+  MOCK_METHOD1(print, int(const SampleRate &sr));
+};
+
+  bool SRMockOperator::isEqual(const SampleRate &s1, const SampleRate &s2) {
     return s1 == s2;
   }
 
-  bool notEqual(const SampleRate &s1, const SampleRate &s2) {
+  bool SRMockOperator::notEqual(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);  
   }
 
-  int print(const SampleRate &sr) { 
+  int SRMockOperator::print(const SampleRate &sr) { 
     cout << sr << endl;
   }
-};
 // Mocked interface test
 TEST(SROperatorTest, SrOperatorCheck)
 {
