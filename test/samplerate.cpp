@@ -45,7 +45,7 @@ public:
   MOCK_METHOD1(print, int(const SampleRate &sr));
 };
 
-  bool isEqual(const SampleRate &s1, const SampleRate &s2) {
+  bool isEqual(const Paa::SampleRate &s1, const Paa::SampleRate &s2) {
     return s1 == s2;
   }
 
