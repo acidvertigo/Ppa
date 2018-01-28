@@ -56,6 +56,6 @@ TEST(SROperatorTest, SrOperatorCheck)
 {
     SRMockOperator opeR;
     SRMockOperator opeR2;
-    EXPECT_CALL(opeRator, isEqual(opeR, opeR2))
+    EXPECT_CALL(opeR, isEqual(opeR, opeR2))
         .WillOnce(Return(true));
 }
