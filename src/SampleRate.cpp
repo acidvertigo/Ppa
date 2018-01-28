@@ -8,7 +8,8 @@
 #include "libString.h"
 
 using namespace std;
-using namespace Paa;
+
+namespace Paa {
 
 /*
  * Constructor: SampleRate
@@ -42,4 +43,5 @@ bool operator!=(const SampleRate &s1, const SampleRate &s2) {
 
 std::ostream & operator<<(ostream & os, const SampleRate &sr) {
  return os << sr.toString();
+}
 }
