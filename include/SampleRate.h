@@ -24,7 +24,7 @@ protected:
     int samplerate; /* samplerate in Hz */
   
 friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
-friend std::ostream & operator<<(std::ostream & os, const SampleRate &sr);
+
 };
 
 //--------------------------------------

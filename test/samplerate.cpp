@@ -35,7 +35,7 @@ public:
 };
 
 // Mock operator interface class
-class SRMockOperator : SROperatorInterface {
+class SRMockOperator : SROperatorInterface, SampleRate {
 public:
   virtual ~SRMockOperator() = default;
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) {
