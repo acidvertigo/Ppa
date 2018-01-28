@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-
+#include "ISampleRate.h"
 #include "ISampleRate.h"
 
 using namespace std;
