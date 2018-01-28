@@ -3,16 +3,15 @@
 
 #include "ISampleRate.h"
 
-/*
 // Mock class
 class MockSampleRate : public ISampleRate {
 public:
     MockSampleRate(const int &sampleratec) : ISampleRate(sampleratec) {};
     virtual ~MockSampleRate() = default;
 
-//    MOCK_METHOD1(ISampleRate, int(const int &sampleratec));
-    //MOCK_STATIC_METHOD0(getSamplerate, int());
-  //  MOCK_STATIC_METHOD0(toString, bool());
+//    MOCK_METHOD1(ISampleRate, int(const int &samplerate
+    MOCK_STATIC_METHOD0(getSamplerate, int());
+   MOCK_STATIC_METHOD0(toString, bool());
 };
 
 using ::testing::Return;
@@ -27,8 +26,8 @@ TEST(SampleRateTest, SrCheck)
    // EXPECT_CALL(sampleRate, equalTo(_))
     //    .WillOnce(Return(true));
 }
-*/
 
+/*
 class ISampleRate {
 public:
   virtual ~Turtle() = default;
@@ -66,7 +65,6 @@ TEST(PainterTest, CanDrawSomething) {
 //  EXPECT_TRUE(painter.DrawCircle(0, 0, 10));
 }                                             // #5
 
-/*
 int main(int argc, char** argv) {
   // The following line must be executed to initialize Google Mock
   // (and Google Test) before running the tests.
