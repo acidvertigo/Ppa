@@ -46,8 +46,8 @@ public:
     return !(s1 == s2);  
   }
 
-  virtual std::ostream (ostream &, const SampleRate &sr) { 
-    return os << sr;
+  virtual std::ostream print(const SampleRate &sr) { 
+    return cout << sr;
   }
 };
 
