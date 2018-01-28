@@ -10,7 +10,6 @@
 using namespace std;
 
 namespace Paa {
-
 /*
  * Constructor: SampleRate
  * Usage: Samplerate sr(sampleratec);
@@ -33,15 +32,15 @@ namespace Paa {
 
 //------------------------------------
 
-bool operator==(const SampleRate &s1, const SampleRate &s2) {
- return s1.samplerate == s2.samplerate;
-}
+  bool operator==(const SampleRate &s1, const SampleRate &s2) {
+    return s1.samplerate == s2.samplerate;
+  }
 
-bool operator!=(const SampleRate &s1, const SampleRate &s2) {
- return !(s1 == s2);
-}
+  bool operator!=(const SampleRate &s1, const SampleRate &s2) {
+    return !(s1 == s2);
+  }
 
-std::ostream & operator<<(ostream & os, const SampleRate &sr) {
- return os << sr.toString();
-}
+  std::ostream & operator<<(ostream & os, const SampleRate &sr) {
+    return os << sr.toString();
+  }
 }

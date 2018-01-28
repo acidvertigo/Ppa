@@ -45,15 +45,15 @@ public:
   MOCK_METHOD1(print, int(const SampleRate &sr));
 };
 
-  bool SRMockOperator::isEqual(const SampleRate &s1, const SampleRate &s2) {
+  bool isEqual(const SampleRate &s1, const SampleRate &s2) {
     return s1 == s2;
   }
 
-  bool SRMockOperator::notEqual(const SampleRate &s1, const SampleRate &s2) {
+  bool notEqual(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);  
   }
 
-  int SRMockOperator::print(const SampleRate &sr) { 
+  int print(const SampleRate &sr) { 
     cout << sr << endl;
   }
 // Mocked interface test
