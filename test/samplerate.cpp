@@ -3,14 +3,14 @@
 
 #include "ISampleRate.h"
 
-using std;
+using ::std;
 
 // Mock class
 class MockSampleRate : public ISampleRate {
 public:
     virtual ~MockSampleRate() = default;
     MOCK_CONST_METHOD0(getSamplerate, int());
-    MOCK_CONST_METHOD0(toString, std::string());
+    MOCK_CONST_METHOD0(toString, string());
 };
 
 using ::testing::Return;
