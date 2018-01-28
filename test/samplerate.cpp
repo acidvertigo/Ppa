@@ -3,7 +3,7 @@
 
 #include "ISampleRate.h"
 
-using ::std;
+using namespace std;
 
 // Mock class
 class MockSampleRate : public ISampleRate {
