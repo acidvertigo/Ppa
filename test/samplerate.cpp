@@ -38,15 +38,15 @@ public:
 class SRMockOperator : public SROperatorInterface {
 public:
   virtual ~SRMockOperator() = default;
-  virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) {
+  bool isEqual(const SampleRate &s1, const SampleRate &s2) {
     return s1 == s2;
   }
 
-  virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) {
+  bool notEqual(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);  
   }
 
-  virtual int print(const SampleRate &sr) { 
+  int print(const SampleRate &sr) { 
     cout << sr;
   }
 };
