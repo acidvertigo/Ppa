@@ -43,7 +43,7 @@ public:
   MOCK_METHOD2(isEqual, bool(const SampleRate &s1, const SampleRate &s2));
   MOCK_METHOD2(notEqual, bool(const SampleRate &s1, const SampleRate &s2));
   MOCK_METHOD1(print, int(const SampleRate &sr));
-  bool isEqual(const Paa::SampleRate &s1, const Paa::SampleRate &s2) {
+  virtual bool isEqual(const Paa::SampleRate &s1, const Paa::SampleRate &s2) {
     return s1 == s2;
   }
 };
