@@ -48,3 +48,11 @@ public:
   }
 };
 
+// Mocked interface test
+TEST(SROperatorTestTest, SrOperatorCheck)
+{
+    SRMockOperator opeRator;
+    SRMockOperator2 opeRator2;
+    EXPECT_CALL(opeRator, isEqual(opeRator, opeRator2))
+        .WillOnce(Return(true));
+}
