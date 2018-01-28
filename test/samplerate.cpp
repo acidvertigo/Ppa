@@ -31,7 +31,7 @@ public:
   virtual ~SROperatorInterface() = default;
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) = 0;
   virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) = 0;
-  virtual std::ostream print(const SampleRate &sr) = 0;
+  virtual int print(const SampleRate &sr) = 0;
 };
 
 // Mock operator interface class
@@ -46,8 +46,8 @@ public:
     return !(s1 == s2);  
   }
 
-  virtual std::ostream print(const SampleRate &sr) { 
-    return cout << sr;
+  virtual int print(const SampleRate &sr) { 
+    cout << sr;
   }
 };
 
