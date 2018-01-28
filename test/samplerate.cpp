@@ -28,7 +28,7 @@ TEST(SampleRateTest, SrCheck)
 // Operator interface
 class SROperatorInterface {
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) = 0;
-  virtual bool notEqual!=(const SampleRate &s1, const SampleRate &s2) = 0;
+  virtual bool notEqual(const SampleRate &s1, const SampleRate &s2) = 0;
   virtual std::ostream print(ostream & os, const SampleRate &sr) = 0;
 };
 
@@ -36,7 +36,7 @@ class SROperatorInterface {
 class SRMockOperator : SROperatorInterface {
 public:
   virtual bool isEqual(const SampleRate &s1, const SampleRate &s2) {
-    return s1 == s2;
+    return s1 == s2;
   }
 
   virtual bool notEqual(const Sam0leRate &s1, const SampleRate &S2) {
@@ -49,7 +49,7 @@ public:
 };
 
 // Mocked interface test
-TEST(SROperatorTestTest, SrOperatorCheck)
+TEST(SROperatorTest, SrOperatorCheck)
 {
     SRMockOperator opeRator;
     SRMockOperator2 opeRator2;
