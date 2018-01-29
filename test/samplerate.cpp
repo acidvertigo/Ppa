@@ -2,8 +2,7 @@
 #include "gmock/gmock.h"
 #include "SampleRate.h"
 
-using namespace std;
-using namespace Ppa;
+using namespace ::Ppa;
 
 using ::testing::Return;
 using ::testing::_;
