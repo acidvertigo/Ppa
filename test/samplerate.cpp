@@ -11,7 +11,7 @@ using ::testing::_;
 // SampleRate Class test 
 TEST(SampleRateTest, getSampleRate)
 {
-    SampleRate sr(44100);
+    Paa::SampleRate sr(44100);
     ASSERT_EQ(sr.getSampleRate(), 44100);
 }
 
