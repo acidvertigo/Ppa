@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
+#include "ISampleRate.h"
 #include "SampleRate.h"
 
 using namespace ::Ppa;
