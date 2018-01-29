@@ -10,7 +10,7 @@ namespace Test {
 // Mock interface class
 class MockISampleRate : public ISampleRate {
 public:
-    MockISampleRate(int sampleratec);
+    MockISampleRate(const int &sampleratec) : ISamplerate::ISampleRate(cost int &sampleratec);                                   
     virtual ~MockISampleRate() = default;
     MOCK_CONST_METHOD0(getSamplerate, int());
     MOCK_CONST_METHOD0(toString, string());
