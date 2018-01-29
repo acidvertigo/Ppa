@@ -31,11 +31,8 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
+file(GLOB SRCS *.cpp)
+add_executable(testfoo ${SRCS})
 
-add_executable(example example.cpp)
-target_link_libraries(example gmock_main)
-add_test(NAME example_test COMMAND example)
-
-add_executable(samplerate samplerate.cpp)
 target_link_libraries(samplerate gmock_main)
 add_test(NAME samplerate_test COMMAND samplerate)
