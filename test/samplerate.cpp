@@ -3,7 +3,7 @@
 #include "SampleRate.h"
 
 using namespace std;
-using namespace Paa::SampleRa;
+using namespace Paa::SampleRate;
 
 using ::testing::Return;
 using ::testing::_;
