@@ -10,6 +10,7 @@ namespace Test {
 // Mock interface class
 class MockISampleRate : public ISampleRate {
 public:
+    MockISampleRate(int sampleratec);
     virtual ~MockISampleRate() = default;
     MOCK_CONST_METHOD0(getSamplerate, int());
     MOCK_CONST_METHOD0(toString, string());
@@ -21,9 +22,9 @@ using ::testing::_;
 // Mocked interface test
 TEST(SampleRateTest, SrCheck)
 {
-    MockISampleRate  sampleRate;
+    MockISampleRate  sampleRate(44100);
     EXPECT_CALL(sampleRate, getSamplerate())
-        .WillOnce(Return(0));
+        .WillOnce(Return(44100));
   /*
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return("0"));
