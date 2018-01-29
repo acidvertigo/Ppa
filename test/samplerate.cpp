@@ -12,7 +12,7 @@ using ::testing::_;
 TEST(SampleRateTest, getSampleRate)
 {
     SampleRate sr(44100);
-    ASSERT_EQ(sr.getSampleRate(); 44100);
+    ASSERT_EQ(sr.getSampleRate(), 44100);
 }
 
 //---------------------------
