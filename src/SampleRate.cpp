@@ -9,7 +9,7 @@
 
 using namespace std;
 
-namespace Paa {
+namespace Ppa {
 /*
  * Constructor: SampleRate
  * Usage: Samplerate sr(sampleratec);
