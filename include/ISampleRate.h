@@ -8,7 +8,7 @@
 
 #include <string>
 
-namespace Paa {
+namespace Ppa {
 class ISampleRate {
   
 public:

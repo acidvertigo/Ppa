@@ -10,7 +10,7 @@
 #include <iostream>
 #include "ISampleRate.h"
 
-namespace Paa {
+namespace Ppa {
 /*
  * Derived classes definitions
  */  
