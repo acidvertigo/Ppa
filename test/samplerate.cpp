@@ -9,8 +9,7 @@ using namespace Paa;
 namespace Test {
 // Mock interface class
 class MockISampleRate : public ISampleRate {
-public:
-    MockISampleRate(const int &sampleratec) : ISamplerate::ISampleRate(cost int &sampleratec);                                   
+public:                                
     virtual ~MockISampleRate() = default;
     MOCK_CONST_METHOD0(getSamplerate, int());
     MOCK_CONST_METHOD0(toString, string());
@@ -22,8 +21,9 @@ using ::testing::_;
 // Mocked interface test
 TEST(SampleRateTest, SrCheck)
 {
-    MockISampleRate  sampleRate(44100);
-    EXPECT_CALL(sampleRate, getSamplerate())
+    SampleRate sr(44100);
+    MockISampleRate  sampleRate;
+    EXPECT_CALL(sr, getSamplerate())
         .WillOnce(Return(44100));
   /*
     EXPECT_CALL(sampleRate, getSamplerate())
