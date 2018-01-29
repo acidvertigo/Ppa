@@ -69,5 +69,5 @@ TEST(SROperatorTest, SrOperatorCheck)
     EXPECT_CALL(opeR, Equals(opeR2))
         .WillOnce(Return(true));
 }
-}
 */
+}
