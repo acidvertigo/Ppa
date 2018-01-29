@@ -32,7 +32,7 @@ endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
 file(GLOB SRCS *.cpp)
-add_executable(testfoo ${SRCS})
+add_executable(samplerate ${SRCS})
 
 target_link_libraries(samplerate gmock_main)
-add_test(NAME samplerate_test COMMAND samplerate)
+ add_test(NAME samplerate_test COMMAND samplerate)
