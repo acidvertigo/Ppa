@@ -3,7 +3,7 @@
 #include "SampleRate.h"
 
 using namespace std;
-using namespace Paa::SampleRate;
+using namespace Paa;
 
 using ::testing::Return;
 using ::testing::_;
@@ -12,7 +12,7 @@ using ::testing::_;
 TEST(SampleRateTest, getSampleRate)
 {
     Paa::SampleRate sr(44100);
-    int value = sr.getSampleRate();
+    int value = sr.getSamplerate();
     ASSERT_EQ(value, 44100);
 }
 
