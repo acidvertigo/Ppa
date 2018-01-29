@@ -5,8 +5,6 @@
 using namespace std;
 using namespace Paa;
 
-namespace Test {
-
 using ::testing::Return;
 using ::testing::_;
 
@@ -57,4 +55,3 @@ TEST(SROperatorTest, SrOperatorCheck)
         .WillOnce(Return(true));
 }
 */
-}
