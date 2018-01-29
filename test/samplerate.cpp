@@ -7,28 +7,15 @@ using namespace std;
 using namespace Paa;
 
 namespace Test {
-// Mock interface class
-class MockISampleRate : public ISampleRate {
-public:                                
-    virtual ~MockISampleRate() = default;
-    MOCK_CONST_METHOD0(getSamplerate, int());
-    MOCK_CONST_METHOD0(toString, string());
-};
 
 using ::testing::Return;
 using ::testing::_;
 
-// Mocked interface test
-TEST(SampleRateTest, SrCheck)
+// SampleRate Class test 
+TEST(SampleRateTest, getSampleRate)
 {
     SampleRate sr(44100);
-    MockISampleRate  sampleRate;
-    EXPECT_CALL(sr, getSamplerate())
-        .WillOnce(Return(44100));
-  /*
-    EXPECT_CALL(sampleRate, getSamplerate())
-        .WillOnce(Return("0"));
-  */
+    ASSERT_EQ(sr.getSampleRate(); 44100);
 }
 
 //---------------------------
