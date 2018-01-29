@@ -14,9 +14,3 @@ TEST(SampleRateTest, getSampleRate)
     int value = sr.getSamplerate();
     ASSERT_EQ(value, 44100);
 }
-
-TEST(SampleRateTest, toString)
-{
-    SampleRate sr(44100);
-    ASSERT_EQ(sr.toString(), "44100");
-}
