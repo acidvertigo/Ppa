@@ -34,7 +34,7 @@ endif()
 file(GLOB SRCS *.cpp)
 add_executable(samplerate ${SRCS})
 
-target_link_libraries(example samplerate gmock_main)
+target_link_libraries(samplerate gmock_main)
 
 add_test(NAME example_test COMMAND example)
 add_test(NAME samplerate_test COMMAND samplerate)
