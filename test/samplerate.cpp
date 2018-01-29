@@ -24,6 +24,8 @@ TEST(SampleRateTest, SrCheck)
     MockISampleRate  sampleRate;
     EXPECT_CALL(sampleRate, getSamplerate())
         .WillOnce(Return(0));
+    EXPECT_CALL(sampleRate, getSamplerate())
+        .WillOnce(Return("0"));
 }
 
 //---------------------------
