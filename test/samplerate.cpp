@@ -4,7 +4,7 @@
 #include "SampleRate.h"
 
 //using namespace ::Ppa;
-namespace {
+//namespace {
 
 // SampleRate Class test 
 TEST(SampleRateTest, getSampleRate)
@@ -13,4 +13,4 @@ TEST(SampleRateTest, getSampleRate)
     int value = sr.getSamplerate();
     ASSERT_EQ(value, 44100);
 }
-}
+//}
