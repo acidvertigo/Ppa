@@ -13,4 +13,4 @@ TEST(SampleRateTest, getSampleRate)
     int value = sr.getSamplerate();
     ASSERT_EQ(value, 44100);
 }
-//}
+}
