@@ -1,7 +1,7 @@
+#include "SampleRate.h"
 #include "gtest/gtest.h"
 //#include "gmock/gmock.h"
 
-#include "SampleRate.h"
 
 //using namespace ::Ppa;
 //namespace {
