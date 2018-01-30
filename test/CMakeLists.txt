@@ -2,13 +2,13 @@
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
   RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/test/googletest-download )
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
 if(result)
   message(FATAL_ERROR "CMake step for googletest failed: ${result}")
 endif()
 execute_process(COMMAND ${CMAKE_COMMAND} --build .
   RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/test/googletest-download )
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
 if(result)
   message(FATAL_ERROR "Build step for googletest failed: ${result}")
 endif()
@@ -30,6 +30,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
+# Now simply link against gtest or gtest_main as needed. Eg
 add_executable(samplerate samplerate.cpp)
-target_link_libraries(samplerate googletest gtest_main)
+target_link_libraries(samplerate gtest_main)
 add_test(NAME samplerate_test COMMAND samplerate)
