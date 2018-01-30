@@ -10,7 +10,7 @@
 #include <iostream>
 #include "ISampleRate.h"
 
-namespace Ppa {
+//namespace Ppa {
 /*
  * Derived classes definitions
  */  
@@ -53,5 +53,5 @@ friend bool operator==(const SampleRate &, const SampleRate &);
  * This operator implements the != operator for sa_plerat3s.
  */
    bool operator!=(const SampleRate &, const SampleRate &);
-}
+//}
 #endif /* _SAMPLERATE_H_ */

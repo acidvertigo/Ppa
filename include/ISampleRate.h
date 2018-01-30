@@ -8,7 +8,7 @@
 
 #include <string>
 
-namespace Ppa {
+//namespace Ppa {
 class ISampleRate {
   
 public:
@@ -31,5 +31,5 @@ public:
  */
    virtual std::string toString() const = 0;
 };  
-}
+//}
 #endif /* _ISAMPLERATE_H_ */
