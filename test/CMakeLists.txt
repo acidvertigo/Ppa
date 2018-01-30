@@ -31,6 +31,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 add_executable(samplerate samplerate.cpp)
-target_link_libraries(samplerate gmock_main)
+target_link_libraries(samplerate gtest_main)
 
 add_test(NAME samplerate COMMAND samplerate)
