@@ -24,7 +24,7 @@ public:
 protected:
     int samplerate; /* samplerate in Hz */
   
-friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
+friend bool operator==(const SampleRate &, const SampleRate &);
 
 };
 
@@ -36,7 +36,7 @@ friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream & os, const SampleRate &sr);
+   std::ostream & operator<<(std::ostream &, const SampleRate &);
 
 /*
  * Operator: ==
@@ -44,7 +44,7 @@ friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
  * -----------------
  * This operator supports equality testing for samplerates.
  */
-   bool operator==(const SampleRate &sr1, const SampleRate &sr2);
+   bool operator==(const SampleRate &, const SampleRate &);
 
 /*
  * Operator: !=
@@ -52,6 +52,6 @@ friend bool operator==(const SampleRate &sr1, const SampleRate &sr2);
  * -----------------
  * This operator implements the != operator for sa_plerat3s.
  */
-   bool operator!=(const SampleRate &sr1, const SampleRate &sr2);
+   bool operator!=(const SampleRate &, const SampleRate &);
 }
 #endif /* _SAMPLERATE_H_ */

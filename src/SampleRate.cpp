@@ -32,14 +32,14 @@ using namespace std;
 
 //------------------------------------
 
-  bool operator==(const Ppa::SampleRate &s1, const Ppa::SampleRate &s2) {
+  bool operator==(const SampleRate &s1, const SampleRate &s2) {
     return s1.samplerate == s2.samplerate;
   }
 
-  bool operator!=(const Ppa::SampleRate &s1, const Ppa::SampleRate &s2) {
+  bool operator!=(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);
   }
 
-  std::ostream & operator<<(ostream & os, const Ppa::SampleRate &sr) {
+  std::ostream & operator<<(ostream & os, const SampleRate &sr) {
     return os << sr.toString();
   }
