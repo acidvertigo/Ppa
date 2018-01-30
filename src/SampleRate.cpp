@@ -16,7 +16,7 @@ using namespace std;
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-  SampleRate::SampleRate(const int &sampleratec) : samplerate(0) {
+  SampleRate::SampleRate(const int &sampleratec) {
     samplerate = sampleratec;
   }
 
