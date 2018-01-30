@@ -129,7 +129,7 @@ add_subdirectory(test)
 #-------------------------------------------------------------------------------
 
 # Set additional include directories
-include_directories(${INCLUDE_DIRS})
+# include_directories(${INCLUDE_DIRS})
 
 # Generate the executable
 add_executable(${TARGET_NAME} ${SOURCE_FILES} ${RESOURCES})
