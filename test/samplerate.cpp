@@ -3,7 +3,7 @@
 #include "ISampleRate.h"
 #include "SampleRate.h"
 
-using ::Ppa;
+using namespace ::Ppa;
 using ::testing::Return;
 using ::testing::_;
 
