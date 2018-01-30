@@ -30,20 +30,16 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-# Now simply link against gtest or gtest_main as needed. Eg
-# file(GLOB SRCS *.cpp)
-# add_executable(samplerate ${SRCS})
-
-# target_link_libraries(samplerate gmock_main)
-
-
-# add_test(NAME samplerate_test COMMAND samplerate)
-
-# add_executable(example example.cpp)
-# target_link_libraries(example gmock_main)
-# add_test(NAME example_test COMMAND example)
-add_dependencies(gmock googletest)
-
 add_executable(samplerate samplerate.cpp)
 target_link_libraries(samplerate gmock_main)
-add_test(NAME samplerate_test COMMAND samplerate)
+gtest_add_tests(TARGET      samplerate
+                TEST_SUFFIX .noArgs
+                TEST_LIST   noArgsTests
+)
+gtest_add_tests(TARGET      samplerate
+                EXTRA_ARGS  --someArg someValue
+                TEST_SUFFIX .withArgs
+                TEST_LIST   withArgsTests
+)
+set_tests_properties(${noArgsTests}   PROPERTIES TIMEOUT 10)
+set_tests_properties(${withArgsTests} PROPERTIES TIMEOUT 20)
