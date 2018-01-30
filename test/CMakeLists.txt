@@ -32,14 +32,5 @@ endif()
 
 add_executable(samplerate samplerate.cpp)
 target_link_libraries(samplerate gmock_main)
-gtest_add_tests(TARGET      samplerate
-                TEST_SUFFIX .noArgs
-                TEST_LIST   noArgsTests
-)
-gtest_add_tests(TARGET      samplerate
-                EXTRA_ARGS  --someArg someValue
-                TEST_SUFFIX .withArgs
-                TEST_LIST   withArgsTests
-)
-set_tests_properties(${noArgsTests}   PROPERTIES TIMEOUT 10)
-set_tests_properties(${withArgsTests} PROPERTIES TIMEOUT 20)
+
+add_test(NAME samplerate COMMAND samplerate)
