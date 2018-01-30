@@ -16,7 +16,7 @@
  */  
 class SampleRate : public ISampleRate {  
 public:
-    SampleRate(const int &samplerate);
+    SampleRate(sampleratec);
     virtual ~SampleRate() override;
     int getSamplerate() const override;
     std::string toString() const;
