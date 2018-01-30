@@ -7,9 +7,9 @@
 #include "SampleRate.h"
 #include "libString.h"
 
+using namespace Ppa;
 using namespace std;
 
-namespace Ppa {
 /*
  * Constructor: SampleRate
  * Usage: Samplerate sr(sampleratec);
@@ -43,4 +43,3 @@ namespace Ppa {
   std::ostream & operator<<(ostream & os, const SampleRate &sr) {
     return os << sr.toString();
   }
-}
