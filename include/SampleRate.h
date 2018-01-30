@@ -9,7 +9,6 @@
 
 #include <iostream>
 #include "ISampleRate.h"
-#include "SampleRate.h"
 
 //namespace Ppa {
 /*
