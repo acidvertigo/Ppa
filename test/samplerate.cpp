@@ -9,7 +9,7 @@
 // SampleRate Class test 
 TEST(SampleRateTest, getSampleRate)
 {
-    SampleRate sr(44100);
+    SampleRate sr;
     int value = sr.getSamplerate();
     ASSERT_EQ(value, 44100);
 }
