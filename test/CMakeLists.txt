@@ -32,5 +32,4 @@ endif()
 
 add_executable(samplerate samplerate.cpp)
 target_link_libraries(samplerate gtest_main)
-
 add_test(NAME samplerate COMMAND samplerate)
