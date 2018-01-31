@@ -128,5 +128,7 @@ INCLUDE(InstallRequiredSystemLibraries)
 #	TEST
 #-------------------------------------------------------------------------------
 
-enable_testing()
-add_subdirectory(test)
+if (BUILD_TESTS)
+ enable_testing()
+ add_subdirectory(test)
+endif()
