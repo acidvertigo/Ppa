@@ -95,7 +95,7 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 #-------------------------------------------------------------------------------
 
 # list(APPEND LIBRARIES
-# 
+#
 # )
 # 
 # # Remove duplicate library dependencies. 
