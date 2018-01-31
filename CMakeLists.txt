@@ -118,13 +118,6 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 include_directories(${INCLUDE_DIRS})
 
 #-------------------------------------------------------------------------------
-#	TEST
-#-------------------------------------------------------------------------------
-
-enable_testing()
-add_subdirectory(test)
-
-#-------------------------------------------------------------------------------
 #	GENERATE EXECUTABLE
 #-------------------------------------------------------------------------------
 
@@ -142,3 +135,10 @@ set_target_properties(${TARGET_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE
 
 INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION bin)
 INCLUDE(InstallRequiredSystemLibraries)
+
+#-------------------------------------------------------------------------------
+#	TEST
+#-------------------------------------------------------------------------------
+
+enable_testing()
+add_subdirectory(test)
