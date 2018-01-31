@@ -1,8 +1,11 @@
 # Ignore the build and lib dirs
+!build/
 build/*
+!lib/
 lib/*
 
 # Ignore any executables
+!bin/
 bin/*
 
 # Ignore Mac specific files
