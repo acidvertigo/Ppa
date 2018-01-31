@@ -31,6 +31,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(samplerate samplerate.cpp)
+file(GLOB TEST_SRC_FILES *.cpp)
+add_executable(runUnitTests ${TEST_SRC_FILES})
 target_link_libraries(samplerate gtest_main)
 add_test(NAME samplerate_test COMMAND samplerate)

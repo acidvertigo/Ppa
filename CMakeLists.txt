@@ -20,7 +20,7 @@ list(APPEND HEADER_FILES
 #src/SampleRate.cpp
 #)
 
-file(GLOB SOURCE_FILES "src/*.cpp")
+file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 # on windows, append headers to source so they show up in visual studio
 if(WIN32)
