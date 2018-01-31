@@ -128,6 +128,6 @@ INCLUDE(InstallRequiredSystemLibraries)
 #-------------------------------------------------------------------------------
 #	TEST
 #-------------------------------------------------------------------------------
-if(BUILD_TESTING)
+# if(BUILD_TESTING)
  add_subdirectory(test)
-endif()
+# endif()
