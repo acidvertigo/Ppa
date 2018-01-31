@@ -115,7 +115,7 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 #-------------------------------------------------------------------------------
 #	SET ADDICTIONAL INCLUDE DIRECTORIES
 #-------------------------------------------------------------------------------
-include_directories(${INCLUDE_DIRS})
+# include_directories(${INCLUDE_DIRS})
 
 #-------------------------------------------------------------------------------
 #	TEST
