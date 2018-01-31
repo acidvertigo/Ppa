@@ -37,10 +37,14 @@ PROJECT(${PROJECT_NAME})
 #-------------------------------------------------------------------------------
 #	SOURCE CODE
 #-------------------------------------------------------------------------------
+
+# set additional include directories
 set(INCLUDE_DIRS 
   ${PROJECT_SOURCE_DIR}/include
   ${PROJECT_SOURCE_DIR}/include/common/utils
 )
+
+# loads source files
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 # on windows, append headers to source so they show up in visual studio

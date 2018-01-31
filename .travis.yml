@@ -22,9 +22,11 @@ script:
   - mkdir build
   - mkdir build/Debug && mkdir build/Release
   - cd build/Debug
-  - cmake -D CMAKE_BUILD_TYPE=Debug ../../ && make
+  - cmake -D CMAKE_BUILD_TYPE=Debug ../../
+  - make
   - ctest
   - cd ../Release
-  - cmake -D CMAKE_BUILD_TYPE=Release ../../ && make
+  - cmake -D CMAKE_BUILD_TYPE=Release ../../ 
+  - make
   - ctest
   - cppcheck --force -ibuild/Debug/googletest-src/ -ibuild/Release/googletest-src/ --quiet --error-exitcode=1 ../../
