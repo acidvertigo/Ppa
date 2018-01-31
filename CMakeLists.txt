@@ -53,9 +53,9 @@ PROJECT(${PROJECT_NAME})
 #	RESOURCES
 #-------------------------------------------------------------------------------
 
-#list(APPEND RESOURCES
+list(APPEND RESOURCES
 #resources/resources.rc
-#)
+)
 
 #-------------------------------------------------------------------------------
 #	COMPILE FLAGS
