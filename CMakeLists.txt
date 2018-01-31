@@ -43,6 +43,7 @@ set(INCLUDE_DIRS
   ${PROJECT_SOURCE_DIR}/include
   ${PROJECT_SOURCE_DIR}/include/common/utils
 )
+message(status "iljde dir is ${PROJECT_SOURCE_DIR}/include")
 
 # loads source files
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
