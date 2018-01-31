@@ -6,20 +6,6 @@ cmake_minimum_required(VERSION 3.9)
 SET(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 #-------------------------------------------------------------------------------
-#	SOURCE CODE
-#-------------------------------------------------------------------------------
-set(INCLUDE_DIRS 
-  ${PROJECT_SOURCE_DIR}/include
-  ${PROJECT_SOURCE_DIR}/include/common/utils
-)
-file(GLOB SOURCE_FILES "src/*.cpp")
-
-# on windows, append headers to source so they show up in visual studio
-if(WIN32)
-	LIST(APPEND SOURCE_FILES ${HEADER_FILES})
-endif()
-
-#-------------------------------------------------------------------------------
 #	PROJECT SETTINGS
 #-------------------------------------------------------------------------------
 
@@ -47,6 +33,20 @@ endif()
 
 # Set the project name
 PROJECT(${PROJECT_NAME})
+
+#-------------------------------------------------------------------------------
+#	SOURCE CODE
+#-------------------------------------------------------------------------------
+set(INCLUDE_DIRS 
+  ${PROJECT_SOURCE_DIR}/include
+  ${PROJECT_SOURCE_DIR}/include/common/utils
+)
+file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+
+# on windows, append headers to source so they show up in visual studio
+if(WIN32)
+	LIST(APPEND SOURCE_FILES ${HEADER_FILES})
+endif()
 
 #-------------------------------------------------------------------------------
 #	RESOURCES
