@@ -83,6 +83,7 @@ set(APPLICATION_NAME ${TARGET_NAME})
 set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
+# enable_testing()
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
@@ -127,8 +128,6 @@ INCLUDE(InstallRequiredSystemLibraries)
 #-------------------------------------------------------------------------------
 #	TEST
 #-------------------------------------------------------------------------------
-
-if (BUILD_TESTS)
- enable_testing()
+if(BUILD_TESTING)
  add_subdirectory(test)
 endif()
