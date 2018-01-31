@@ -12,7 +12,7 @@ set(INCLUDE_DIRS
   ${PROJECT_SOURCE_DIR}/include
   ${PROJECT_SOURCE_DIR}/include/common/utils
 )
-file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+file(GLOB SOURCE_FILES "src/*.cpp")
 list(REMOVE_ITEM SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 # on windows, append headers to source so they show up in visual studio
@@ -53,9 +53,9 @@ PROJECT(${PROJECT_NAME})
 #	RESOURCES
 #-------------------------------------------------------------------------------
 
-list(APPEND RESOURCES
+# list(APPEND RESOURCES
 #resources/resources.rc
-)
+# )
 
 #-------------------------------------------------------------------------------
 #	COMPILE FLAGS
