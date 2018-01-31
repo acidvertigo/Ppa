@@ -32,8 +32,8 @@ endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
 
-file(GLOB TEST_SRC_FILES ${CMALE_SOURCE_DIR}/test/*.cpp)
+file(GLOB TEST_SRC_FILES ${CMAKE_SOURCE_DIR}/test/*.cpp)
 
 add_executable(samplerate ${TEST_SRC_FILES})
-target_link_libraries(samplerate gtest_main)
+target_link_libraries(samplerate gtest_main$
 add_test(NAME samplerate_test COMMAND samplerate)
