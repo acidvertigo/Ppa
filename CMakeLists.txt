@@ -9,8 +9,8 @@ SET(CMAKE_INCLUDE_CURRENT_DIR ON)
 #	SOURCE CODE
 #-------------------------------------------------------------------------------
 set(INCLUDE_DIRS 
-  ${CMAKE_SOURCE_DIR}/include
-  ${CMAKE_SOURCE_DIR}/include/common/utils
+  ${PROJECT_SOURCE_DIR}/include
+  ${PROJECT_SOURCE_DIR}/include/common/utils
 )
 file(GLOB SOURCE_FILES "src/*.cpp")
 
