@@ -221,6 +221,57 @@ if(GIT_FOUND)
 	  OUTPUT_STRIP_TRAILING_WHITESPACE
 	)
 	set(PROJECT_NAME ${TARGET_NAME}-${BRANCH})
+#-------------------------------------------------------------------------------
+#	CMAKE SETTINGS
+#-------------------------------------------------------------------------------
+
+cmake_minimum_required(VERSION 3.9)
+SET(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+#-------------------------------------------------------------------------------
+#	SOURCE CODE
+#-------------------------------------------------------------------------------
+
+# .h files
+list(APPEND HEADER_FILES
+
+)
+
+# .cpp files
+#list(APPEND SOURCE_FILES
+#src/Main.cpp
+#src/SampleRate.cpp
+#)
+
+file(GLOB SOURCE_FILES "src/*.cpp")
+
+# on windows, append headers to source so they show up in visual studio
+if(WIN32)
+	LIST(APPEND SOURCE_FILES ${HEADER_FILES})
+endif()
+
+#-------------------------------------------------------------------------------
+#	PROJECT SETTINGS
+#-------------------------------------------------------------------------------
+
+set(TARGET_NAME cmake-cpp-project)
+
+# Use git branch as project name if clones from git
+find_package(Git)
+if(GIT_FOUND)
+	execute_process(
+	  COMMAND ${GIT_EXECUTABLE} rev-parse --abbrev-ref HEAD
+	  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+	  OUTPUT_VARIABLE BRANCH
+	  OUTPUT_STRIP_TRAILING_WHITESPACE
+	)
+	execute_process(
+	  COMMAND ${GIT_EXECUTABLE} describe --abbrev=0 --tags
+	  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+	  OUTPUT_VARIABLE VERSION
+	  OUTPUT_STRIP_TRAILING_WHITESPACE
+	)
+	set(PROJECT_NAME ${TARGET_NAME}-${BRANCH})
 else()
 	set(PROJECT_NAME ${TARGET_NAME})
 endif()
@@ -259,8 +310,8 @@ set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
 set(INCLUDE_DIRS 
-  include
-  include/common/utils
+  ${CMAKE_SOURCE_DIR}/include
+  ${CMAKE_SOURCE_DIR}/include/common/utils
 )
 
 #-------------------------------------------------------------------------------
@@ -290,11 +341,18 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 include_directories(${INCLUDE_DIRS})
 
 #-------------------------------------------------------------------------------
+#	TEST
+#-------------------------------------------------------------------------------
+
+enable_testing()
+add_subdirectory(test)
+
+#-------------------------------------------------------------------------------
 #	GENERATE EXECUTABLE
 #-------------------------------------------------------------------------------
 
 # Set additional include directories
-# include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 
 # Generate the executable
 add_executable(${TARGET_NAME} ${SOURCE_FILES} ${RESOURCES})
@@ -307,10 +365,3 @@ set_target_properties(${TARGET_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE
 
 INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION bin)
 INCLUDE(InstallRequiredSystemLibraries)
-
-#-------------------------------------------------------------------------------
-#	TEST
-#-------------------------------------------------------------------------------
-
-enable_testing()
-add_subdirectory(test)
