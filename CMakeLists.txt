@@ -8,19 +8,12 @@ SET(CMAKE_INCLUDE_CURRENT_DIR ON)
 #-------------------------------------------------------------------------------
 #	SOURCE CODE
 #-------------------------------------------------------------------------------
-
-# .h files
-list(APPEND HEADER_FILES
-
+set(INCLUDE_DIRS 
+  ${PROJECT_SOURCE_DIR}/include
+  ${PROJECT_SOURCE_DIR}/include/common/utils
 )
-
-# .cpp files
-#list(APPEND SOURCE_FILES
-#src/Main.cpp
-#src/SampleRate.cpp
-#)
-
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+list(REMOVE_ITEM SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 # on windows, append headers to source so they show up in visual studio
 if(WIN32)
@@ -86,10 +79,6 @@ set(APPLICATION_NAME ${TARGET_NAME})
 set(APPLICATION_VERSION ${VERSION})
 set(APPLICATION_ORGANIZATION "Nagrit")
 set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
-set(INCLUDE_DIRS 
-  ${PROJECT_SOURCE_DIR}/include
-  ${PROJECT_SOURCE_DIR}/include/common/utils
-)
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
