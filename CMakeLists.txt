@@ -274,10 +274,3 @@ set_target_properties(${TARGET_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE
 INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION bin)
 INCLUDE(InstallRequiredSystemLibraries)
 
-#-------------------------------------------------------------------------------
-#	TEST
-#-------------------------------------------------------------------------------
-
-enable_testing()
-add_subdirectory(test)
-
