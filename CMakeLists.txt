@@ -241,6 +241,9 @@ source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 # # Remove duplicate library dependencies. 
 # list(REMOVE_DUPLICATES LIBRARIES)
 
+# Set additional include directories
+include_directories(${INCLUDE_DIRS})
+
 #-------------------------------------------------------------------------------
 #	TEST
 #-------------------------------------------------------------------------------
@@ -252,8 +255,7 @@ add_subdirectory(test)
 #	GENERATE EXECUTABLE
 #-------------------------------------------------------------------------------
 
-# Set additional include directories
-include_directories(${INCLUDE_DIRS})
+
 
 # Generate the executable
 add_executable(${TARGET_NAME} ${SOURCE_FILES} ${RESOURCES})
