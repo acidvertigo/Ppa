@@ -13,7 +13,7 @@ set(INCLUDE_DIRS
   ${PROJECT_SOURCE_DIR}/include/common/utils
 )
 file(GLOB SOURCE_FILES "src/*.cpp")
-list(REMOVE_ITEM SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp)
+list(REMOVE_ITEM SRC_FILES "${PROJECT_SOURCE_DIR}/src/Main.cpp")
 
 # on windows, append headers to source so they show up in visual studio
 if(WIN32)
