@@ -35,5 +35,5 @@ endif()
 file(GLOB TEST_SRC_FILES ${CMALE_SOURCE_DIR}/test/*.cpp)
 
 add_executable(samplerate ${TEST_SRC_FILES})
-target_link_libraries(samplerate gtest gtest_main)
+target_link_libraries(samplerate gtest_main)
 add_test(NAME samplerate_test COMMAND samplerate)
