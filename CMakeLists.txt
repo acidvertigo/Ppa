@@ -13,7 +13,6 @@ set(INCLUDE_DIRS
   ${CMAKE_SOURCE_DIR}/include/common/utils
 )
 file(GLOB SOURCE_FILES "src/*.cpp")
-list(REMOVE_ITEM SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/Main.cpp)
 
 # on windows, append headers to source so they show up in visual studio
 if(WIN32)
