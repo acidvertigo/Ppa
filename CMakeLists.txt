@@ -43,7 +43,7 @@ set(INCLUDE_DIRS
   ${PROJECT_SOURCE_DIR}/include
   ${PROJECT_SOURCE_DIR}/include/common/utils
 )
-message("-- Added include dir ${PROJECT_SOURCE_DIR}/include")
+message("-- Added include dir ${INCLUDE_DIRS}")
 
 # loads source files
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
