@@ -34,7 +34,7 @@ endif()
 
 file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${INCLUDE_DIRS})
 
 # add_executable(samplerate ${TEST_SRC_FILES})
 add_executable(samplerate samplerate.cpp)
