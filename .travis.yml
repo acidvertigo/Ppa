@@ -29,4 +29,10 @@ script:
   - cmake -D CMAKE_BUILD_TYPE=Release ../../ 
   - make
   - ctest
-  - cppcheck --force -ibuild/Debug/googletest-src/ -ibuild/Release/googletest-src/ --quiet --error-exitcode=1 ../../
+  - cppcheck --enable=warning,style,performance,portability,unusedFunction
+             --std=c++17
+             --verbose
+             --error-exitcode=1
+             --language=c++
+             -DMAIN=main
+             -ibuild/Debug/googletest-src/ -ibuild/Release/googletest-src/
