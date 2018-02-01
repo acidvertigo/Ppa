@@ -29,4 +29,4 @@ script:
   - cmake -D CMAKE_BUILD_TYPE=Release ../../ 
   - make
   - ctest
-  - cppcheck --all --std=c++11 --verbose --error-exitcode=1 --language=c++ -ibuild/Debug/googletest-src/ -ibuild/Release/googletest-src/
+  - cppcheck --enable=all --std=c++11 --verbose --error-exitcode=1 --language=c++ -ibuild/Debug/googletest-src/ -ibuild/Release/googletest-src/
