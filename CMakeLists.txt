@@ -122,7 +122,7 @@ target_link_libraries(${TARGET_NAME} ${LIBRARIES})
 # Use the automatically determined RPATH values
 set_target_properties(${TARGET_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION build/Release)
+INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION bin)
 INCLUDE(InstallRequiredSystemLibraries)
 
 #-------------------------------------------------------------------------------
