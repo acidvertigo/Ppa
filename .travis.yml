@@ -19,7 +19,7 @@ script:
   - export CXX=/usr/bin/g++-6
   - gcc -v && g++ -v && cmake --version
   - mkdir test/googletest-download
-  - mkdir build/Debug && mkdir build/Release
+  - mkdir build && mkdir build/Debug && mkdir build/Release
   - cd build/Debug
   - cmake -D CMAKE_BUILD_TYPE=Debug ../../
   - make
