@@ -33,8 +33,12 @@ endif()
 # Now simply link against gtest or gtest_main as needed. Eg
 
 file(GLOB TEST_SRC_FILES ${CMAKE_SOURCE_DIR}/test/*.cpp)
-include_directories(${CMAKE_SOURCE_DIR}/include)
-message("-- Added include dir ${CMAKE_SOURCE_DIR}/include")
+set(INCLUDE_DIRS 
+  ${CMAKE_SOURCE_DIR}/include
+  ${CMAKE_SOURCE_DIR}/include/common/utils
+)
+include_directories(${INCLUDE_DIRS})
+message("-- Added include dir {$INCLUDE_DIRS}")
 
 # add_executable(samplerate ${TEST_SRC_FILES})
 add_executable(samplerate samplerate.cpp)
