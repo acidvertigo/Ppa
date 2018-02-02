@@ -31,7 +31,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
-
+SET(CMAKE_INCLUDE_CURRENT_DIR ON)
 file(GLOB TEST_SRC_FILES ${CMAKE_SOURCE_DIR}/test/*.cpp)
 set(INCLUDE_DIRS 
   ${CMAKE_SOURCE_DIR}/include
