@@ -41,7 +41,8 @@ include_directories(${INCLUDE_DIRS})
 message("-- Added include dir {$INCLUDE_DIRS}")
 
 # add_executable(samplerate ${TEST_SRC_FILES})
-add_executable(samplerate samplerate.cpp)
 target_include_directories(samplerate PUBLIC ${INCLUDE_DIRS})
+add_executable(samplerate samplerate.cpp)
+
 target_link_libraries(samplerate gmock_main)
 add_test(NAME samplerate_test COMMAND samplerate)
