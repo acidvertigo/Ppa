@@ -41,7 +41,7 @@ ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/test/ )
 # )
 # 
 # # Remove duplicate library dependencies. 
-# LIST(REMOVE_DUPLICATES LIBRARIES) 
+#  LIST(REMOVE_DUPLICATES LIBRARIES) 
 
 #-------------------------------------------------------------------------------
 #	COMPILE FLAGS
