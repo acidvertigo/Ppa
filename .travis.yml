@@ -7,6 +7,7 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
     packages:
+      - tree
       - gcc-6
       - g++-6
       - cmake
@@ -18,14 +19,17 @@ script:
   - export CC=/usr/bin/gcc-6
   - export CXX=/usr/bin/g++-6
   - gcc -v && g++ -v && cmake --version
-  - mkdir test/googletest-download
   - mkdir build && mkdir build/Debug && mkdir build/Release
   - cd build/Debug
   - cmake -D CMAKE_BUILD_TYPE=Debug ../../
-  - make
+  - make && make install
   - ctest
   - cd ../Release
   - cmake -D CMAKE_BUILD_TYPE=Release ../../
-  - make
+  - make && make install
   - ctest
-  - cppcheck --enable=all --check-config --error-exitcode=1 --std=c++11 --verbose --language=c++ -ibuild/Debug/googletest-src/ -ibuild/Release/googletest-src/ -ibuild/Debug/CMakeFiles/ -ibuild/Release/CMakeFiles/ -I../../include/ ../../
+  - cd ../../
+  - rm -rf build
+  - cppcheck --enable=all --suppress=missingIncludeSystem --check-config --error-exitcode=1 --std=c++11 --verbose --language=c++ -Iinclude/ .
+  - tree -a -C -s -I ".git"
+  - bin/Debug/app-debug && bin/Release/app

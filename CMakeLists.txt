@@ -1,133 +1,99 @@
 #-------------------------------------------------------------------------------
 #	CMAKE SETTINGS
 #-------------------------------------------------------------------------------
-
-cmake_minimum_required(VERSION 3.9)
+CMAKE_MINIMUM_REQUIRED( VERSION 3.9 )
 SET(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+#needed to set project version
+if(POLICY CMP0048)
+  cmake_policy(SET CMP0048 NEW)
+endif()
 
 #-------------------------------------------------------------------------------
 #	PROJECT SETTINGS
 #-------------------------------------------------------------------------------
+SET( PROJ_NAME      "app" )
+SET( PROJ_PATH      ${CMAKE_SOURCE_DIR} )
+SET( PROJ_OUT_PATH  ${CMAKE_BINARY_DIR} )
+SET( PROJ_LIBRARIES 
 
-set(TARGET_NAME cmake-cpp-project)
-
-# Use git branch as project name if clones from git
-find_package(Git)
-if(GIT_FOUND)
-	execute_process(
-	  COMMAND ${GIT_EXECUTABLE} rev-parse --abbrev-ref HEAD
-	  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-	  OUTPUT_VARIABLE BRANCH
-	  OUTPUT_STRIP_TRAILING_WHITESPACE
-	)
-	execute_process(
-	  COMMAND ${GIT_EXECUTABLE} describe --abbrev=0 --tags
-	  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-	  OUTPUT_VARIABLE VERSION
-	  OUTPUT_STRIP_TRAILING_WHITESPACE
-	)
-	set(PROJECT_NAME ${TARGET_NAME}-${BRANCH})
-else()
-	set(PROJECT_NAME ${TARGET_NAME})
-endif()
-
-# Set the project name
-PROJECT(${PROJECT_NAME})
+)
+SET( PROJ_INCLUDES 
+  inc
+  ${CMAKE_BINARY_DIR}/exports
+)
+PROJECT( ${PROJ_NAME} VERSION 0.0.1 )
+ENABLE_TESTING()
 
 #-------------------------------------------------------------------------------
 #	SOURCE CODE
 #-------------------------------------------------------------------------------
+FILE( GLOB_RECURSE PROJ_SOURCES src/*.cpp )
+FILE( GLOB_RECURSE PROJ_HEADERS inc/*.h )
 
-# set additional include directories
-set(INCLUDE_DIRS 
-  ${PROJECT_SOURCE_DIR}/include
-  ${PROJECT_SOURCE_DIR}/include/common/utils
-)
-message("-- Added include dir ${INCLUDE_DIRS}")
-
-# loads source files
-file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
-
-# on windows, append headers to source so they show up in visual studio
-if(WIN32)
-	LIST(APPEND SOURCE_FILES ${HEADER_FILES})
-endif()
+ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/test/ )
 
 #-------------------------------------------------------------------------------
-#	RESOURCES
+#	ADDITIONAL LIBRARIES
 #-------------------------------------------------------------------------------
-
-# list(APPEND RESOURCES
-#resources/resources.rc
+# LIST(APPEND LIBRARIES
+#
 # )
+# 
+# # Remove duplicate library dependencies. 
+# LIST(REMOVE_DUPLICATES LIBRARIES) 
 
 #-------------------------------------------------------------------------------
 #	COMPILE FLAGS
 #-------------------------------------------------------------------------------
-
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_CXX_STANDARD 17)
 
 if(MSVC)
-	add_compile_options(/MP)
-	add_compile_options(/std:c++17)
+	ADD_COMPILE_OPTIONS(/MP)
+	ADD_COMPILE_OPTIONS(/std:c++17)
 elseif(CMAKE_COMPILER_IS_GNUCXX)
-	add_compile_options(-std=c++17)
+	ADD_COMPILE_OPTIONS(-std=c++17)
 endif(MSVC)
-
-#-------------------------------------------------------------------------------
-#	CONFIGURATION
-#-------------------------------------------------------------------------------
-
-set(APPLICATION_NAME ${TARGET_NAME})
-set(APPLICATION_VERSION ${VERSION})
-set(APPLICATION_ORGANIZATION "Nagrit")
-set(APPLICATION_ORGANIZATION_DOMAIN "https://github.com/acidvertigo/")
-enable_testing()
 
 #-------------------------------------------------------------------------------
 #	SOURCE GROUPS
 #-------------------------------------------------------------------------------
-
 source_group(generated REGULAR_EXPRESSION ".*_automoc.cpp")
 source_group(resources REGULAR_EXPRESSION ".*[.][q]?rc")
 source_group(source REGULAR_EXPRESSION ".*[.]cpp")
 source_group(headers REGULAR_EXPRESSION ".*[.]h")
 source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
 
-#-------------------------------------------------------------------------------
-#	ADDITIONAL LIBRARIES
-#-------------------------------------------------------------------------------
-
-# list(APPEND LIBRARIES
-#
-# )
-# 
-# # Remove duplicate library dependencies. 
-# list(REMOVE_DUPLICATES LIBRARIES) 
 
 #-------------------------------------------------------------------------------
-#	GENERATE EXECUTABLE
+#	GENERATE EXECUTABLES
 #-------------------------------------------------------------------------------
+# add the binary tree to the search path for include files
+# so that we will find TutorialConfig.h
+INCLUDE_DIRECTORIES( ${PROJ_INCLUDES} )
+ADD_EXECUTABLE( ${PROJ_NAME} ${PROJ_SOURCES} ${PROJ_SOURC})
+TARGET_LINK_LIBRARIES( ${PROJ_NAME} ${PROJ_LIBRARIES} )
 
-# Set additional include directories
-include_directories(${INCLUDE_DIRS})
-
-# Generate the executable
-add_executable(${TARGET_NAME} ${SOURCE_FILES} ${RESOURCES})
-
-# link libraries
-target_link_libraries(${TARGET_NAME} ${LIBRARIES})
+# Add debug postfix to executable name
+SET_TARGET_PROPERTIES(app PROPERTIES DEBUG_POSTFIX "-debug")
 
 # Use the automatically determined RPATH values
-set_target_properties(${TARGET_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE)
+set_target_properties(${PROJ_NAME} PROPERTIES INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION bin)
+#-------------------------------------------------------------------------------
+#	DEFINE INSTALL FOLDERS
+#-------------------------------------------------------------------------------
+IF(CMAKE_BUILD_TYPE MATCHES "Release")
+    INSTALL(TARGETS ${PROJ_NAME}
+        RUNTIME DESTINATION ${CMAKE_SOURCE_DIR}/bin/Release/
+        LIBRARY DESTINATION ${CMAKE_SOURCE_DIR}/lib/Release/
+        CONFIGURATIONS Release)
+ELSE(CMAKE_BUILD_TYPE MATCHES "Release")
+    INSTALL(TARGETS ${PROJ_NAME}
+        RUNTIME DESTINATION ${CMAKE_SOURCE_DIR}/bin/Debug/
+        LIBRARY DESTINATION ${CMAKE_SOURCE_DIR}/lib/Debug/
+        CONFIGURATIONS Debug)
+ENDIF(CMAKE_BUILD_TYPE MATCHES "Release")
+
 INCLUDE(InstallRequiredSystemLibraries)
-
-#-------------------------------------------------------------------------------
-#	TEST
-#-------------------------------------------------------------------------------
-# if(BUILD_TESTING)
- add_subdirectory(test)
-# endif()
