@@ -24,12 +24,10 @@ public:
     virtual ~SampleRate() override;
     int AUDIO_EXPORT getSamplerate() const override;
     std::string AUDIO_EXPORT toString() const;
+    friend bool operator==(const SampleRate &s1, const SampleRate &s2);
 
 protected:
     int samplerate; /* samplerate in Hz */
-  
-friend bool operator==(const SampleRate &s1, const SampleRate &s2);
-
 };
 
 /*
