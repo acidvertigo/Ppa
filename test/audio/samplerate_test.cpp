@@ -43,7 +43,7 @@ class SrInterface {
   MOCK_METHOD2(compare, bool(const SampleRate &s1, const SampleRate &s2));
 };
 
-class SrMock : public SrInterface, SampleRateTest { 
+class SrMock : public SrInterface { 
  public:
   virtual bool compare(const SampleRate &s1, const SampleRate &s2) override {
     return (s1 == s2);
@@ -55,6 +55,12 @@ SrMock srMock;
 
 TEST(SampleRateTest, testIsEqual)
 {
-    EXPECT_CALL(SrMock,compare(s1, s2))
+    SampleRate * sp;
+    SampleRate * sp2;
+     
+    sp  = new SampleRate(44100);
+    sp2 = new SampleRate(44100);
+
+    EXPECT_CALL(SrMock,compare(sp, sp2))
         . WillOnce(Return(TRUE));
 }
