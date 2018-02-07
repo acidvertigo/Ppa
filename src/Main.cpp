@@ -11,7 +11,7 @@ using namespace std;
 using namespace Ppa::Audio;
 
 int main() {
-  SampleRate * sm
+  SampleRate * sm;
   SampleRate * sm2;
 
   sm  = new SampleRate(44100);
