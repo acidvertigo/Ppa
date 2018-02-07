@@ -32,11 +32,11 @@ using namespace Ppa::Common;
 
 //------------------------------------
 
-  bool Ppa::Audio::operator==(const SampleRate &s1, const SampleRate &s2) {
+  bool Ppa::Audio::operator==(const SampleRate &s1, const SampleRate &s2) const {
     return s1.samplerate == s2.samplerate;
   }
 
-  bool Ppa::Audio::operator!=(const SampleRate &s1, const SampleRate &s2) {
+  bool Ppa::Audio::operator!=(const SampleRate &s1, const SampleRate &s2) const {
     return !(s1 == s2);
   }
 
