@@ -52,6 +52,7 @@ class SrMock : public SrInterface {
 
 SrMock srMock;
 
+using ::testing::Return;
 
 TEST(SampleRateTest, testIsEqual)
 {
