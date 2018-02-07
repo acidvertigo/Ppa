@@ -31,3 +31,8 @@ TEST_F(SampleRateTest, testSample)
 {
     ASSERT_EQ(sp->GetSampleRate(), 44100);
 }
+
+TEST_F(SampleRateTest, testSample2)
+{
+    ASSERT_EQ(sp->toString(), "44100");
+}
