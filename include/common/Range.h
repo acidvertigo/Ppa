@@ -6,6 +6,9 @@
 #ifndef _LIBRANGE_H_
 #define _LIBRANGE_H_
 
+namespace Ppa {
+namespace Common {
+
 /* Usage: range<int>(min, max)::contains(i)
  *        range<int>(min, max)::notContains(i)
  *        range<int>(min, max) //iterator
@@ -52,5 +55,8 @@ template <typename T>
     iter end()   const { return iter(m_end  ); }
   
   };
+
+} // namespace Common end
+} // namespace Ppa end
 
 #endif /* _LIBRANGE_H_ */
