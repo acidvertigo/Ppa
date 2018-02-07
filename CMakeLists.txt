@@ -19,7 +19,7 @@ SET( PROJ_LIBRARIES
   audio
 )
 SET( PROJ_INCLUDES 
-  inc
+  include
   ${CMAKE_BINARY_DIR}/exports
 )
 PROJECT( ${PROJ_NAME} VERSION 0.0.1 )
