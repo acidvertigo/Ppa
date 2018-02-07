@@ -27,7 +27,7 @@ protected:
      }
 };
 
-TEST_F(SampleRateTest, GetSampleRate)
+TEST_F(SampleRateTest, smTest)
 {
     ASSERT_EQ(sm->GetSampleRate(), 44100);
 }
