@@ -32,7 +32,6 @@ FILE( GLOB_RECURSE PROJ_SOURCES src/*.cpp )
 FILE( GLOB_RECURSE PROJ_HEADERS inc/*.h )
 
 ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/src/audio/ )
-ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/src/common/ )
 ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/test/ )
 
 #-------------------------------------------------------------------------------
