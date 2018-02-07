@@ -9,6 +9,7 @@
 
 #include <iostream>
 
+#include "audio_export.h"
 #include "ISampleRate.h"
 
 namespace Ppa {
@@ -19,10 +20,10 @@ namespace Audio {
  */  
 class SampleRate : public ISampleRate {  
 public:
-    SampleRate(int sampleratec);
+    AUDIO_EXPORT SampleRate(int sampleratec);
     virtual ~SampleRate() override;
-    int getSamplerate() const override;
-    std::string toString() const;
+    int AUDIO_EXPORT getSamplerate() const override;
+    std::string AUDIO_EXPORT toString() const;
 
 protected:
     int samplerate; /* samplerate in Hz */
