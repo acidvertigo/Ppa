@@ -3,6 +3,7 @@
  * ---------------
  * This file implements the SampleRate.h interface.
  */
+#include "audio_export.h"
 #include "audio/SampleRate.h"
 #include "common/String.h"
 
@@ -16,17 +17,17 @@ using namespace Ppa::Common;
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-  SampleRate::SampleRate(int sampleratec) : samplerate(0) {
+  AUDIO_EXPORT SampleRate::SampleRate(int sampleratec) : samplerate(0) {
     samplerate = sampleratec;
   }
 
-  SampleRate::~SampleRate() = default;
+  AUDIO_EXPORT SampleRate::~SampleRate() = default;
 
-  int SampleRate::GetSampleRate() const {
+  AUDIO_EXPORT int SampleRate::GetSampleRate() const {
     return samplerate;
   }
 
-  std::string SampleRate::toString() const {
+  AUDIO_EXPORT std::string SampleRate::toString() const {
     return NumberToString(samplerate);
   }
 
