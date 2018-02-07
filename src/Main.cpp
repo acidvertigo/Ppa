@@ -4,7 +4,9 @@
  */
 
 #include <iostream>
-#include "SampleRate.h"
+#include "audio/SampleRate.h"
+
+using namespace Ppa::Audio;
 
 int main() {
   std::cout << "Hello World!" << std::endl;
