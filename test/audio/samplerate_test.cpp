@@ -7,8 +7,8 @@ using namespace ::Ppa::Audio;
 class SampleRateTest : public ::testing::Test
 {
 public:
-     SampleRateTest();
-     virtual ~SampleRateTest();
+     SampleRateTest() {}
+     virtual ~SampleRateTest() {}
      
 protected:
      SampleRate * sm;
