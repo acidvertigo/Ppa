@@ -39,8 +39,5 @@ TEST_F(SampleRateTest, testToString)
 
 TEST_F(SampleRateTest, testIsEqual)
 {
-    if (*sp == *sp2)
-       return ::testing::AssertionSuccess();
-    else
-       return ::testing::AssertionFailure();
+    EXPECT_TRUE(*sp == *sp2);
 }
