@@ -16,7 +16,7 @@ SET( PROJ_NAME      "app" )
 SET( PROJ_PATH      ${CMAKE_SOURCE_DIR} )
 SET( PROJ_OUT_PATH  ${CMAKE_BINARY_DIR} )
 SET( PROJ_LIBRARIES 
-
+  audio
 )
 SET( PROJ_INCLUDES 
   inc
@@ -31,6 +31,7 @@ ENABLE_TESTING()
 FILE( GLOB_RECURSE PROJ_SOURCES src/*.cpp )
 FILE( GLOB_RECURSE PROJ_HEADERS inc/*.h )
 
+ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/src/audio/ )
 ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/test/ )
 
 #-------------------------------------------------------------------------------
