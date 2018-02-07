@@ -1,3 +1,5 @@
+#include "gtest/gtest.h"
+
 #include "audio/SampleRate.h"
 
 using namespace ::Ppa::Audio;
