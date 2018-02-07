@@ -27,12 +27,17 @@ protected:
      }
 };
 
-TEST_F(SampleRateTest, testSample)
+TEST_F(SampleRateTest, testGetSampleRate)
 {
     ASSERT_EQ(sp->GetSampleRate(), 44100);
 }
 
-TEST_F(SampleRateTest, testSample2)
+TEST_F(SampleRateTest, testToString)
 {
     ASSERT_EQ(sp->toString(), "44100");
+}
+
+TEST_F(SampleRateTest, testIsEqual)
+{
+    ASSERT_EQ(sp, sp2);
 }
