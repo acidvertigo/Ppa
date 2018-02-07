@@ -6,6 +6,10 @@ using namespace ::Ppa::Audio;
 
 class SampleRateTest : public ::testing::Test
 {
+public:
+     SampleRateTest();
+     virtual ~SampleRateTest();
+     
 protected:
      SampleRate * sm;
      SampleRate * sm2;
