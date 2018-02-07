@@ -8,7 +8,7 @@ class SampleRateTest : public ::testing::Test
 {
 public:
      SampleRateTest() {}
-     virtual ~SampleRateTest() {}
+     ~SampleRateTest() {}
      
 protected:
      SampleRate * sm;
