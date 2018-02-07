@@ -20,7 +20,7 @@ using namespace Ppa::Common;
     samplerate = sampleratec;
   }
 
-  AUDIO_EXPORT SampleRate::~SampleRate() = default;
+  SampleRate::~SampleRate() = default;
 
   int SampleRate::GetSampleRate() const {
     return samplerate;
