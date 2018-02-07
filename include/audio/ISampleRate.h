@@ -23,7 +23,7 @@ public:
  * ----------------------------------
  * These methods returns the samplerate set
  */
-   virtual int getSamplerate() const = 0;
+   virtual int GetSampleRate() const = 0;
 
 /*
  * Method: toString
