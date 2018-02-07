@@ -6,25 +6,30 @@ using namespace ::Ppa::Audio;
 
 class SampleRateTest : public ::testing::Test
 {
-public:
-    SampleRateTest() {}
-    virtual ~SampleRateTest() {}
-
 protected:
      SampleRate * sm;
+     SampleRate * sm2;
  
      virtual void SetUp() override
      {      
-         sm = new SampleRate(11);
+         sm = new SampleRate(44100);
+         sm2 = new SampleRate(44100);
      }
 
      virtual void TearDown() override
      {
         delete sm;
+        delete sm2;
      }
 };
 
-TEST_F(SampleRateTest, smTest)
+TEST_F(SampleRateTest, GetSampleRate)
 {
-    ASSERT_EQ(sm->GetSampleRate(), 11);
+    ASSERT_EQ(sm->GetSampleRate(), 44100);
+}
+
+// Test comprison operator
+TEST_F(SampleRateTest, isEqual)
+{
+    ASSERT_EQ(sm, sm2);
 }
