@@ -9,7 +9,6 @@
 
 #include <iostream>
 
-#include "audio_export.h"
 #include "ISampleRate.h"
 
 namespace Ppa {
@@ -20,10 +19,10 @@ namespace Audio {
  */  
 class SampleRate : public ISampleRate {  
 public:
-    AUDIO_EXPORT SampleRate(int sampleratec);
-    virtual AUDIO_EXPORT ~SampleRate() override;
-    int AUDIO_EXPORT GetSampleRate() const override;
-    std::string AUDIO_EXPORT toString() const;
+    SampleRate(int sampleratec);
+    virtual ~SampleRate() override;
+    int GetSampleRate() const override;
+    std::string toString() const;
     friend bool operator==(const SampleRate &s1, const SampleRate &s2);
 
 protected:
