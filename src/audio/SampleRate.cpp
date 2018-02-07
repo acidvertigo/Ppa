@@ -31,7 +31,7 @@ using namespace Ppa::Audio;
 
 //------------------------------------
 
-  bool operator==(const SampleRate &s1, const SampleRate &s2) {
+  friend bool operator==(const SampleRate &s1, const SampleRate &s2) {
     return s1.samplerate == s2.samplerate;
   }
 
