@@ -26,5 +26,5 @@ protected:
 
 TEST_F(SampleRateTest, smTest)
 {
-    ASSERT_EQ(sm->getSampleRate(), 11);
+    ASSERT_EQ(sm->GetSampleRate(), 11);
 }
