@@ -8,6 +8,9 @@
 
 #include <sstream>
 
+namespace Ppa {
+namespace Common {
+
 /* Usage: NumberToString(Number)
  * -------------
  * Template to comvert integer to string
@@ -31,5 +34,8 @@ template <typename T>
     T number;
 	return (ss >> number)?number:0;
   }
+
+} // namespace Common end
+} // namespace Ppa end
 
 #endif /* _LIBSTR_H_ */
