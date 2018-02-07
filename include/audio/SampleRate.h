@@ -47,7 +47,7 @@ protected:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream &os, const SampleRate &sr) const;
+   std::ostream & operator<<(std::ostream &os, const SampleRate &sr);
 
 /*
  * Operator: ==
@@ -55,7 +55,7 @@ protected:
  * -----------------
  * This operator supports equality testing for samplerates.
  */
-   bool operator==(const SampleRate &s1, const SampleRate &s2) const;
+   bool operator==(const SampleRate &s1, const SampleRate &s2);
 
 /*
  * Operator: !=
