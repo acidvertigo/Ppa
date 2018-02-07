@@ -29,12 +29,12 @@ protected:
 
 TEST_F(SampleRateTest, testGetSampleRate)
 {
-    ASSERT_EQ(sp->GetSampleRate(), 44100);
+    EXPECT_EQ(sp->GetSampleRate(), 44100);
 }
 
 TEST_F(SampleRateTest, testToString)
 {
-    ASSERT_EQ(sp->toString(), "44100");
+    EXPECT_EQ(sp->toString(), "44100");
 }
 
 //TEST_F(SampleRateTest, testIsEqual)
