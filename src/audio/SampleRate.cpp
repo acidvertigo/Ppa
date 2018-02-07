@@ -8,6 +8,7 @@
 
 using namespace std;
 using namespace Ppa::Audio;
+using namespace Ppa::Common;
 
 /*
  * Constructor: SampleRate
