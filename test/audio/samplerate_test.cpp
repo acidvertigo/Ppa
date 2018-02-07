@@ -39,5 +39,5 @@ TEST_F(SampleRateTest, testToString)
 
 TEST_F(SampleRateTest, testIsEqual)
 {
-    EXPECT_EQ(*sp, *sp2);
+    EXPECT_TRUE ( sp == sp2);
 }
