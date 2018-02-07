@@ -9,7 +9,7 @@ public:
     virtual ~SampleRateTest() {}
 
 protected:
-     Shared * sm;
+     SampleRate * sm;
  
      virtual void SetUp() override
      {      
