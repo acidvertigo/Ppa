@@ -11,23 +11,23 @@ public:
      ~SampleRateTest() {}
      
 protected:
-     SampleRate * sm;
-     SampleRate * sm2;
+     SampleRate * sp;
+     SampleRate * sp2;
  
      virtual void SetUp() override
      {      
-         sm  = new SampleRate(44100);
-         sm2 = new SampleRate(44100);
+         sp  = new SampleRate(44100);
+         sp2 = new SampleRate(44100);
      }
 
      virtual void TearDown() override
      {
-        delete sm;
-        delete sm2;
+        delete sp;
+        delete sp2;
      }
 };
 
-TEST_F(SampleRateTest, sTest)
+TEST_F(SampleRateTest, smTest)
 {
-    ASSERT_EQ(sm->GetSampleRate(), 44100);
+    ASSERT_EQ(sp->GetSampleRate(), 44100);
 }
