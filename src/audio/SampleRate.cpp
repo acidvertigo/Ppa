@@ -26,7 +26,7 @@ using namespace Ppa::Common;
     return samplerate;
   }
 
-  std::string SampleRate::toString() const {
+  string SampleRate::toString() const {
     return NumberToString(samplerate);
   }
 
