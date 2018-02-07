@@ -31,14 +31,14 @@ using namespace Ppa::Audio;
 
 //------------------------------------
 
-  bool operator==(const SampleRate &s1, const SampleRate &s2) {
+  bool Ppa::Audio::operator==(const SampleRate &s1, const SampleRate &s2) {
     return s1.samplerate == s2.samplerate;
   }
 
-  bool operator!=(const SampleRate &s1, const SampleRate &s2) {
+  bool Ppa::Audio::operator!=(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);
   }
 
-  std::ostream & operator<<(ostream & os, const SampleRate &sr) {
+  std::ostream & Ppa::Audio::operator<<(ostream & os, const SampleRate &sr) {
     return os << sr.toString();
   }
