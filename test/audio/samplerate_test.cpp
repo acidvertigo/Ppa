@@ -1,4 +1,4 @@
-#include "gtest/gmock.h"
+#include "gmock/gmock.h"
 
 #include "audio/SampleRate.h"
 
