@@ -6,9 +6,12 @@
 #include <iostream>
 #include "audio/SampleRate.h"
 
+using namespace std;
 using namespace Ppa::Audio;
 
 int main() {
-  std::cout << "Hello World!" << std::endl;
+  SampleRate sm(44100);
+  cout << "Hello World!" << std::endl;
+  cout << "Samplerate value is: " << sm.GetSampleRate(); << endl;
   return 0;
 }
