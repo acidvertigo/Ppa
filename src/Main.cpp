@@ -11,7 +11,9 @@ using namespace Ppa::Audio;
 
 int main() {
   SampleRate sm(44100);
-  cout << "Hello World!" << std::endl;
+  SampleRate sm2(44100);
+  cout << "Hello World!" << endl;
   cout << "Samplerate value is: " << sm.GetSampleRate() << endl;
+  cout << sm == sm2 << endl;
   return 0;
 }
