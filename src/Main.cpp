@@ -11,8 +11,11 @@ using namespace std;
 using namespace Ppa::Audio;
 
 int main() {
-  SampleRate * sm(44100);
-  SampleRate * sm2(44100);
+  SampleRate * sm;
+  SampleRate * sm2;
+
+  sm  = new SampleRate(44100);
+  sm2 = new SampleRate(44100);
 
   bool verdict = *sm == *sm2;
   cout << "Hello World!" << endl;
