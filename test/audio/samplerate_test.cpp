@@ -1,5 +1,6 @@
+#include "audio/SampleRate.h"
 
-using namespace ::Foo;
+using namespace ::Ppa::Audio;
 
 class SampleRateTest : public ::testing::Test
 {
