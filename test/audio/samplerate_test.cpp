@@ -12,7 +12,7 @@ protected:
  
      virtual void SetUp() override
      {      
-         sm = new SampleRate(44100);
+         sm  = new SampleRate(44100);
          sm2 = new SampleRate(44100);
      }
 
@@ -26,6 +26,11 @@ protected:
 TEST_F(SampleRateTest, GetSampleRate)
 {
     ASSERT_EQ(sm->GetSampleRate(), 44100);
+}
+
+TEST_F(SampleRateTest, toString)
+{
+    ASSERT_EQ(sm->toString(), "44100");
 }
 
 // Test comprison operator

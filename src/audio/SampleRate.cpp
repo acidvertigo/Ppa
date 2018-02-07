@@ -12,7 +12,7 @@ using namespace Ppa::Common;
 
 /*
  * Constructor: SampleRate
- * Usage: Samplerate sr(sampleratec);
+ * Usage: Samplerate sr(int sampleratec);
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
