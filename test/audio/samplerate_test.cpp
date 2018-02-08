@@ -42,7 +42,7 @@ class SrInterface {
 
 class SrMock : public SrInterface {
  public:
-  virtual ~RealMock() {}
+  virtual ~SrMock() {}
   MOCK_METHOD2(Equals, bool(const SampleRate&, const SampleRate&));
   MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
 };
