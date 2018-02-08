@@ -61,7 +61,7 @@ protected:
  * Operator: !=
  * Usage: sr1 != sr2
  * -----------------
- * This operator implements the != operator for sa_plerat3s.
+ * This operator implements the != operator for samplerate.
  */
    bool operator!=(const SampleRate &s1, const SampleRate &s2);
 

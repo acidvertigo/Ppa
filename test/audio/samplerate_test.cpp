@@ -24,6 +24,12 @@ class SampleRateTest : public ::testing::Test {
   }
 };
 
+class BaseSampleRate : public SampleRate {
+public:
+  BaseSampleRate() {}
+  ~BaseSampleRate() {}
+};
+
 TEST_F(SampleRateTest, testGetSampleRate) {
   EXPECT_EQ(sp->GetSampleRate(), 44100);
 }
@@ -38,7 +44,7 @@ TEST_F(SampleRateTest, testIsEqual) {
   ASSERT_TRUE(*sp == *sp2);
 }
 
-TEST(SampleRateTest, testNotEqual) {
+TEST(BaseSampleRate, testNotEqual) {
   SampleRate* sp;
   SampleRate* sp2;
 
