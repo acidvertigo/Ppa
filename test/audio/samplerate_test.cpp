@@ -40,28 +40,20 @@ class SrInterface {
   virtual bool notEquals(const SampleRate&, const SampleRate&) = 0;
 };
 
-class RealMock : public SrInterface {
- public:
-  virtual ~RealMock() {}
-  virtual bool Equals(const SampleRate& s1, const SampleRate& s2) { return s1 == s2; }
-  virtual bool notEquals(const SampleRate& s1, const SampleRate& s2) {
-    return !(s1 == s2);
-  }
-};
-
 class SrMock : public SrInterface {
  public:
+  virtual ~RealMock() {}
   MOCK_METHOD2(Equals, bool(const SampleRate&, const SampleRate&));
   MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
 };
 
 SrMock srMock;
 bool Equals(const SampleRate& s1, const SampleRate& s2) {
-  srMock.Equals(s1, s2);
+  return s1 == s2; 
 }
 
 bool notEquals(const SampleRate& s1, const SampleRate& s2) {
-  srMock.notEquals(s1, s2);
+  return !(s1 == s2);
 }
 
 using ::testing::Return;
