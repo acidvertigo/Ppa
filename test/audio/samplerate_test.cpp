@@ -42,19 +42,33 @@ class SrInterface {
  public:
   virtual ~SrInterface();
   virtual bool Equals(const SampleRate &, const SampleRate &) = 0;
+  virtual bool notEquals(const SampleRate &, const SampleRate &) = 0;
 };
 
 class RealMock : public SrInterface { 
  public:
    virtual ~RealMock() {}
-   bool Equals(const SampleRate &s1, const SampleRate &s2) {
+   bool Equals(const SampleRate &sp, const SampleRate &sp2) {
     return s1 == s2;
+  }
+  bool notEquals(const SampleRate &sp, const SampleRate &sp2) {
+    return s1 !== s2;
   }
 };
 
 class SrMock : public RealMock {
   MOCK_METHOD2(Equals, bool(const SampleRate &, const SampleRate &));
+  MOCK_METHOD2(notEquals, bool(const SampleRate &, const SampleRate &));
 };
+
+bool operator==(const SampleRate &s1, const SampleRate &s2) {
+    return s1.samplerate == s2.samplerate;
+}
+
+bool operator!=(const SampleRate &s1, const SampleRate &s2) {
+    return !(s1 == s2);
+}
+
 
 using ::testing::Return;
 
@@ -68,5 +82,18 @@ TEST(SampleRateTest, testIsEqual)
     
     SrMock srMock;
     EXPECT_CALL(srMock, Equals(sp, sp2));
+        // . WillOnce(Return(true));
+}
+
+TEST(SampleRateTest, testNotEqual)
+{
+    SampleRate * sp;
+    SampleRate * sp2;
+     
+    sp  = new SampleRate(44100);
+    sp2 = new SampleRate(44100);
+    
+    SrMock srMock;
+    EXPECT_CALL(srMock, notEquals(sp, sp2));
         // . WillOnce(Return(true));
 }
