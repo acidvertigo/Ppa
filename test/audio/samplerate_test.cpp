@@ -66,26 +66,26 @@ using ::testing::Return;
 
 TEST(SampleRateTest, testIsEqual)
 {
-    SampleRate * sp;
-    SampleRate * sp2;
+    SampleRate * s1;
+    SampleRate * s2;
      
     sp  = new SampleRate(44100);
     sp2 = new SampleRate(44100);
     
     SrMock srMock;
-    EXPECT_CALL(srMock, Equals(s, s2));
+    EXPECT_CALL(srMock, Equals(s1, s2));
         // . WillOnce(Return(true));
 }
 
 TEST(SampleRateTest, testNotEqual)
 {
-    SampleRate * s;
+    SampleRate * s1;
     SampleRate * s2;
      
     sp  = new SampleRate(44100);
     sp2 = new SampleRate(88200);
     
     SrMock srMock;
-    EXPECT_CALL(srMock, notEquals(s, s2));
+    EXPECT_CALL(srMock, notEquals(s1, s2));
         // . WillOnce(Return(true));
 }
