@@ -50,11 +50,11 @@ class SrMock : public SrInterface {
 class RealMock : public SrInterface {
 public:
 bool Equals(const SampleRate & s1, const SampleRate & s2) {
-  return s1 == s2; 
+  return *s1 == *s2; 
 }
 
 bool notEquals(const SampleRate & s1, const SampleRate & s2) {
-  return !(s1 == s2);
+  return !(*s1 == *s2);
 }
 };
 
@@ -68,7 +68,7 @@ TEST(SampleRateTest, testIsEqual) {
   s2 = new SampleRate(44100);
 
   SrMock srMock;
-  EXPECT_CALL(srMock, Equals(*s1, *s2));
+  EXPECT_CALL(srMock, Equals(s1, s2));
   // . WillOnce(Return(true));
 }
 
@@ -80,6 +80,6 @@ TEST(SampleRateTest, testNotEqual) {
   s2 = new SampleRate(88200);
 
   SrMock srMock;
-  EXPECT_CALL(srMock, notEquals(*s1, *s2));
+  EXPECT_CALL(srMock, notEquals(s1, s2));
   // . WillOnce(Return(true));
 }
