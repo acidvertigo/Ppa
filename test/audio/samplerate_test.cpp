@@ -33,53 +33,17 @@ TEST_F(SampleRateTest, testToString) {
 }
 
 //————————————————————————————————————-
-class SrInterface {
- public:
-  virtual ~SrInterface();
-  virtual bool Equals(SampleRate, SampleRate) = 0;
-  virtual bool notEquals(SampleRate, SampleRate) = 0;
-};
 
-class RealMock : public SrInterface {
-public:
-bool Equals(SampleRate s1, SampleRate s2) {
-  return s1 == s2; 
-}
-
-bool notEquals(SampleRate s1,  SampleRate s2) {
-  return !(s1 == s2);
-}
-};
-
-class SrMock : public SrInterface {
- public:
-  virtual ~SrMock() {}
-  MOCK_METHOD2(Equals, bool(SampleRate, SampleRate));
-  MOCK_METHOD2(notEquals, bool(SampleRate, SampleRate));
-};
-
-using ::testing::Return;
-
-TEST(SampleRateTest, testIsEqual) {
-  SampleRate * s1;
-  SampleRate * s2;
-
-  s1 = new SampleRate(44100);
-  s2 = new SampleRate(44100);
-
-  SrMock srMock;
-  EXPECT_CALL(srMock, Equals(s1, s2));
-  // . WillOnce(Return(true));
+TEST_F(SampleRateTest, testIsEqual) {
+  ASSERT_TRUE (sp == sp2);
 }
 
 TEST(SampleRateTest, testNotEqual) {
-  SampleRate* s1;
-  SampleRate* s2;
+  SampleRate* sp;
+  SampleRate* sp2;
 
-  s1 = new SampleRate(44100);
-  s2 = new SampleRate(88200);
+  sp = new SampleRate(44100);
+  sp2 = new SampleRate(44100);
 
-  SrMock srMock;
-  EXPECT_CALL(srMock, notEquals(s1, s2));
-  // . WillOnce(Return(true));
+  ASSERT_NE (sp == sp2);
 }
