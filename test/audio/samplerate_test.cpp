@@ -45,8 +45,6 @@ class SrInterface {
 
 class SrMock : public SrInterface { 
  public:
-  virtual bool eq(const SampleRate &s1, const SampleRate &s2) override {
-    return (s1 == s2);
     MOCK_METHOD2(eq, bool(const SampleRate &s1, const SampleRate &s2));
   }
 };
