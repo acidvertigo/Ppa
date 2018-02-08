@@ -39,8 +39,8 @@ TEST_F(SampleRateTest, testToString)
 
 class SrInterface {
  public:
-  virtual bool compare(const SampleRate &s1, const SampleRate &s2) = 0;
-  MOCK_METHOD2(compare, bool(const SampleRate &s1, const SampleRate &s2));
+  virtual bool eq(const SampleRate &s1, const SampleRate &s2) = 0;
+  MOCK_METHOD2(eq, bool(const SampleRate &s1, const SampleRate &s2));
 };
 
 class SrMock : public SrInterface { 
