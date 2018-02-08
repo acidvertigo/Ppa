@@ -40,7 +40,7 @@ TEST_F(SampleRateTest, testToString)
 class SrInterface {
  public:
   virtual ~SrInterface();
-  virtual bool Equals(const SampleRate&, const SampleRate&) = 0;
+  virtual bool Equals(const SampleRate &, const SampleRate &) = 0;
 };
 
 class SrMock : public SrInterface { 
