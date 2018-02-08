@@ -49,11 +49,11 @@ class SrMock : public SrInterface {
 
 class RealMock : public SrInterface {
 public:
-bool Equals(const SampleRate& s1, const SampleRate& s2) {
+bool Equals(const Ppa::Audio::SampleRate& s1, const Ppa::Audio::SampleRate& s2) {
   return s1 == s2; 
 }
 
-bool notEquals(const SampleRate& s1, const SampleRate& s2) {
+bool notEquals(const Ppa::Audio::SampleRate& s1, const Ppa::Audio::SampleRate& s2) {
   return !(s1 == s2);
 }
 };
