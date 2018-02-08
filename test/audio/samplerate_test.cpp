@@ -36,24 +36,24 @@ TEST_F(SampleRateTest, testToString) {
 class SrInterface {
  public:
   virtual ~SrInterface();
-  virtual bool Equals(const SampleRate&, const SampleRate&) = 0;
-  virtual bool notEquals(const SampleRate&, const SampleRate&) = 0;
+  virtual bool Equals(const SampleRate &, const SampleRate &) = 0;
+  virtual bool notEquals(const SampleRate &, const SampleRate &) = 0;
 };
 
 class SrMock : public SrInterface {
  public:
   virtual ~SrMock() {}
-  MOCK_METHOD2(Equals, bool(const SampleRate&, const SampleRate&));
-  MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
+  MOCK_METHOD2(Equals, bool(const SampleRate &, const SampleRate &));
+  MOCK_METHOD2(notEquals, bool(const SampleRate &, const SampleRate &));
 };
 
 class RealMock : public SrInterface {
 public:
-bool Equals(const Ppa::Audio::SampleRate& s1, const Ppa::Audio::SampleRate& s2) {
+bool Equals(const SampleRate & s1, const SampleRate & s2) {
   return s1 == s2; 
 }
 
-bool notEquals(const Ppa::Audio::SampleRate& s1, const Ppa::Audio::SampleRate& s2) {
+bool notEquals(const SampleRate & s1, const SampleRate & s2) {
   return !(s1 == s2);
 }
 };
