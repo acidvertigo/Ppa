@@ -35,7 +35,7 @@ TEST_F(SampleRateTest, testToString) {
 //————————————————————————————————————-
 
 TEST_F(SampleRateTest, testIsEqual) {
-  ASSERT_TRUE(sp == sp2);
+  ASSERT_TRUE(*sp == *sp2);
 }
 
 TEST(SampleRateTest, testNotEqual) {
@@ -45,7 +45,7 @@ TEST(SampleRateTest, testNotEqual) {
   sp = new SampleRate(44100);
   sp2 = new SampleRate(88200);
 
-  ASSERT_FALSE(sp == sp2);
+  ASSERT_FALSE(*sp == *sp2);
 }
 
 TEST_F(SampleRateTest, testSstream) {
