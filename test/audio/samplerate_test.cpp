@@ -51,16 +51,16 @@ class RealMock : public SrInterface {
 
 class SrMock : public SrInterface {
  public:
-  MOCK_METHOD2(Equals, bool(const SampleRate& s1, const SampleRate& s2));
-  MOCK_METHOD2(notEquals, bool(const SampleRate& s1, const SampleRate& s2));
+  MOCK_METHOD2(Equals, bool(const SampleRate&, const SampleRate&));
+  MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
 };
 
 SrMock srMock;
-void Equals(const SampleRate& s1, const SampleRate& s2) {
+bool Equals(const SampleRate& s1, const SampleRate& s2) {
   srMock.Equals(s1, s2);
 }
 
-void notEquals(const SampleRate& s1, const SampleRate& s2) {
+bool notEquals(const SampleRate& s1, const SampleRate& s2) {
   srMock.notEquals(s1, s2);
 }
 
