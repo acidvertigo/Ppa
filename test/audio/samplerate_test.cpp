@@ -47,7 +47,8 @@ class SrMock : public SrInterface {
   MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
 };
 
-SrMock srMock;
+class RealMock : public SrInterface {
+public:
 bool Equals(const SampleRate& s1, const SampleRate& s2) {
   return s1 == s2; 
 }
@@ -55,6 +56,7 @@ bool Equals(const SampleRate& s1, const SampleRate& s2) {
 bool notEquals(const SampleRate& s1, const SampleRate& s2) {
   return !(s1 == s2);
 }
+};
 
 using ::testing::Return;
 
