@@ -37,6 +37,7 @@ TEST_F(SampleRateTest, testToString)
     EXPECT_EQ(sp->toString(), "44100");
 }
 
+//————————————————————————————————————-
 class SrInterface {
  public:
   virtual ~SrInterface();
@@ -46,7 +47,7 @@ class SrInterface {
 class RealMock : public SrInterface { 
  public:
    virtual ~RealMock() {}
-   virtual bool Equals(const SampleRate &, const SampleRate &) {
+   bool Equals(const SampleRate &s1, const SampleRate &s2) {
     return s1 == s2;
   }
 };
