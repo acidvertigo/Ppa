@@ -40,7 +40,7 @@ TEST_F(SampleRateTest, testToString)
 class SrInterface {
  public:
   virtual ~SrInterface();
-  virtual bool eq(const SampleRate &s1, const SampleRate &s2) = 0;
+  virtual bool eq(const SampleRate &s1, const SampleRate &s2) const = 0;
  
 };
 
