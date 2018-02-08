@@ -49,7 +49,7 @@ class RealMock : public SrInterface {
   }
 };
 
-class SrMock : public RealMock {
+class SrMock : public SrInterface {
   MOCK_METHOD2(Equals, bool(const SampleRate&, const SampleRate&));
   MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
 };
