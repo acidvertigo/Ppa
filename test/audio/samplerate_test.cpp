@@ -61,14 +61,6 @@ class SrMock : public RealMock {
   MOCK_METHOD2(notEquals, bool(const SampleRate &, const SampleRate &));
 };
 
-bool operator==(const SampleRate &s1, const SampleRate &s2) {
-    return s1.samplerate == s2.samplerate;
-}
-
-bool operator!=(const SampleRate &s1, const SampleRate &s2) {
-    return !(s1 == s2);
-}
-
 
 using ::testing::Return;
 
@@ -91,7 +83,7 @@ TEST(SampleRateTest, testNotEqual)
     SampleRate * sp2;
      
     sp  = new SampleRate(44100);
-    sp2 = new SampleRate(44100);
+    sp2 = new SampleRate(88200);
     
     SrMock srMock;
     EXPECT_CALL(srMock, notEquals(sp, sp2));
