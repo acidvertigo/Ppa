@@ -39,6 +39,7 @@ TEST_F(SampleRateTest, testToString)
 
 class SrInterface {
  public:
+  virtual ~SrInterface();
   virtual bool eq(const SampleRate &s1, const SampleRate &s2) = 0;
  
 };
@@ -48,7 +49,7 @@ class SrMock : public SrInterface {
    virtual bool eq(const SampleRate &s1, const SampleRate &s2) const override {
      return s1 == s2;
    }
-   MOCK_METHOD2(eq, bool(const SampleRate &s1, const SampleRate &s2));
+   MOCK_CONST_METHOD2(eq, bool(const SampleRate &s1, const SampleRate &s2));
 };
 
 SrMock srMock;
