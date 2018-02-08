@@ -42,11 +42,11 @@ class SrInterface {
 
 class RealMock : public SrInterface {
 public:
-bool Equals(const SampleRate & s1, const SampleRate & s2) {
+bool Equals(SampleRate s1, SampleRate s2) {
   return s1 == s2; 
 }
 
-bool notEquals(const SampleRate & s1, const SampleRate & s2) {
+bool notEquals(SampleRate s1,  SampleRate s2) {
   return !(s1 == s2);
 }
 };
