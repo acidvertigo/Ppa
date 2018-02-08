@@ -48,10 +48,10 @@ class SrInterface {
 class RealMock : public SrInterface { 
  public:
    virtual ~RealMock() {}
-   bool Equals(const SampleRate &sp, const SampleRate &sp2) {
+   bool Equals(const SampleRate &s1, const SampleRate &s2) {
     return s1.samplerate == s2.samplerate;
   }
-  bool notEquals(const SampleRate &sp, const SampleRate &sp2) {
+  bool notEquals(const SampleRate &s1, const SampleRate &s2) {
     return !(s1 == s2);
   }
 };
