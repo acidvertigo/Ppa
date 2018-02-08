@@ -36,8 +36,8 @@ TEST_F(SampleRateTest, testToString) {
 class SrInterface {
  public:
   virtual ~SrInterface();
-  virtual bool Equals(const SampleRate &, const SampleRate &) = 0;
-  virtual bool notEquals(const SampleRate &, const SampleRate &) = 0;
+  virtual bool Equals(SampleRate, SampleRate) = 0;
+  virtual bool notEquals(SampleRate, SampleRate) = 0;
 };
 
 class RealMock : public SrInterface {
