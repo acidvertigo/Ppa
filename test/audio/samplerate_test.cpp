@@ -61,14 +61,14 @@ bool notEquals(const SampleRate & s1, const SampleRate & s2) {
 using ::testing::Return;
 
 TEST(SampleRateTest, testIsEqual) {
-  SampleRate* s1;
-  SampleRate* s2;
+  SampleRate * s1;
+  SampleRate * s2;
 
   s1 = new SampleRate(44100);
   s2 = new SampleRate(44100);
 
   SrMock srMock;
-  EXPECT_CALL(srMock, Equals(s1, s2));
+  EXPECT_CALL(srMock, Equals(*s1, *s2));
   // . WillOnce(Return(true));
 }
 
@@ -80,6 +80,6 @@ TEST(SampleRateTest, testNotEqual) {
   s2 = new SampleRate(88200);
 
   SrMock srMock;
-  EXPECT_CALL(srMock, notEquals(s1, s2));
+  EXPECT_CALL(srMock, notEquals(*s1, *s2));
   // . WillOnce(Return(true));
 }
