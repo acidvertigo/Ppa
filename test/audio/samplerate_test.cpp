@@ -63,6 +63,7 @@ TEST(SampleRateTest, testIsEqual)
     sp  = new SampleRate(44100);
     sp2 = new SampleRate(44100);
     
-    EXPECT_CALL(SrMock(), Equals(sp2));
+    SrMock srMock;
+    EXPECT_CALL(srMock, Equals(sp2));
         // . WillOnce(Return(true));
 }
