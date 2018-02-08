@@ -40,16 +40,15 @@ TEST_F(SampleRateTest, testToString)
 class SrInterface {
  public:
   virtual ~SrInterface();
-  virtual bool eq(const SampleRate &s1, const SampleRate &s2) const = 0;
- 
+  virtual bool operator==(const SampleRate&) = 0; 
 };
 
 class SrMock : public SrInterface { 
  public:
-   virtual bool eq(const SampleRate &s1, const SampleRate &s2) const override {
-     return s1 == s2;
-   }
-   MOCK_CONST_METHOD2(eq, bool(const SampleRate &s1, const SampleRate &s2));
+   SrMock() {}
+   virtual ~SrMock() {}
+   MOCK_METHOD1(Equals, bool(const Samplerate&));
+   virtual bool operator==(const SampleRate& rhs) { return Equals(rhs); }
 };
 
 SrMock srMock;
@@ -64,6 +63,6 @@ TEST(SampleRateTest, testIsEqual)
     sp  = new SampleRate(44100);
     sp2 = new SampleRate(44100);
 
-    EXPECT_CALL(SrMock,eq(sp, sp2))
-        . WillOnce(Return(true));
+    EXPECT_CALL(SrMock, Equals(sp2));
+        // . WillOnce(Return(true));
 }
