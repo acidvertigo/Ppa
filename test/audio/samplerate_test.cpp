@@ -47,7 +47,7 @@ class SrMock : public SrInterface {
  public:
    SrMock() {}
    virtual ~SrMock() {}
-   MOCK_METHOD1(Equals, bool(const Samplerate&));
+   MOCK_METHOD1(Equals, bool(const SampleRate&));
    virtual bool operator==(const SampleRate& rhs) { return Equals(rhs); }
 };
 
