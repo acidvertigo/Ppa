@@ -40,15 +40,17 @@ TEST_F(SampleRateTest, testToString)
 class SrInterface {
  public:
   virtual ~SrInterface();
-  virtual bool operator==(const SampleRate&) = 0; 
+  virtual bool Equals(const SampleRate&, const SampleRate&) = 0;
 };
 
 class SrMock : public SrInterface { 
  public:
    SrMock() {}
    virtual ~SrMock() {}
-   MOCK_METHOD1(Equals, bool(const SampleRate&));
-   virtual bool operator==(const SampleRate& rhs) { return Equals(rhs); }
+   MOCK_METHOD2(Equals, bool(const SampleRate &, const SampleRate &));
+   virtual bool Equals(const SampleRate &s1, const SampleRate &s2) {
+    return s1 == s2;
+  }
 };
 
 SrMock srMock;
