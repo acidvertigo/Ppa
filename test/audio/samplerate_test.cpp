@@ -54,6 +54,15 @@ class SrMock : public SrInterface {
   MOCK_METHOD2(notEquals, bool(const SampleRate&, const SampleRate&));
 };
 
+SrMock srMock;
+void Equals(const SampleRate& s1, const SampleRate& s2) {
+  srMock.Equals(s1, s2);
+}
+
+void notEquals(const SampleRate& s1, const SampleRate& s2) {
+  srMock.notEquals(s1, s2);
+}
+
 using ::testing::Return;
 
 TEST(SampleRateTest, testIsEqual) {
