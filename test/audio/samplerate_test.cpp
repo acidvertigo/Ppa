@@ -54,8 +54,8 @@ bool notEquals(SampleRate s1,  SampleRate s2) {
 class SrMock : public SrInterface {
  public:
   virtual ~SrMock() {}
-  MOCK_METHOD2(Equals, bool(const SampleRate &, const SampleRate &));
-  MOCK_METHOD2(notEquals, bool(const SampleRate &, const SampleRate &));
+  MOCK_METHOD2(Equals, bool(SampleRate, SampleRate));
+  MOCK_METHOD2(notEquals, bool(SampleRate, SampleRate));
 };
 
 using ::testing::Return;
