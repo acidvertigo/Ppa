@@ -43,7 +43,7 @@ TEST(SampleRateTest, testNotEqual) {
   SampleRate* sp2;
 
   sp = new SampleRate(44100);
-  sp2 = new SampleRate(44100);
+  sp2 = new SampleRate(88200);
 
   ASSERT_NE (sp == sp2);
 }
