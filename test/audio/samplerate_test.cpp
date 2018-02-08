@@ -43,17 +43,18 @@ class SrInterface {
   virtual bool Equals(const SampleRate &, const SampleRate &) = 0;
 };
 
-class SrMock : public SrInterface { 
+class RealMock : public SrInterface { 
  public:
    SrMock() {}
    virtual ~SrMock() {}
-   MOCK_METHOD2(Equals, bool(const SampleRate &, const SampleRate &));
    virtual bool Equals(const SampleRate &s1, const SampleRate &s2) {
     return s1 == s2;
   }
 };
 
-SrMock srMock;
+class SrMock : public RealMock {
+  MOCK_METHOD2(Equals, bool(const SampleRate &, const SampleRate &));
+};
 
 using ::testing::Return;
 
