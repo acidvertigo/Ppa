@@ -14,12 +14,12 @@ namespace Audio {
 
 /*
  * Constructor: BitDepth
- * Usage: BitDepth sbd(int bithdepthc);
+ * Usage: BitDepth sbd(int bitdepthc);
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-BitDepth::BitDepth(int bitdepthc) : bithdepth(0) {
-  bithdepth = bitdepthc;
+BitDepth::BitDepth(int bitdepthc) : bitdepth(0) {
+  bitdepth = bitdepthc;
 }
 
 BitDepth::~BitDepth() = default;
