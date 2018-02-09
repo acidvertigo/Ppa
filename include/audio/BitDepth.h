@@ -18,7 +18,7 @@ namespace Audio {
 /*
  * Derived classes definitions
  */
-class BithDepth : public IBitDepth {
+class BitDepth : public IBitDepth {
  public:
   AUDIO_EXPORT BithDepth(int bitdepthc);
   AUDIO_EXPORT ~BithDepth() override;
