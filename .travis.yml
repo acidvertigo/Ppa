@@ -22,11 +22,11 @@ script:
   - mkdir build && mkdir build/Debug && mkdir build/Release
   - cd build/Debug
   - cmake -D CMAKE_BUILD_TYPE=Debug ../../
-  - make && make install
+  - make CTEST_OUTPUT_ON_FAILURE=1 && make install
   - ctest
   - cd ../Release
   - cmake -D CMAKE_BUILD_TYPE=Release ../../
-  - make && make install
+  - make CTEST_OUTPUT_ON_FAILURE=1 && make install
   - ctest
   - cd ../../
   - rm -rf build
