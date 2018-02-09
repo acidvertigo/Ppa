@@ -16,17 +16,9 @@ namespace Audio {
  * Constructor: BitDepth
  * Usage: BitDepth bd(24, false);
  * ------------------------
- * Creates a SampleRate object.  The parameter sets the samplerate;
+ * Creates a BitDepth object.  The parameter sets the samplerate;
  */
 BitDepth::BitDepth(int bitdepthc) : bitdepth(0) {
-  bitdepth = bitdepthc;
-}
-
-BitDepth::BitDepth(float bitdepthc) : bitdepth(0) {
-  bitdepth = bitdepthc;
-}
-
-BitDepth::BitDepth(double bitdepthc) : bitdepth(0) {
   bitdepth = bitdepthc;
 }
 
@@ -34,10 +26,6 @@ BitDepth::~BitDepth() = default;
 
 int BitDepth::GetBitDepth() const {
   return bitdepth;
-}
-
-bool BitDepth::IsFloat() const {
-  return flPoint;
 }
 
 string BitDepth::toString() const {
