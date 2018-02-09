@@ -7,8 +7,10 @@
 #include "common/String.h"
 
 using namespace std;
-using namespace Ppa::Audio;
 using namespace Ppa::Common;
+
+namespace Ppa {
+namespace Audio {
 
 /*
  * Constructor: SampleRate
@@ -16,30 +18,33 @@ using namespace Ppa::Common;
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-  SampleRate::SampleRate(int sampleratec) : samplerate(0) {
-    samplerate = sampleratec;
-  }
+SampleRate::SampleRate(int sampleratec) : samplerate(0) {
+  samplerate = sampleratec;
+}
 
-  SampleRate::~SampleRate() = default;
+SampleRate::~SampleRate() = default;
 
-  int SampleRate::GetSampleRate() const {
-    return samplerate;
-  }
+int SampleRate::GetSampleRate() const {
+  return samplerate;
+}
 
-  string SampleRate::toString() const {
-    return NumberToString(samplerate);
-  }
+string SampleRate::toString() const {
+  return NumberToString(samplerate);
+}
 
 //------------------------------------
 
-  bool Ppa::Audio::operator==(const SampleRate &s1, const SampleRate &s2) {
-    return s1.samplerate == s2.samplerate;
-  }
+bool operator==(const SampleRate& s1, const SampleRate& s2) {
+  return s1.samplerate == s2.samplerate;
+}
 
-  bool Ppa::Audio::operator!=(const SampleRate &s1, const SampleRate &s2) {
-    return !(s1 == s2);
-  }
+bool operator!=(const SampleRate& s1, const SampleRate& s2) {
+  return !(s1 == s2);
+}
 
-  std::ostream & Ppa::Audio::operator<<(ostream & os, const SampleRate &sr) {
-    return os << sr.toString();
-  }
+ostream& operator<<(ostream& os, const SampleRate& sr) {
+  return os << sr.toString();
+}
+
+}  // namespace Audio end
+}  // namespace Ppa end
