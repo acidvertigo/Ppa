@@ -6,6 +6,12 @@
 
 using namespace ::Ppa::Audio;
 
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
+
+//----------------------------------------
 class SampleRateTest : public ::testing::Test {
  public:
   SampleRateTest() {}
@@ -39,7 +45,6 @@ TEST_F(SampleRateTest, testToString) {
 TEST_F(SampleRateTest, testIsEqual) {
   ASSERT_TRUE(*sp == *sp2);
 }
-
 
 TEST_F(SampleRateTest, testNotEqual) {
   SampleRate* sp;
