@@ -24,7 +24,7 @@ SampleRate::SampleRate(int sampleratec) : samplerate(0) {
 
 SampleRate::~SampleRate() = default;
 
-int SampleRate::GetSampleRate() const {
+auto SampleRate::GetSampleRate() const {
   return samplerate;
 }
 
