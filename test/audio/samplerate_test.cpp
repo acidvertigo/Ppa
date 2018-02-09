@@ -35,8 +35,7 @@ TEST_F(SampleRateTest, testToString) {
   EXPECT_EQ(sp->toString(), "44100");
 }
 
-
-
+//-----------------------------------
 TEST_F(SampleRateTest, testIsEqual) {
   ASSERT_TRUE(*sp == *sp2);
 }
@@ -51,10 +50,10 @@ TEST_F(SampleRateTest, testNotEqual) {
 
   ASSERT_FALSE(*sp == *sp2);
 }
-/*_________________________________
+
 TEST_F(SampleRateTest, testSstream) {
     std::stringstream out;
     out << sp;
     ASSERT_TRUE(out.str() == "44100");
 }
-*/
+
