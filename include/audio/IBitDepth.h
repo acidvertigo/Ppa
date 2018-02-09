@@ -1,7 +1,7 @@
 /*
  * File: ISampleRate.h
  * -------------
- * Interface for the SampleRate class.
+ * Interface for the BitDepth class.
  */
 #ifndef _IBITDEPTH_H_
 #define _IBITDEPTH_H_
