@@ -23,9 +23,7 @@ class BitDepth : public IBitDepth {
   AUDIO_EXPORT BitDepth(int bitdepthc);
   AUDIO_EXPORT ~BitDepth() override;
 
-  int GetBitDepth() const override;
-  float GetBitDepth() const override;
-  double  GetBitDepth() const override;
+  AUDIO_EXPORT int GetBitDepth() const override;
 
   std::string AUDIO_EXPORT toString() const override;
 
@@ -36,6 +34,7 @@ class BitDepth : public IBitDepth {
 
  protected:
   int bitdepth;    /* integer bit depth */
+  std::set <int, greater <int> > allowed;
 };
 
 /*
