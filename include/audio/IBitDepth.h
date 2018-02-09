@@ -23,7 +23,7 @@ public:
  * ----------------------------------
  * These methods returns the bit depth set
  */
-   virtual auto GetBitDepth() const = 0;
+   virtual int GetBitDepth() const = 0;
 
 /*
  * Method: toString

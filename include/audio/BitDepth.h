@@ -21,11 +21,12 @@ namespace Audio {
 class BitDepth : public IBitDepth {
  public:
   AUDIO_EXPORT BitDepth(int bitdepthc);
-  AUDIO_EXPORT BitDepth(float bitdepthfpc);
-  AUDIO_EXPORT BitDepth(double bitdepthfplc);
   AUDIO_EXPORT ~BitDepth() override;
 
-  auto AUDIO_EXPORT GetBitDepth() const override;
+  int GetBitDepth() const override;
+  float GetBitDepth() const override;
+  double  GetBitDepth() const override;
+
   std::string AUDIO_EXPORT toString() const override;
 
   /*
@@ -34,7 +35,7 @@ class BitDepth : public IBitDepth {
   friend bool operator==(const BitDepth&, const BitDepth&);
 
  protected:
-  auto bitdepth;    /* integer bit depth */
+  int bitdepth;    /* integer bit depth */
 };
 
 /*
