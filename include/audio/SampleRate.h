@@ -23,14 +23,8 @@ class SampleRate : public ISampleRate {
   AUDIO_EXPORT SampleRate(int sampleratec);
   AUDIO_EXPORT ~SampleRate() override;
 
-  /*
-   * Method: GetSampleRate
-   * Usage: GetSamplerate()
-   * —————————————————————-
-   * Returns the actual samplerate value
-   */
   int AUDIO_EXPORT GetSampleRate() const override;
-  std::string AUDIO_EXPORT toString() const;
+  std::string AUDIO_EXPORT toString() const override;
 
   /*
    * friend method needed from comparison operator
