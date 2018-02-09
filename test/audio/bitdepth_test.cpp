@@ -40,8 +40,8 @@ TEST_F(BitDepthTest, testIsEqual) {
 }
 
 TEST_F(BitDepthTest, testNotEqual) {
-  SampleRate* bd;
-  SampleRate* bd2;
+  BitDepth* bd;
+  BitDepth* bd2;
 
   bd = new BitDepth(44100);
   bd2 = new BitDepth(88200);
