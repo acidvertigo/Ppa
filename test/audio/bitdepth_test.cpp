@@ -51,7 +51,7 @@ TEST_F(BitDepthTest, testNotEqual) {
 
 TEST_F(BitDepthTest, testSstream) {
     std::stringstream out;
-    BitDepth bd(16);
+    BitDepth bd(24);
     out << bd;
     ASSERT_TRUE(out.str() == "24");
 }
