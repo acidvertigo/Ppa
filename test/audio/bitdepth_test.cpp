@@ -22,39 +22,39 @@ class BitDepthTest : public ::testing::Test {
   }
 
   virtual void TearDown() override {
-    delete sp;
-    delete sp2;
+    delete bd;
+    delete bd2;
   }
 };
 
 
-TEST_F(SampleRateTest, testGetSampleRate) {
-  EXPECT_EQ(sp->GetSampleRate(), 44100);
+TEST_F(BitDepthTest, testGetBitDepth) {
+  EXPECT_EQ(bd->GetBitDepth(), 44100);
 }
 
-TEST_F(SampleRateTest, testToString) {
-  EXPECT_EQ(sp->toString(), "44100");
+TEST_F(BitDepthTest, testToString) {
+  EXPECT_EQ(bd->toString(), "44100");
 }
 
 //-----------------------------------
-TEST_F(SampleRateTest, testIsEqual) {
-  ASSERT_TRUE(*sp == *sp2);
+TEST_F(BitDepthTest, testIsEqual) {
+  ASSERT_TRUE(*bd == *bd2);
 }
 
-TEST_F(SampleRateTest, testNotEqual) {
-  SampleRate* sp;
-  SampleRate* sp2;
+TEST_F(BitDepthTest, testNotEqual) {
+  SampleRate* bd;
+  SampleRate* bd2;
 
-  sp = new SampleRate(44100);
-  sp2 = new SampleRate(88200);
+  bd = new BitDepth(44100);
+  bd2 = new BitDepth(88200);
 
-  ASSERT_FALSE(*sp == *sp2);
+  ASSERT_FALSE(*bd == *bd2);
 }
 
-TEST_F(SampleRateTest, testSstream) {
+TEST_F(BitDepthTest, testSstream) {
     std::stringstream out;
-    SampleRate samp(44100);
-    out << samp;
+    BitDepth bd(44100);
+    out << bd;
     ASSERT_TRUE(out.str() == "44100");
 }
 
