@@ -10,7 +10,7 @@
 #include <iostream>
 
 #include "audio_export.h"
-#include "ISampleRate.h"
+#include "IBitDepth.h"
 
 namespace Ppa {
 namespace Audio {
