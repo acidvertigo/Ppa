@@ -1,5 +1,3 @@
-#include <sstream>      // std::stringstream
-
 #include "gtest/gtest.h"
 
 #include "audio/BitDepth.h"
