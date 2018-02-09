@@ -1,3 +1,5 @@
+#include <sstream>      // std::stringstream
+
 #include "gtest/gtest.h"
 
 #include "audio/SampleRate.h"
@@ -48,10 +50,10 @@ TEST(SampleRateTest, testNotEqual) {
 
   ASSERT_FALSE(*sp == *sp2);
 }
-/*————————————————————————————————————-
+
 TEST_F(SampleRateTest, testSstream) {
     std::stringstream out;
     out << sp;
     ASSERT_TRUE(out.str() == "44100");
 }
-*/
+
