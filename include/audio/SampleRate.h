@@ -17,28 +17,28 @@ namespace Audio {
 
 /*
  * Derived classes definitions
- */  
-class SampleRate : public ISampleRate {  
-public:
-    AUDIO_EXPORT SampleRate(int sampleratec);
-    AUDIO_EXPORT ~SampleRate() override;
+ */
+class SampleRate : public ISampleRate {
+ public:
+  AUDIO_EXPORT SampleRate(int sampleratec);
+  AUDIO_EXPORT ~SampleRate() override;
 
-   /*
-    * Method: GetSampleRate
-    * Usage: GetSamplerate()
-    * —————————————————————-
-    * Returns the actual samplerate value
-    */
-    int AUDIO_EXPORT GetSampleRate() const override;
-    std::string AUDIO_EXPORT toString() const;
+  /*
+   * Method: GetSampleRate
+   * Usage: GetSamplerate()
+   * —————————————————————-
+   * Returns the actual samplerate value
+   */
+  int AUDIO_EXPORT GetSampleRate() const override;
+  std::string AUDIO_EXPORT toString() const;
 
-   /*
-    * friend method needed from comparison operator
-    */
-    friend bool operator==(const SampleRate &s1, const SampleRate &s2);
+  /*
+   * friend method needed from comparison operator
+   */
+  friend bool operator==(const SampleRate& s1, const SampleRate& s2);
 
-protected:
-    int samplerate; /* samplerate in Hz */
+ protected:
+  int samplerate; /* samplerate in Hz */
 };
 
 /*
@@ -47,7 +47,7 @@ protected:
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-   std::ostream & operator<<(std::ostream &os, const SampleRate &sr);
+std::ostream& operator<<(std::ostream&, const SampleRate&);
 
 /*
  * Operator: ==
@@ -55,7 +55,7 @@ protected:
  * -----------------
  * This operator supports equality testing for samplerates.
  */
-   bool operator==(const SampleRate &s1, const SampleRate &s2);
+bool operator==(const SampleRate&, const SampleRate&);
 
 /*
  * Operator: !=
@@ -63,9 +63,9 @@ protected:
  * -----------------
  * This operator implements the != operator for samplerate.
  */
-   bool operator!=(const SampleRate &s1, const SampleRate &s2);
+bool operator!=(const SampleRate&, const SampleRate&);
 
-} // namespace Audio end
-} // namespace Ppa end
+}  // namespace Audio end
+}  // namespace Ppa end
 
 #endif /* _SAMPLERATE_H_ */
