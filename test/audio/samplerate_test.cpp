@@ -42,7 +42,7 @@ TEST_F(SampleRateTest, testIsEqual) {
 }
 
 
-TEST(SampleRateTest, testNotEqual) {
+TEST_F(SampleRateTest, testNotEqual) {
   SampleRate* sp;
   SampleRate* sp2;
 
