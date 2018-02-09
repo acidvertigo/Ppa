@@ -32,7 +32,7 @@ class BitDepth : public IBitDepth {
   friend bool operator==(const BitDepth&, const BitDepth&);
 
  protected:
-  int bithdepth; /* bit depth */
+  int bitdepth; /* bit depth */
 };
 
 /*
