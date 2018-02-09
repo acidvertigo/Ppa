@@ -18,15 +18,15 @@ namespace Audio {
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-BitDepth::BitDepth(auto bitdepthc) : bitdepth(0) {
+BitDepth::BitDepth(int bitdepthc) : bitdepth(0) {
   bitdepth = bitdepthc;
 }
 
-BitDepth::BitDepth(float bitdepthfpc) : bitdepth(0) {
+BitDepth::BitDepth(float bitdepthc) : bitdepth(0) {
   bitdepth = bitdepthc;
 }
 
-BitDepth::BitDepth(double bitdepthfplc) : bitdepth(0) {
+BitDepth::BitDepth(double bitdepthc) : bitdepth(0) {
   bitdepth = bitdepthc;
 }
 
