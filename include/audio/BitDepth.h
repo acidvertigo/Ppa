@@ -21,7 +21,7 @@ namespace Audio {
 class BitDepth : public IBitDepth {
  public:
   AUDIO_EXPORT BithDepth(int bitdepthc);
-  AUDIO_EXPORT ~BithDepth() override;
+  AUDIO_EXPORT ~BitDepth() override;
 
   int AUDIO_EXPORT GetBitDepth() const override;
   std::string AUDIO_EXPORT toString() const override;
