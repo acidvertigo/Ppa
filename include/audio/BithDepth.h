@@ -32,7 +32,7 @@ class BithDepth : public IBithDepth {
   friend bool operator==(const BitDepth&, const BitDepth&);
 
  protected:
-  int samplerate; /* samplerate in Hz */
+  int bithdepth; /* bit depth */
 };
 
 /*
