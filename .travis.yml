@@ -23,11 +23,11 @@ script:
   - cd build/Debug
   - cmake -D CMAKE_BUILD_TYPE=Debug ../../
   - make CTEST_OUTPUT_ON_FAILURE=1 && make install
-  - ctest -V
+  - ctest -W
   - cd ../Release
   - cmake -D CMAKE_BUILD_TYPE=Release ../../
   - make CTEST_OUTPUT_ON_FAILURE=1 && make install
-  - ctest -V
+  - ctest -W
   - cd ../../
   - rm -rf build
   - cppcheck --enable=all --suppress=missingIncludeSystem --check-config --error-exitcode=1 --std=c++11 --verbose --language=c++ -Iinclude/ .
