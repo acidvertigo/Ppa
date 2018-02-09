@@ -59,7 +59,7 @@ TEST_F(SampleRateTest, testNotEqual) {
 TEST_F(SampleRateTest, testSstream) {
     std::stringstream out;
     SampleRateTest samp
-    out << samp;
+    std::out << samp;
     ASSERT_TRUE(out.str() == "44100");
 }
 
