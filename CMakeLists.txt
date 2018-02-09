@@ -23,7 +23,7 @@ SET( PROJ_INCLUDES
   ${CMAKE_BINARY_DIR}/exports
 )
 PROJECT( ${PROJ_NAME} VERSION 0.0.1 )
-include(GoogleTest)
+ENABLE_TESTING()
 
 #-------------------------------------------------------------------------------
 #	SOURCE CODE
