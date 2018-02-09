@@ -6,5 +6,5 @@ set(INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/include/ )
 include_directories( ${INCLUDE_DIRS} )
 
 add_executable(audiotst ${TEST_SRC_FILES})
-target_link_libraries(audiotst audio gmock)
+target_link_libraries(audiotst audio gmock_main)
 add_test(NAME audio_test COMMAND audiotst)
