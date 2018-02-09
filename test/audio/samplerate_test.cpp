@@ -33,12 +33,12 @@ TEST_F(SampleRateTest, testToString) {
   EXPECT_EQ(sp->toString(), "44100");
 }
 
-/*————————————————————————————————————-
+
 
 TEST_F(SampleRateTest, testIsEqual) {
   ASSERT_TRUE(*sp == *sp2);
 }
-
+/*————————————————————————————————————-
 TEST(SampleRateTest, testNotEqual) {
   SampleRate* sp;
   SampleRate* sp2;
