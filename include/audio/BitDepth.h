@@ -20,7 +20,7 @@ namespace Audio {
  */
 class BitDepth : public IBitDepth {
  public:
-  AUDIO_EXPORT BithDepth(int bitdepthc);
+  AUDIO_EXPORT BitDepth(int bitdepthc);
   AUDIO_EXPORT ~BitDepth() override;
 
   int AUDIO_EXPORT GetBitDepth() const override;
