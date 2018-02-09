@@ -27,11 +27,11 @@ class BitDepthTest : public ::testing::Test {
 
 
 TEST_F(BitDepthTest, testGetBitDepth) {
-  EXPECT_EQ(bd->GetBitDepth(), 44100);
+  EXPECT_EQ(bd->GetBitDepth(), 16);
 }
 
 TEST_F(BitDepthTest, testToString) {
-  EXPECT_EQ(bd->toString(), "44100");
+  EXPECT_EQ(bd->toString(), "16");
 }
 
 //-----------------------------------
@@ -43,16 +43,16 @@ TEST_F(BitDepthTest, testNotEqual) {
   BitDepth* bd;
   BitDepth* bd2;
 
-  bd = new BitDepth(44100);
-  bd2 = new BitDepth(88200);
+  bd = new BitDepth(16);
+  bd2 = new BitDepth(24);
 
   ASSERT_FALSE(*bd == *bd2);
 }
 
 TEST_F(BitDepthTest, testSstream) {
     std::stringstream out;
-    BitDepth bd(44100);
+    BitDepth bd(16);
     out << bd;
-    ASSERT_TRUE(out.str() == "44100");
+    ASSERT_TRUE(out.str() == "24");
 }
 
