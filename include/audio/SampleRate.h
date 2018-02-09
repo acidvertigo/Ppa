@@ -47,7 +47,7 @@ class SampleRate : public ISampleRate {
  * ------------------
  * Overloads the << operator so that it is able to display SampleRate values.
  */
-AUDIO_EXPORT inline std::ostream& operator<<(std::ostream&, const SampleRate&);
+AUDIO_EXPORT std::ostream& operator<<(std::ostream&, const SampleRate&);
 
 /*
  * Operator: ==
@@ -55,7 +55,7 @@ AUDIO_EXPORT inline std::ostream& operator<<(std::ostream&, const SampleRate&);
  * -----------------
  * This operator supports equality testing for samplerates.
  */
-AUDIO_EXPORT inline bool operator==(const SampleRate&, const SampleRate&);
+AUDIO_EXPORT bool operator==(const SampleRate&, const SampleRate&);
 
 /*
  * Operator: !=
@@ -63,7 +63,7 @@ AUDIO_EXPORT inline bool operator==(const SampleRate&, const SampleRate&);
  * -----------------
  * This operator implements the != operator for samplerate.
  */
-AUDIO_EXPORT inline bool operator!=(const SampleRate&, const SampleRate&);
+AUDIO_EXPORT bool operator!=(const SampleRate&, const SampleRate&);
 
 }  // namespace Audio end
 }  // namespace Ppa end
