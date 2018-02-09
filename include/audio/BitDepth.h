@@ -34,7 +34,7 @@ class BitDepth : public IBitDepth {
 
  protected:
   int bitdepth;    /* integer bit depth */
-  std::set <int, greater <int> > allowed;
+  std::set <int> allowed;
 };
 
 /*
