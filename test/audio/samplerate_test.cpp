@@ -41,6 +41,7 @@ TEST_F(SampleRateTest, testIsEqual) {
   ASSERT_TRUE(*sp == *sp2);
 }
 
+/*_________________________________
 TEST(SampleRateTest, testNotEqual) {
   SampleRate* sp;
   SampleRate* sp2;
@@ -50,7 +51,7 @@ TEST(SampleRateTest, testNotEqual) {
 
   ASSERT_FALSE(*sp == *sp2);
 }
-
+*/
 TEST_F(SampleRateTest, testSstream) {
     std::stringstream out;
     out << sp;
