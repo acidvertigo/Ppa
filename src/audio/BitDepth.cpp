@@ -3,11 +3,11 @@
  * ---------------
  * This file implements the BitDepth.h interface.
  */
-#include <algorithm>
-#include <stdexcept>
-
 #include "audio/BitDepth.h"
 #include "common/String.h"
+
+#include <stdexcept>
+#include <algorithm>
 
 using namespace std;
 using namespace Ppa::Common;
