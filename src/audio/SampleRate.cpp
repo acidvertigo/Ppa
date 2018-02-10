@@ -19,7 +19,7 @@ namespace Audio {
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
 SampleRate::SampleRate(int sampleratec) : samplerate(0), allowed{8000,11025,16000,22050,44100,48000,88200,96000,176400,196000,352800,364000} {
-  if !(IsValid(sampleratec) {
+  if (!IsValid(sampleratec)) {
     throw invalid_argument( "samplerate value not allowed" );
   } else {
     samplerate = sampleratec;
