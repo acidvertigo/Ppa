@@ -1,8 +1,8 @@
 /*
  * File: FSystem.h
  * -------------
- * This interface exports the FSystem class, which represents audio
- * sample rate frequency.
+ * This interface exports the FSystem implementation, which is responsable
+ * for file I/O operations.
  */
 #ifndef _FSYSTEM_H_
 #define _FSYSTEM_H_
