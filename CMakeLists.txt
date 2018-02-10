@@ -17,6 +17,7 @@ SET( PROJ_PATH      ${CMAKE_SOURCE_DIR} )
 SET( PROJ_OUT_PATH  ${CMAKE_BINARY_DIR} )
 SET( PROJ_LIBRARIES 
   audio
+  fsystem
 )
 SET( PROJ_INCLUDES 
   include
