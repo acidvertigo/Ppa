@@ -36,7 +36,7 @@ string SampleRate::toString() const {
   return NumberToString(samplerate);
 }
 
-bool SampleRate::IsValid(const int& value) {
+bool SampleRate::IsValid(const int& value) const {
   return find(allowed.begin(), allowed.end(), value) != allowed.end();
 }
 
