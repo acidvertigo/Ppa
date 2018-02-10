@@ -38,7 +38,8 @@ public:
  * Method: IsValid
  * Usage: bool ok = bd.IsValid(24);
  * ———————————————————————————————-
-   virtual bool IsValid(const int&) const = 0;
+ * virtual bool IsValid(const int&) const = 0;
+ */
 };
 
 } // namespace Audio end
