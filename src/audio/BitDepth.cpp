@@ -3,6 +3,9 @@
  * ---------------
  * This file implements the BitDepth.h interface.
  */
+#include <algorithm>
+#include <stdexcept>
+
 #include "audio/BitDepth.h"
 #include "common/String.h"
 
@@ -19,7 +22,10 @@ namespace Audio {
  * Creates a BitDepth object.  The parameter sets the samplerate;
  */
 BitDepth::BitDepth(int bitdepthc) : bitdepth(0), allowed{8,16,24,32,64} {
-  bitdepth = bitdepthc;
+  if !(IsValid(bitdepthc))
+    throw invalid_argument( "bit depth value not allowed" );
+  else
+    bitdepth = bitdepthc;
 }
 
 BitDepth::~BitDepth() = default;
@@ -30,6 +36,10 @@ int BitDepth::GetBitDepth() const {
 
 string BitDepth::toString() const {
   return NumberToString(bitdepth);
+}
+
+bool BitDepth::IsValid(const int& value) {
+    return std::find(allowed.begin(), allowed.end(), value) != allowed.end();
 }
 
 //------------------------------------

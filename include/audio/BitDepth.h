@@ -36,6 +36,8 @@ class BitDepth : public IBitDepth {
  protected:
   int bitdepth;    /* integer bit depth */
   std::set<int> allowed; /* allowed values */
+
+  bool IsValid(const int&) const override;
 };
 
 /*
