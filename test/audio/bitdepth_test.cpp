@@ -43,10 +43,6 @@ TEST_F(BitDepthTest, testIsValid) {
   EXPECT_TRUE(bd->IsValid(16));
 }
 
-TEST_F(BitDepthTest, testIsNotValid) {
-  EXPECT_FALSE(bd->IsValid(39));
-}
-
 
 //-----------------------------------
 TEST_F(BitDepthTest, testIsEqual) {
