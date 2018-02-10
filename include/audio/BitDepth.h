@@ -7,11 +7,11 @@
 #ifndef _BITDEPTH_H_
 #define _BITDEPTH_H_
 
-#include <iostream>
-#include <set>
-
 #include "audio_export.h"
 #include "IBitDepth.h"
+
+#include <iostream>
+#include <set>
 
 namespace Ppa {
 namespace Audio {
