@@ -40,7 +40,7 @@ string BitDepth::toString() const {
 }
 
 bool BitDepth::IsValid(const int& value) const {
-  return find(allowed.begin(), allowed.end(), value) != allowed.end();
+  return std::find(allowed.begin(), allowed.end(), value) != allowed.end();
 }
 
 //------------------------------------

@@ -37,7 +37,7 @@ string SampleRate::toString() const {
 }
 
 bool SampleRate::IsValid(const int& value) const {
-  return find(allowed.begin(), allowed.end(), value) != allowed.end();
+  return std::find(allowed.begin(), allowed.end(), value) != allowed.end();
 }
 
 //------------------------------------
