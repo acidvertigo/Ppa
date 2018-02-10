@@ -9,8 +9,8 @@ lib/*
 bin/*
 
 # Ignore ide specific folders
-!vscode
-vscode/*
+!.vscode
+.vscode/*
 
 # Ignore Mac specific files
 .DS_Store
