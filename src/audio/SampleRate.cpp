@@ -18,7 +18,7 @@ namespace Audio {
  * ------------------------
  * Creates a SampleRate object.  The parameter sets the samplerate;
  */
-SampleRate::SampleRate(int sampleratec) : samplerate(0), allowed{8,16,24,32,64} {
+SampleRate::SampleRate(int sampleratec) : samplerate(0) {
   samplerate = sampleratec;
 }
 
