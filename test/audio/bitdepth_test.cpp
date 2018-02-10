@@ -28,7 +28,7 @@ class BitDepthTest : public ::testing::Test {
 
 TEST_F(BitDepthTest, testThrowException) {
   BitDepth* bd;
-  ASSERT_THROW(bd = new BitDepth(19), invalid_argument);
+  ASSERT_ANY_THROW(bd = new BitDepth(19));
 }
 
 TEST_F(BitDepthTest, testGetBitDepth) {

@@ -28,7 +28,7 @@ class SampleRateTest : public ::testing::Test {
 
 TEST_F(SampleRateTest, testThrowException) {
   SampleRate* sr;
-  ASSERT_THROW(sr = new SampleRate(19000), invalid_argument);
+  ASSERT_ANY_THROW(sr = new SampleRate(19000));
 }
 
 TEST_F(SampleRateTest, testGetSampleRate) {
