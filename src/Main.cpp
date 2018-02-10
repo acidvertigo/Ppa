@@ -2,7 +2,7 @@
  * --------------
  * Main Application file
  */
-
+#include <cstdlib>
 #include <iostream>
 
 #include "audio/SampleRate.h"
