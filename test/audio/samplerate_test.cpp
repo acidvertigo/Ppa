@@ -25,6 +25,10 @@ class SampleRateTest : public ::testing::Test {
   }
 };
 
+TEST_F(SampleRateTest, testThrowException) {
+  SampleRate* sr;
+  ASSERT_THROW(sr = new SampleRate(19000), invalid_argument);
+}
 
 TEST_F(SampleRateTest, testGetSampleRate) {
   EXPECT_EQ(sp->GetSampleRate(), 44100);
@@ -32,6 +36,14 @@ TEST_F(SampleRateTest, testGetSampleRate) {
 
 TEST_F(SampleRateTest, testToString) {
   EXPECT_EQ(sp->toString(), "44100");
+}
+
+TEST_F(SampleRateTest, testIsValid) {
+  EXPECT_TRUE(sp->isValid(48000));
+}
+
+TEST_F(SampleRateTest, testIsNotValid) {
+  EXPECT_FALSE(sp->isValid(39000));
 }
 
 //-----------------------------------

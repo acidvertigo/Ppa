@@ -25,6 +25,10 @@ class BitDepthTest : public ::testing::Test {
   }
 };
 
+TEST_F(BitDepthTest, testThrowException) {
+  BitDepth* bd;
+  ASSERT_THROW(bd = new BitDepth(19), invalid_argument);
+}
 
 TEST_F(BitDepthTest, testGetBitDepth) {
   EXPECT_EQ(bd->GetBitDepth(), 16);
@@ -33,6 +37,15 @@ TEST_F(BitDepthTest, testGetBitDepth) {
 TEST_F(BitDepthTest, testToString) {
   EXPECT_EQ(bd->toString(), "16");
 }
+
+TEST_F(BitDepthTest, testIsValid) {
+  EXPECT_TRUE(bd->isValid(16));
+}
+
+TEST_F(BitDepthTest, testIsNotValid) {
+  EXPECT_FALSE(bd->isValid(39));
+}
+
 
 //-----------------------------------
 TEST_F(BitDepthTest, testIsEqual) {
