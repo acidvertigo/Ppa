@@ -40,7 +40,7 @@ string Channel::toString() const {
 //------------------------------------
 
 bool operator==(const Channel& c1, const Channel& c2) {
-  return c1.number == c2.number;
+  return c1.number == c2.number && c1.name == c2.name;
 }
 
 bool operator!=(const Channel& c1, const Channel& c2) {
