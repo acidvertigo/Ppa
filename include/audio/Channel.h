@@ -25,7 +25,7 @@ public:
  * ----------------------------------
  * These methods returns the current channel number
  */
-  AUDIO_EXPORT int GetChannelNumber() const override;
+  AUDIO_EXPORT int GetNumber() const override;
 
 /*
  * Method: GetName
@@ -33,7 +33,7 @@ public:
  * ----------------------------------
  * These methods returns the current channel name
  */
-   AUDIO_EXPORT std::string GetChannelName() const override;
+   AUDIO_EXPORT std::string GetName() const override;
 
 /*
  * Method: toString
@@ -42,6 +42,11 @@ public:
  * Returns a string representation of the bit depth.
  */
    AUDIO_EXPORT std::string toString() const override;
+
+  /*
+   * friend method needed from comparison operator
+   */
+  friend bool operator==(const Channel&, const Channel&);
 
 protected:
    std::string name;

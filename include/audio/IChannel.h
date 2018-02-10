@@ -21,7 +21,7 @@ public:
  * ----------------------------------
  * These methods returns the current channel number
  */
-   virtual int GetChannelNumber() const = 0;
+   virtual int GetNumber() const = 0;
 
 /*
  * Method: GetName
@@ -29,7 +29,7 @@ public:
  * ----------------------------------
  * These methods returns the current channel name
  */
-   virtual std::string GetChannelName() const = 0;
+   virtual std::string GetName() const = 0;
 
 /*
  * Method: toString
