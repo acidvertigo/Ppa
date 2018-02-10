@@ -42,8 +42,8 @@ TEST_F(ChannelTest, testIsEqual) {
 }
 
 TEST_F(ChannelTest, testNotEqual) {
-  SampleRate* ch;
-  SampleRate* ch2;
+  Channel* ch;
+  Channel* ch2;
 
   ch = new Channel("piano", 1);
   ch2 = new Channel("guitar", 2);

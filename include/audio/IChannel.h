@@ -25,7 +25,7 @@ public:
 
 /*
  * Method: GetName
- * Usage: int x = ch.GetName();
+ * Usage: std::string x = ch.GetName();
  * ----------------------------------
  * These methods returns the current channel name
  */
