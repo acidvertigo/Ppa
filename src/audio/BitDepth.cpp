@@ -22,11 +22,10 @@ namespace Audio {
  * Creates a BitDepth object.  The parameter sets the samplerate;
  */
 BitDepth::BitDepth(int bitdepthc) : bitdepth(0), allowed{8,16,24,32,64} {
-  if (!IsValid(bitdepthc)) {
+  if (!IsValid(bitdepthc))
     throw invalid_argument( "bit depth value not allowed" );
-  } else {
+  else
     bitdepth = bitdepthc;
-  }
 }
 
 BitDepth::~BitDepth() = default;
@@ -40,7 +39,7 @@ string BitDepth::toString() const {
 }
 
 bool BitDepth::IsValid(const int& value) const {
-  return std::find(allowed.begin(), allowed.end(), value) != allowed.end();
+  return allowed.count(value) != 0;
 }
 
 //------------------------------------
