@@ -12,11 +12,6 @@
 namespace Ppa {
 namespace FSystem {
 
-class IFSystem {
-  
-public:
-   virtual ~IFSystem() = default;
-
 /*
  * Methods: Open
  * Usage: ch.Open("drums.wav");
@@ -48,9 +43,6 @@ public:
  * Returns true if the file already exists
  */
     virtual bool Exists () const = 0;
-
-
-};
 
 } // namespace Audio end
 } // namespace Ppa end
