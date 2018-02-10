@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
-
 #include "audio/BitDepth.h"
+
+#include <stdexcept>
 
 using namespace ::Ppa::Audio;
 
@@ -39,11 +40,11 @@ TEST_F(BitDepthTest, testToString) {
 }
 
 TEST_F(BitDepthTest, testIsValid) {
-  EXPECT_TRUE(bd->isValid(16));
+  EXPECT_TRUE(bd->IsValid(16));
 }
 
 TEST_F(BitDepthTest, testIsNotValid) {
-  EXPECT_FALSE(bd->isValid(39));
+  EXPECT_FALSE(bd->IsValid(39));
 }
 
 
