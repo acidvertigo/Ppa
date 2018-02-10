@@ -39,11 +39,6 @@ TEST_F(BitDepthTest, testToString) {
   EXPECT_EQ(bd->toString(), "16");
 }
 
-TEST_F(BitDepthTest, testIsValid) {
-  EXPECT_TRUE(bd->IsValid(16));
-}
-
-
 //-----------------------------------
 TEST_F(BitDepthTest, testIsEqual) {
   ASSERT_TRUE(*bd == *bd2);
