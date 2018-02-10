@@ -11,6 +11,7 @@
 #include "ISampleRate.h"
 
 #include <iostream>
+#include <set>
 
 namespace Ppa {
 namespace Audio {
