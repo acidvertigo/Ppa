@@ -23,6 +23,7 @@ int main() {
   cout << "Samplerate value is: " << sm->GetSampleRate() << endl;
   cout << verdict << endl;
   } catch (...) { // deal with all other exceptions
+    throw;
     exit(EXIT_FAILURE);
   }
 
