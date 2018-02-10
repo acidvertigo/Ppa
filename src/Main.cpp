@@ -11,6 +11,7 @@ using namespace std;
 using namespace Ppa::Audio;
 
 int main() {
+  try {
   SampleRate * sm;
   SampleRate * sm2;
 
@@ -21,5 +22,9 @@ int main() {
   cout << "Hello World!" << endl;
   cout << "Samplerate value is: " << sm->GetSampleRate() << endl;
   cout << verdict << endl;
+  } catch (...) { // deal with all other exceptions
+    exit(EXIT_FAILURE);
+  }
+
   return 0;
 }

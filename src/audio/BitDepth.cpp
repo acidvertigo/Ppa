@@ -39,9 +39,7 @@ string BitDepth::toString() const {
   return NumberToString(bitdepth);
 }
 
-bool BitDepth::IsValid(const int& value) {
-  return find(allowed.begin(), allowed.end(), value) != allowed.end();
-}
+
 
 //------------------------------------
 
