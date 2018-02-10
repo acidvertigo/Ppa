@@ -27,11 +27,20 @@ public:
 
 /*
  * Method: toString
- * Usage: string str = pt.toString();
+ * Usage: string str = sr.toString();
  * ----------------------------------
  * Returns a string representation of the samplerate.
  */
    virtual std::string toString() const = 0;
+
+protected:
+/*
+ * Method: IsValid
+ * Usage: bool ok = sr.IsValid(48000);
+ * ———————————————————————————————-
+ * Check if bit depth value is allowed
+ */
+   virtual bool IsValid(const int&) const = 0;
 
 };
 
