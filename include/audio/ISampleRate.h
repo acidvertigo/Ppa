@@ -33,7 +33,6 @@ public:
  */
    virtual std::string toString() const = 0;
 
-protected:
 /*
  * Method: IsValid
  * Usage: bool ok = sr.IsValid(48000);
