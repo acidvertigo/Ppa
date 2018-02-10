@@ -39,14 +39,6 @@ TEST_F(SampleRateTest, testToString) {
   EXPECT_EQ(sp->toString(), "44100");
 }
 
-TEST_F(SampleRateTest, testIsValid) {
-  EXPECT_TRUE(sp->isValid(48000));
-}
-
-TEST_F(SampleRateTest, testIsNotValid) {
-  EXPECT_FALSE(sp->isValid(39000));
-}
-
 //-----------------------------------
 TEST_F(SampleRateTest, testIsEqual) {
   ASSERT_TRUE(*sp == *sp2);
