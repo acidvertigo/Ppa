@@ -33,14 +33,6 @@ public:
  */
    virtual std::string toString() const = 0;
 
-/*
- * Method: IsFloat
- * Usage: bool fp = bd.isFloat();
- * —————————————————————————————-
- * Returns if current bit depth is floating point.
- */
-   virtual bool IsFloat() const = 0;
-
 };
 
 } // namespace Audio end
