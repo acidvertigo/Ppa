@@ -19,29 +19,9 @@ public:
   AUDIO_EXPORT Channel(std::string namec, int numberc);
   AUDIO_EXPORT ~Channel() override;
 
-/*
- * Method: GetNumber
- * Usage: int x = ch.GetNumber();
- * ----------------------------------
- * These methods returns the current channel number
- */
   AUDIO_EXPORT int GetNumber() const override;
-
-/*
- * Method: GetName
- * Usage: int x = ch.GetName();
- * ----------------------------------
- * These methods returns the current channel name
- */
-   AUDIO_EXPORT std::string GetName() const override;
-
-/*
- * Method: toString
- * Usage: string str = ch.toString();
- * ----------------------------------
- * Returns a string representation of the bit depth.
- */
-   AUDIO_EXPORT std::string toString() const override;
+  AUDIO_EXPORT std::string GetName() const override;
+  AUDIO_EXPORT std::string toString() const override;
 
   /*
    * friend method needed from comparison operator

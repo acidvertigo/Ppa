@@ -10,6 +10,7 @@ using namespace std;
 /*
  * floating point math
  * Usage: floatEquals<float>(1.00f, 1.00f, 2f)
+ * Usage: floatEquals<double>(1.00d, 1.00d, 2d)
  */
 template <typename T>
 bool floatEquals(T left, T right, T epsilon) {

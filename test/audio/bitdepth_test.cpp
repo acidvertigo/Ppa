@@ -1,8 +1,6 @@
 #include "gtest/gtest.h"
 #include "audio/BitDepth.h"
 
-#include <stdexcept>
-
 using namespace ::Ppa::Audio;
 
 //----------------------------------------

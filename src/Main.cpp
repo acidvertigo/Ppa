@@ -21,7 +21,7 @@ int main() {
   bool verdict = (*sm == *sm2);
   cout << "Hello World!" << endl;
   cout << "Samplerate value is: " << sm->GetSampleRate() << endl;
-  cout << verdict << endl;
+  cout << boolalpha << verdict << endl;
   } catch (...) { // deal with all other exceptions
     throw;
     exit(EXIT_FAILURE);
