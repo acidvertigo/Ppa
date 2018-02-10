@@ -33,6 +33,7 @@ class SampleRate : public ISampleRate {
 
  protected:
   int samplerate; /* samplerate in Hz */
+  std::set<int> allowed; /* allowed values */
 };
 
 /*
