@@ -7,10 +7,10 @@
 #ifndef _SAMPLERATE_H_
 #define _SAMPLERATE_H_
 
-#include <iostream>
-
 #include "audio_export.h"
 #include "ISampleRate.h"
+
+#include <iostream>
 
 namespace Ppa {
 namespace Audio {
