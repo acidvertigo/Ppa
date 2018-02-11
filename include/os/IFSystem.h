@@ -10,9 +10,9 @@
 #include <fstream>
 
 namespace Ppa {
-namespace FSystem {
+namespace Os {
 
-class Os {
+class FSystem {
 
 /*
  * Methods: Open
