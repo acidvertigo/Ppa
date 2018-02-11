@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 
 namespace Ppa {
 namespace Os {

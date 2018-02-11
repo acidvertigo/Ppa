@@ -10,8 +10,7 @@
 #include "os_export.h"
 #include "IFSystem.h"
 
-#include <iostream>
-#include <fstream>
+#include <string>
 
 namespace Ppa {
 namespace Os {

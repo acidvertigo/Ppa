@@ -16,7 +16,7 @@ using namespace std;
 
 //————————————————————————————————————
    bool FSystem::FileIsOpen () const {
-       std::ifstream ifs (filename);
+       ifstream ifs (filename);
        return ifs.is_open();
    }
 
