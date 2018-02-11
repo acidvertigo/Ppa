@@ -7,14 +7,14 @@
 #ifndef _FSYSTEM_H_
 #define _FSYSTEM_H_
 
-#include "fsystem_export.h"
+#include "os_export.h"
 #include "IFSystem.h"
 
 #include <iostream>
 #include <fstream>
 
 namespace Ppa {
-namespace FSystem {
+namespace Os {
 
 class FSystem : IFSystem {
 
