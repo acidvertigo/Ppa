@@ -12,7 +12,7 @@
 namespace Ppa {
 namespace Os {
 
-class FSystem {
+class IFSystem {
 
 /*
  * Methods: Open
