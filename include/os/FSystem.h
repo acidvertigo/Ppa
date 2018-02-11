@@ -10,12 +10,14 @@
 #include "os_export.h"
 #include "IFSystem.h"
 
+#include <string>
+
 namespace Ppa {
 namespace Os {
 
 class FSystem : IFSystem {
 public:
-   OS_EXPORT FSystem(string filenamec);
+   OS_EXPORT FSystem(std:string filenamec);
    OS_EXPORT ~FSystem() = default;
 
    OS_EXPORT bool FileIsOpen () const override;
