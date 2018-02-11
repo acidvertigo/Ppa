@@ -5,6 +5,8 @@
  */
 #include "os/FSystem.h"
 
+#include <string>
+
 using namespace Ppa::Os;
 using namespace std;
 
