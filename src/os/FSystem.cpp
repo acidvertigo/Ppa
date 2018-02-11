@@ -11,10 +11,10 @@ using namespace std;
    FSystem::FSystem(string filenamec) {}
    ~ FSystem::FSystem() = default;
 
-   void FSystem::Open(const char* filename, ios::openmode mode) const {
+   void FSystem::OpenFile(const char* filename, ios::openmode mode) const {
    }
-   void FSystem::Close () const {}
-   bool FSystem::IsOpen () const {}
-   bool FSystem::Exists () const {}
+   void FSystem::CloseFile () const {}
+   bool FSystem::FileIsOpen () const {}
+   bool FSystem::FileExists () const {}
    void WriteContent ( const char* filename, std::vector<BYTE> data) const {}
    vector<BYTE> ReadContent (const char* filename) const {}
