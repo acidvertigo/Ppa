@@ -18,10 +18,12 @@ namespace Os {
 
 class FSystem : IFSystem {
 
-   OS_EXPORT void Open (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
-   OS_EXPORT void Close () const override;
-   OS_EXPORT bool IsOpen () const override;
-   OS_EXPORT bool Exists () const override;
+   OS_EXPORT void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
+   OS_EXPORT void CloseFile () const override;
+   OS_EXPORT bool FileIsOpen () const override;
+   OS_EXPORT bool FileExist () const override;
+   OS_EXPORT void WriteContent ( const char* filename, std::vector<BYTE> data) const override;
+   OS_EXPORT std::vector<BYTE> ReadContent (const char* filename) const override;
 
 };
 
