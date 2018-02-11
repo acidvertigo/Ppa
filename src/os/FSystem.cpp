@@ -26,7 +26,7 @@ using namespace std;
    }
 
 //—————————————————————————————————————————————————————————————————————————-
-   void WriteContent ( const char* filename, std::vector<BYTE> data) const {
+   void WriteContent ( const std::vector<char>& data) const {
 
    }
 

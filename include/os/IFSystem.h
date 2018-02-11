@@ -37,17 +37,17 @@ public:
  * Methods: Write
  * Usage: ch.Write("guitar.wav", data{01110, 10101, 11111, ...});
  * ----------------------------------
- * Writes vector<BYTE> content on file
+ * Writes vector<char> content on file
  */
-    virtual void WriteContent( const char* filename, std::vector<BYTE> data) const = 0;
+    virtual void WriteContent(const std::vector<char>& data) const = 0;
 
 /*
  * Methods: ReadContent
  * Usage: ch.ReadContent("piano.wav");
  * ----------------------------------
- * Reads vector<BYTE> content from file
+ * Reads vector<char> content from file
  */
-    virtual std::vector<BYTE> ReadContent(const char* filename) const = 0;
+    virtual std::vector<char> ReadContent() const = 0;
 
 protected:
 /*
