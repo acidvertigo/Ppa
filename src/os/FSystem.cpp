@@ -10,8 +10,8 @@
 using namespace Ppa::Os;
 using namespace std;
 
-   FSystem::FSystem(string filenamec) {
-       filename = filenamec;
+   FSystem::FSystem(string filenamec) : filename("") {
+      filename = filenamec;
    }
 
    ~ FSystem::FSystem() = default;
@@ -33,7 +33,7 @@ using namespace std;
    }
 
 //———————————————————————————————————————————————————————-
-   vector<BYTE> ReadContent (const char* filename) const {
+   vector<char> ReadContent (const char* filename) const {
 
    }
 
