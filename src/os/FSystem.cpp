@@ -12,4 +12,4 @@ using namespace std;
    };
    void FSystem::Close () const {};
    bool FSystem::IsOpen () const {};
-   bool FSystem::Exists () const = {};
+   bool FSystem::Exists () const {};
