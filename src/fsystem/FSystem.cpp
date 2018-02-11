@@ -8,9 +8,8 @@
 using namespace Ppa::FSystem;
 using namespace std::ios;
 
-
-   void Open (const char* filename, openmode mode = in | out) const {
+   void FSystem::Open(const char* filename, ios::openmode mode = ios::in | ios::out) const {
    }
-   void Close () const {};
-   bool IsOpen () const {};
-   bool Exists () const = {};
+   void FSystem::Close () const {};
+   bool FSystem::IsOpen () const {};
+   bool FSystem::Exists () const = {};
