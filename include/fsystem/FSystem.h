@@ -18,7 +18,7 @@ namespace FSystem {
 
 class FSystem : IFSystem {
 
-   FSYSTEM_EXPORT void Open (const char* filename, std::ios_base::openmode mode = std::ios_base::in | std::ios_base::out) const override;
+   FSYSTEM_EXPORT void Open (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
    FSYSTEM_EXPORT void Close () const override;
    FSYSTEM_EXPORT bool IsOpen () const override;
    FSYSTEM_EXPORT bool Exists () const = override;
