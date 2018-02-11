@@ -6,7 +6,10 @@
 #include "fsystem/FSystem.h"
 
 using namespace Ppa::FSystem;
-using namespace std::ios;
+using namespace std::ios::openmode;
+using namespace std::ios::in;
+using namespace std::ios::out;
+
 
    void Open (const char* filename, openmode mode = in | out) const {
    }
