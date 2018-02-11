@@ -19,7 +19,7 @@ public:
    OS_EXPORT ~FSystem() = default;
 
    OS_EXPORT bool FileIsOpen () const override;
-   OS_EXPORT bool FileExist () const override;
+   OS_EXPORT bool FileExists () const override;
    OS_EXPORT void WriteContent (const std::vector<char>& data) const override;
    OS_EXPORT std::vector<char> ReadContent () const override;
 
