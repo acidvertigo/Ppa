@@ -17,14 +17,20 @@ namespace Ppa {
 namespace Os {
 
 class FSystem : IFSystem {
+public:
+   OS_EXPORT FSystem::FSystem(string filenamec) {}
+   OS_EXPORT ~FSystem::FSystem() = default;
 
-   OS_EXPORT void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
-   OS_EXPORT void CloseFile () const override;
    OS_EXPORT bool FileIsOpen () const override;
    OS_EXPORT bool FileExist () const override;
    OS_EXPORT void WriteContent ( const char* filename, std::vector<BYTE> data) const override;
    OS_EXPORT std::vector<BYTE> ReadContent (const char* filename) const override;
 
+protected:
+   std::string filename;
+
+   void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
+   void CloseFile () const override;
 };
 
 } // namespace Audio end

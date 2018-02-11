@@ -8,12 +8,13 @@
 using namespace Ppa::Os;
 using namespace std;
 
-   FSystem::FSystem() {}
-   ~ FSystem::FSystem() {}
+   FSystem::FSystem(string filenamec) {}
+   ~ FSystem::FSystem() = default;
+
    void FSystem::Open(const char* filename, ios::openmode mode) const {
-   };
-   void FSystem::Close () const {};
-   bool FSystem::IsOpen () const {};
-   bool FSystem::Exists () const {};
-   void WriteContent ( const char* filename, std::vector<BYTE> data) const {};
-   vector<BYTE> ReadContent (const char* filename) const {};
+   }
+   void FSystem::Close () const {}
+   bool FSystem::IsOpen () const {}
+   bool FSystem::Exists () const {}
+   void WriteContent ( const char* filename, std::vector<BYTE> data) const {}
+   vector<BYTE> ReadContent (const char* filename) const {}

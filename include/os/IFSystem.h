@@ -14,23 +14,9 @@ namespace Ppa {
 namespace Os {
 
 class IFSystem {
+public:
 
-/*
- * Methods: Open
- * Usage: ch.Open("drums.wav");
- * ----------------------------------
- * This method opens a new file
- */
-   virtual void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const = 0;
-
-/*
- * Methods: Close
- * Usage: ch.Close();
- * ----------------------------------
- * Closes the file, flush the buffer and disconnect from stream object
- */  
-   virtual void CloseFile () const = 0;
- 
+    virtual ~IFSystem() = default;
 /*
  * Methods: IsOpen;
  * Usage: ch.IsOpen();
@@ -62,6 +48,24 @@ class IFSystem {
  * Reads vector<BYTE> content from file
  */
     virtual std::vector<BYTE> ReadContent(const char* filename) const = 0;
+
+protected:
+/*
+ * Methods: Open
+ * Usage: ch.Open("drums.wav");
+ * ----------------------------------
+ * This method opens a new file
+ */
+   virtual void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const = 0;
+
+/*
+ * Methods: Close
+ * Usage: ch.Close();
+ * ----------------------------------
+ * Closes the file, flush the buffer and disconnect from stream object
+ */  
+   virtual void CloseFile () const = 0;
+
 };
 
 } // namespace Audio end

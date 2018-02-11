@@ -14,7 +14,6 @@ namespace Audio {
 class ISampleRate {
   
 public:
-
    virtual ~ISampleRate() = default;
 
 /*
