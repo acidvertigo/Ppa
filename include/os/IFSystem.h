@@ -20,7 +20,7 @@ class IFSystem {
  * ----------------------------------
  * This method opens a new file
  */
-   virtual void Open (const char* filename, std:: ios::openmode mode = std::ios::in | std::ios::out) const = 0;
+   virtual void Open (const char* filename, std:: ios::openmode mode = std::ios::in | std::ios::out) = 0;
 
 /*
  * Methods: Close
