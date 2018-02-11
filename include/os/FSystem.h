@@ -21,7 +21,7 @@ class FSystem : IFSystem {
    OS_EXPORT void Open (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
    OS_EXPORT void Close () const override;
    OS_EXPORT bool IsOpen () const override;
-   OS_EXPORT bool Exists () const = override;
+   OS_EXPORT bool Exists () const override;
 
 };
 
