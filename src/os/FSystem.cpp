@@ -26,12 +26,12 @@ using namespace std;
    }
 
 //—————————————————————————————————————————————————————————————————————————-
-   void WriteContent ( const std::vector<char>& data) const {
+   void FSystem::WriteContent ( const std::vector<char>& data) const {
 
    }
 
 //———————————————————————————————————————————————————————-
-   vector<char> ReadContent (const char* filename) const {
+   vector<char> FSystem::ReadContent (const char* filename) const {
 
    }
 
