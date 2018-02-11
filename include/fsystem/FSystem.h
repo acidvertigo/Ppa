@@ -16,10 +16,14 @@
 namespace Ppa {
 namespace FSystem {
 
+class FSystem : IFSystem {
+
    FSYSTEM_EXPORT void Open (const char* filename, ios::openmode mode = ios::in | ios::out) const override;
    FSYSTEM_EXPORT void Close () const override;
    FSYSTEM_EXPORT bool IsOpen () const override;
    FSYSTEM_EXPORT bool Exists () const = override;
+
+};
 
 } // namespace Audio end
 } // namespace Ppa end

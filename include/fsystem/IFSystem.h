@@ -12,6 +12,8 @@
 namespace Ppa {
 namespace FSystem {
 
+class IFSystem {
+
 /*
  * Methods: Open
  * Usage: ch.Open("drums.wav");
@@ -43,6 +45,7 @@ namespace FSystem {
  * Returns true if the file already exists
  */
     virtual bool Exists () const = 0;
+};
 
 } // namespace Audio end
 } // namespace Ppa end
