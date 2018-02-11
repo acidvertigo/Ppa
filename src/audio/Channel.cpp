@@ -25,28 +25,32 @@ Channel::Channel(string namec, int numberc) : name(""), number(0) {
 
 Channel::~Channel() = default;
 
+//——————————————————————————————-
 string Channel::GetName() const {
   return name;
 }
 
+//——————————————————————————————
 int Channel::GetNumber() const {
   return number;
 }
 
+//————————————————————————————————
 string Channel::toString() const {
   return name + NumberToString(number);
 }
 
-//------------------------------------
-
+//----------------------------------——————————————————-
 bool operator==(const Channel& c1, const Channel& c2) {
   return c1.number == c2.number && c1.name == c2.name;
 }
 
+//————————————————————————————————————————————————————-
 bool operator!=(const Channel& c1, const Channel& c2) {
   return !(c1 == c2);
 }
 
+//——————————————————————————————————————————————————-
 ostream& operator<<(ostream& os, const Channel& ch) {
   return os << ch.toString();
 }
