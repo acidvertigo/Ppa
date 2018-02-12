@@ -39,7 +39,18 @@ namespace Os {
 
 //———————————————————————————————————————————————————————----------
    vector<char> FSystem::ReadContent (const char* filename) const {
-
+       std::ifstream in(filename, ios::in | ios::binary);
+       if (in)
+       {
+           vector<char> contents;
+           in.seekg(0, ios::end);
+           contents.resize(in.tellg());
+           in.seekg(0, ios::beg);
+           in.read(&contents[0], contents.size());
+           in.close();
+           return(contents);
+       }
+       throw(errno);
    }
 
 //----------------------------------------------------------------------------
