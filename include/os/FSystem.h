@@ -18,7 +18,7 @@ namespace Os {
 class FSystem : public IFSystem {
 public:
    OS_EXPORT FSystem(std::string filenamec);
-   OS_EXPORT ~FSystem() = default;
+   OS_EXPORT ~FSystem() override;
 
    OS_EXPORT bool FileIsOpen () const override;
    OS_EXPORT bool FileExists () const override;
