@@ -34,13 +34,21 @@ public:
     virtual bool FileExists () const = 0;
 
 /*
- * Methods: Write
- * Usage: ch.Write("guitar.wav", data{01110, 10101, 11111, ...});
+ * Methods: WriteContent
+ * Usage: ch.WriteContent("guitar.wav", data{01110, 10101, 11111, ...});
  * ----------------------------------
  * Writes vector<char> content on file
  */
     virtual void WriteContent(const std::vector<char>& data) const = 0;
 
+/*
+ * Methods: WriteContent
+ * Usage: ch.WriteContent("guitar.wav", data{01110, 10101, 11111, ...});
+ * ----------------------------------
+ * Writes vector<char> content on file
+ */
+    virtual void WriteContentAt(const std::vector<char>& data, int byte) const = 0;    
+  
 /*
  * Methods: ReadContent
  * Usage: ch.ReadContent("piano.wav");
@@ -48,6 +56,14 @@ public:
  * Reads vector<char> content from file
  */
     virtual std::vector<char> ReadContent(const char* filename) const = 0;
+    
+/*
+ * Methods: ReadContentAt
+ * Usage: ch.ReadContentAt("piano.wav", 15);
+ * ----------------------------------
+ * Reads vector<char> content from file
+ */
+    virtual std::vector<char> ReadContent(const char* filename, int byte) const = 0;    
 
 protected:
 /*
