@@ -12,7 +12,7 @@ using namespace std;
       filename = filenamec;
    }
 
-   ~FSystem::FSystem() = default;
+   FSystem::~FSystem() = default;
 
 //————————————————————————————————————
    bool FSystem::FileIsOpen () const {
