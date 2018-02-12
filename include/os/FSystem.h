@@ -23,7 +23,9 @@ public:
    OS_EXPORT bool FileIsOpen () const override;
    OS_EXPORT bool FileExists () const override;
    OS_EXPORT void WriteContent (const std::vector<char>& data) const override;
+   OS_EXPORT void WriteContentAt(const std::vector<char>& data, int byte) const override;    
    OS_EXPORT std::vector<char> ReadContent (const char* filename) const override;
+   OS_EXPORT std::vector<char> ReadContentAt(const char* filename, int byte) const override;  
 
 protected:
    std::string filename;
