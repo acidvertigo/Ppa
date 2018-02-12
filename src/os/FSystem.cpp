@@ -31,12 +31,22 @@ namespace Os {
    void FSystem::WriteContent ( const std::vector<char>& data) const {
 
    }
+   
+//------------------------------------------------------------------------------
+   void FSystem::WriteContentAt(const std::vector<char>& data, int byte) const {
+      
+   }
 
-//———————————————————————————————————————————————————————-
+//———————————————————————————————————————————————————————----------
    vector<char> FSystem::ReadContent (const char* filename) const {
 
    }
 
+//----------------------------------------------------------------------------
+   vector<char> FSystem::ReadContentAt(const char* filename, int byte) const {
+      
+   }
+   
 //————————————————————————————————————————————————————————————————————————-
    void FSystem::OpenFile(const char* filename, ios::openmode mode) const {
 
