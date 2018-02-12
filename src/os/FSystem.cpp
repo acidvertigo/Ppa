@@ -5,8 +5,10 @@
  */
 #include "os/FSystem.h"
 
-using namespace Ppa::Os;
 using namespace std;
+
+namespace Ppa {
+namespace Os {
 
    FSystem::FSystem(string filenamec) : filename("") {
       filename = filenamec;
@@ -44,3 +46,6 @@ using namespace std;
    void FSystem::CloseFile () const {
 
    }
+
+} // namespace Os end
+} // namespace Ppa end
