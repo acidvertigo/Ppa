@@ -15,7 +15,7 @@
 namespace Ppa {
 namespace Os {
 
-class FSystem : IFSystem {
+class FSystem : public IFSystem {
 public:
    OS_EXPORT FSystem(std::string filenamec);
    OS_EXPORT ~FSystem() = default;
