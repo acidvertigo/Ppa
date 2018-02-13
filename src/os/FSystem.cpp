@@ -40,7 +40,7 @@ namespace Os {
    }
 
 //———————————————————————————————————————————————————————----------
-   vector<char> FSystem::ReadContent () const {
+   vector<char> FSystem::ReadContent () {
        if (&fl)
        {
            vector<char> contents;
