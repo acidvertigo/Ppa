@@ -38,7 +38,7 @@ namespace Os {
    }
    
 //------------------------------------------------------------------------------
-   void FSystem::WriteContentAt(const std::vector<char>& data, int byte) const {
+   void FSystem::WriteContentAt(const std::vector<char>& data, int byte) {
       
    }
 
