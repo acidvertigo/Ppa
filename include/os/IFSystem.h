@@ -52,11 +52,11 @@ public:
     
 /*
  * Methods: ReadContentAt
- * Usage: ch.ReadContentAt(const int& start, const int);
+ * Usage: ch.ReadContentAt(const long& start);
  * ----------------------------------
  * Reads vector<char> content from file
  */
-    virtual std::vector<char> ReadContentAt(const int& start, const int& end) = 0;    
+    virtual std::vector<char> ReadContentAt(const long& start) = 0;    
 
 };
 
