@@ -51,11 +51,11 @@ public:
   
 /*
  * Methods: ReadContent
- * Usage: ch.ReadContent("piano.wav");
+ * Usage: ch.ReadContent();
  * ----------------------------------
  * Reads vector<char> content from file
  */
-    virtual std::vector<char> ReadContent(const char* filename) const = 0;
+    virtual std::vector<char> ReadContent() const = 0;
     
 /*
  * Methods: ReadContentAt
