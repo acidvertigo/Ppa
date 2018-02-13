@@ -19,7 +19,7 @@ namespace Os {
    }
 
 //————————————————————————————————————
-   string getFilename() const {
+   string FSystem::getFilename() const {
        return filename;
    }
 
