@@ -29,7 +29,7 @@ namespace Os {
    }
 
 //————————————————————————————————————
-   static bool FSystem::FileExists (const string& filenamec) {
+   bool FSystem::FileExists (const string& filenamec) {
        ifstream in(filenamec);
        return in.good();
    }
