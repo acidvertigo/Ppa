@@ -18,9 +18,8 @@ namespace Audio {
  * ------------------------
  * Creates a Channel object.  The parameter sets the name and number;
  */
-Channel::Channel(string namec, int numberc) : name(""), number(0) {
-    name = namec;
-    number = numberc;
+Channel::Channel(string namec, int numberc) : name(namec), number(numberc) {
+
 }
 
 Channel::~Channel() = default;
