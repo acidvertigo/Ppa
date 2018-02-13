@@ -10,8 +10,8 @@ using namespace std;
 namespace Ppa {
 namespace Os {
 
-   FSystem::FSystem(string filenamec) : filename("") {
-      filename = filenamec;
+   FSystem::FSystem(string filenamec) : filename(filenamec) {
+
    }
 
    FSystem::~FSystem() = default;
