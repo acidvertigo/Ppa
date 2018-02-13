@@ -45,7 +45,7 @@ namespace Os {
        {
            vector<char> contents;
            file.seekg(0, ios::end);
-           contents.resize(in.tellg());
+           contents.resize(file.tellg());
            file.seekg(0, ios::beg);
            file.read(&contents[0], contents.size());
            return(contents);
