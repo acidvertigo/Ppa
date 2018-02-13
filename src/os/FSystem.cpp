@@ -11,10 +11,13 @@ namespace Ppa {
 namespace Os {
 
    FSystem::FSystem(string filenamec) : filename(filenamec) {
-
+       file(filename, ios::in | ios::binary);
    }
 
-   FSystem::~FSystem() = default;
+   FSystem::~FSystem() {
+       file.close();
+       throw(errno);
+   }
 
 //————————————————————————————————————
    bool FSystem::FileIsOpen () const {
@@ -39,18 +42,15 @@ namespace Os {
 
 //———————————————————————————————————————————————————————----------
    vector<char> FSystem::ReadContent (const char* filename) const {
-       std::ifstream in(filename, ios::in | ios::binary);
-       if (in)
+       if (file)
        {
            vector<char> contents;
-           in.seekg(0, ios::end);
+           file.seekg(0, ios::end);
            contents.resize(in.tellg());
-           in.seekg(0, ios::beg);
-           in.read(&contents[0], contents.size());
-           in.close();
+           file.seekg(0, ios::beg);
+           file.read(&contents[0], contents.size());
            return(contents);
        }
-       throw(errno);
    }
 
 //----------------------------------------------------------------------------
