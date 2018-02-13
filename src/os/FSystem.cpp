@@ -40,7 +40,7 @@ namespace Os {
    }
 
 //———————————————————————————————————————————————————————----------
-   vector<char> FSystem::ReadContent (const char* filename) const {
+   vector<char> FSystem::ReadContent () const {
        if (file)
        {
            vector<char> contents;
