@@ -11,11 +11,11 @@ namespace Ppa {
 namespace Os {
 
    FSystem::FSystem(string filenamec) : filename(filenamec) {
-       fl(filenamec, ios::in | ios::binary);
+       fl.open(filenamec, ios::in | ios::binary);
    }
 
    FSystem::~FSystem() {
-       fl.close();
+       &fl.close();
        delete fl;
    }
 
