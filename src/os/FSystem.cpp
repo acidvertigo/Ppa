@@ -11,7 +11,7 @@ namespace Ppa {
 namespace Os {
 
    FSystem::FSystem(string filenamec) : filename(filenamec) {
-       file(filenamec, ios::in | ios::binary);
+       fl = file(filenamec, ios::in | ios::binary);
    }
 
    FSystem::~FSystem() {
@@ -44,10 +44,10 @@ namespace Os {
        if (fl)
        {
            vector<char> contents;
-           *fl.seekg(0, ios::end);
-           contents.resize(*fl.tellg());
-           *fl.seekg(0, ios::beg);
-           *fl.read(&contents[0], contents.size());
+           fl.seekg(0, ios::end);
+           contents.resize(fl.tellg());
+           fl.seekg(0, ios::beg);
+           fl.read(&contents[0], contents.size());
            return(contents);
        }
        throw(errno);
