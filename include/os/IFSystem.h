@@ -39,7 +39,7 @@ public:
  * ----------------------------------
  * Writes vector<char> content on file
  */
-    virtual void WriteContent(const std::vector<char>& data) const = 0;
+    virtual void WriteContent(const std::vector<char>& data) = 0;
 
 /*
  * Methods: WriteContent
