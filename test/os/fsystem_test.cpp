@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "os/FSystem.h"
 
-using namespace ::Ppa::os;
+using namespace ::Ppa::Os;
 
 //----------------------------------------
 class FsystemTest : public ::testing::Test {
