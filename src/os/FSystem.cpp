@@ -25,7 +25,7 @@ namespace Os {
 
 //————————————————————————————————————
    bool FSystem::FileExists () const {
-
+       return fl.good();
    }
 
 //—————————————————————————————————————————————————————————————————————————-
@@ -52,7 +52,7 @@ namespace Os {
    }
 
 //----------------------------------------------------------------------------
-   vector<char> FSystem::ReadContentAt(const char* filename, int byte) const {
+   vector<char> FSystem::ReadContentAt(const char* filename, int byte) {
       if (fl)
        {
            vector<char> contents;
