@@ -30,7 +30,7 @@ public:
  * ----------------------------------
  * Returns true if the file already exists
  */
-   OS_EXPORT static bool FileExists (const std::string& filenamec) const;
+   OS_EXPORT static bool FileExists (const std::string& filenamec);
 
 protected:
    std::string filename;

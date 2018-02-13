@@ -11,7 +11,7 @@ namespace Ppa {
 namespace Os {
 
    FSystem::FSystem(string filenamec) : filename(filenamec) {
-       fl.open(filenamec, ios::in | ios::binary);
+       fl.open(filename, ios::in | ios::binary);
    }
 
    FSystem::~FSystem() {
@@ -29,9 +29,9 @@ namespace Os {
    }
 
 //————————————————————————————————————
-   static bool FSystem::FileExists (const string& filenamec) const {
+   static bool FSystem::FileExists (const string& filenamec) {
        ifstream in(filenamec);
-       return fl.good();
+       return in.good();
    }
 
 //—————————————————————————————————————————————————————————————————————————-
