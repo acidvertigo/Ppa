@@ -24,7 +24,8 @@ namespace Os {
    }
 
 //————————————————————————————————————
-   bool FSystem::FileExists () const {
+   static bool FSystem::FileExists (const string& filenamec) const {
+       ifstream in(filenamec);
        return fl.good();
    }
 

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <vector>
 
 namespace Ppa {
@@ -31,7 +32,7 @@ public:
  * ----------------------------------
  * Returns true if the file already exists
  */
-    virtual bool FileExists () const = 0;
+    virtual static bool FileExists (const std::string& filenamec) const = 0;
 
 /*
  * Methods: WriteContent

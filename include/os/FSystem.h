@@ -10,8 +10,6 @@
 #include "os_export.h"
 #include "IFSystem.h"
 
-#include <string>
-
 namespace Ppa {
 namespace Os {
 
@@ -21,7 +19,7 @@ public:
    OS_EXPORT ~FSystem() override;
 
    OS_EXPORT bool FileIsOpen () const override;
-   OS_EXPORT bool FileExists () const override;
+   OS_EXPORT static bool FileExists (const std::string& filenamec) const override;
    OS_EXPORT void WriteContent (const std::vector<char>& data) override;  
    OS_EXPORT std::vector<char> ReadContent () override;
    OS_EXPORT std::vector<char> ReadContentAt(const char* filename, int byte) override;  
