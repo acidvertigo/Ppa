@@ -62,9 +62,9 @@ namespace Os {
       if (fl)
        {
            vector<char> contents;
-           fl.seekg(start, ios::end);
+           fl.seekg(-start, ios::end);
            contents.resize(fl.tellg());
-           fl.seekg(0, start);
+           fl.seekg(start, ios:beg);
            fl.read(&contents[0], contents.size());
            return(contents);
        }
