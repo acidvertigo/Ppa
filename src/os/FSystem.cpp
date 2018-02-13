@@ -18,7 +18,7 @@ namespace Os {
        fl.close();
    }
 
-//————————————————————————————————————
+//—————————————————————————————————————-
    string FSystem::getFilename() const {
        return filename;
    }
@@ -28,13 +28,13 @@ namespace Os {
        return fl.is_open();
    }
 
-//————————————————————————————————————
+//————————————————————————————————————————————————————-
    bool FSystem::FileExists (const string& filenamec) {
        ifstream in(filenamec);
        return in.good();
    }
 
-//—————————————————————————————————————————————————————————————————————————-
+//———————————————————————————————————————————————————————————————
    void FSystem::WriteContent ( const std::vector<char>& data)  {
      if(fl) 
      {
@@ -43,7 +43,7 @@ namespace Os {
      throw(errno);
    }
 
-//———————————————————————————————————————————————————————----------
+//———————————————————————————————————————
    vector<char> FSystem::ReadContent () {
        if (fl)
        {
@@ -57,7 +57,7 @@ namespace Os {
        throw(errno);
    }
 
-//----------------------------------------------------------------------------
+//----------------------------------------------------------------------
    vector<char> FSystem::ReadContentAt(const char* filename, int byte) {
       if (fl)
        {
