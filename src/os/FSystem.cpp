@@ -29,8 +29,9 @@ namespace Os {
    }
 
 //—————————————————————————————————————————————————————————————————————————-
-   void FSystem::WriteContent ( const std::vector<char>& data) const {
-     if(fl) {
+   void FSystem::WriteContent ( const std::vector<char>& data)  {
+     if(fl) 
+     {
          fl.write(&data[0], data.size());
      }
      throw(errno);

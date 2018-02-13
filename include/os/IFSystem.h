@@ -47,7 +47,7 @@ public:
  * ----------------------------------
  * Writes vector<char> content on file
  */
-    virtual void WriteContentAt(const std::vector<char>& data, int byte) const = 0;    
+    virtual void WriteContentAt(const std::vector<char>& data, int byte) = 0;    
   
 /*
  * Methods: ReadContent
