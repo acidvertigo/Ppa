@@ -42,14 +42,6 @@ public:
     virtual void WriteContent(const std::vector<char>& data) = 0;
 
 /*
- * Methods: WriteContent
- * Usage: ch.WriteContent("guitar.wav", data{01110, 10101, 11111, ...});
- * ----------------------------------
- * Writes vector<char> content on file
- */
-    virtual void WriteContentAt(const std::vector<char>& data, int byte) = 0;    
-  
-/*
  * Methods: ReadContent
  * Usage: ch.ReadContent();
  * ----------------------------------
@@ -64,23 +56,6 @@ public:
  * Reads vector<char> content from file
  */
     virtual std::vector<char> ReadContentAt(const char* filename, int byte) const = 0;    
-
-protected:
-/*
- * Methods: Open
- * Usage: ch.Open("drums.wav");
- * ----------------------------------
- * This method opens a new file
- */
-   virtual void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const = 0;
-
-/*
- * Methods: Close
- * Usage: ch.Close();
- * ----------------------------------
- * Closes the file, flush the buffer and disconnect from stream object
- */  
-   virtual void CloseFile () const = 0;
 
 };
 

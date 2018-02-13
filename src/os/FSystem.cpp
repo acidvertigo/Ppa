@@ -36,11 +36,6 @@ namespace Os {
      }
      throw(errno);
    }
-   
-//------------------------------------------------------------------------------
-   void FSystem::WriteContentAt(const std::vector<char>& data, int byte) {
-      
-   }
 
 //———————————————————————————————————————————————————————----------
    vector<char> FSystem::ReadContent () {
@@ -58,17 +53,16 @@ namespace Os {
 
 //----------------------------------------------------------------------------
    vector<char> FSystem::ReadContentAt(const char* filename, int byte) const {
-      
-   }
-   
-//————————————————————————————————————————————————————————————————————————-
-   void FSystem::OpenFile(const char* filename, ios::openmode mode) const {
-
-   }
-
-//———————————————————————————————————
-   void FSystem::CloseFile () const {
-
+      if (fl)
+       {
+           vector<char> contents;
+           fl.seekg(byte, ios::end);
+           contents.resize(fl.tellg());
+           fl.seekg(0, ios::beg);
+           fl.read(&contents[0], contents.size());
+           return(contents);
+       }
+       throw(errno);
    }
 
 } // namespace Os end
