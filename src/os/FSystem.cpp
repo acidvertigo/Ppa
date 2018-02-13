@@ -20,8 +20,7 @@ namespace Os {
 
 //————————————————————————————————————
    bool FSystem::FileIsOpen () const {
-       ifstream ifs (filename);
-       return ifs.is_open();
+       return fl.is_open();
    }
 
 //————————————————————————————————————
@@ -31,7 +30,10 @@ namespace Os {
 
 //—————————————————————————————————————————————————————————————————————————-
    void FSystem::WriteContent ( const std::vector<char>& data) const {
-
+     if(fl) {
+         fl.write(&data[0], data.size());
+     }
+     throw(errno);
    }
    
 //------------------------------------------------------------------------------
@@ -41,7 +43,7 @@ namespace Os {
 
 //———————————————————————————————————————————————————————----------
    vector<char> FSystem::ReadContent () {
-       if (&fl)
+       if (fl)
        {
            vector<char> contents;
            fl.seekg(0, ios::end);
