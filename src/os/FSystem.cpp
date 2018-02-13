@@ -11,7 +11,7 @@ namespace Ppa {
 namespace Os {
 
    FSystem::FSystem(string filenamec) : filename(filenamec) {
-       file(filename, ios::in | ios::binary);
+       file(filenamec, ios::in | ios::binary);
    }
 
    FSystem::~FSystem() {
