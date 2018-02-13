@@ -16,6 +16,7 @@ namespace Os {
 
    FSystem::~FSystem() {
        fl.close();
+       delete fl;
    }
 
 //————————————————————————————————————
