@@ -27,12 +27,12 @@ public:
     virtual bool FileIsOpen () const = 0;
 
 /*
- * Methods: Exists
- * Usage: ch.Exists();
+ * Methods: getFilaname()
+ * Usage: ch.getFikename();
  * ----------------------------------
- * Returns true if the file already exists
+ * Returns the current filename
  */
-    virtual static bool FileExists (const std::string& filenamec) const = 0;
+    virtual std::string getFilename() const = 0;  
 
 /*
  * Methods: WriteContent

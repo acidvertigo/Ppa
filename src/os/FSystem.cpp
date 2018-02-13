@@ -19,6 +19,11 @@ namespace Os {
    }
 
 //————————————————————————————————————
+   string getFilename() const {
+       return filename;
+   }
+
+//————————————————————————————————————
    bool FSystem::FileIsOpen () const {
        return fl.is_open();
    }
