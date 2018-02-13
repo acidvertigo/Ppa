@@ -58,13 +58,13 @@ namespace Os {
    }
 
 //----------------------------------------------------------------------
-   vector<char> FSystem::ReadContentAt(const char* filename, int byte) {
+   vector<char> FSystem::ReadContentAt(const int& start = 0, const int& end = ios::end) {
       if (fl)
        {
            vector<char> contents;
-           fl.seekg(byte, ios::end);
+           fl.seekg(start, end);
            contents.resize(fl.tellg());
-           fl.seekg(0, ios::beg);
+           fl.seekg(0, start);
            fl.read(&contents[0], contents.size());
            return(contents);
        }

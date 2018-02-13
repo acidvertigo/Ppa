@@ -22,7 +22,7 @@ public:
    OS_EXPORT std::string getFilename() const override;
    OS_EXPORT void WriteContent (const std::vector<char>& data) override;  
    OS_EXPORT std::vector<char> ReadContent () override;
-   OS_EXPORT std::vector<char> ReadContentAt(const char* filename, int byte) override;
+   OS_EXPORT std::vector<char> ReadContentAt(const int& start, const int& end) override;
 
 /*
  * Methods: Exists

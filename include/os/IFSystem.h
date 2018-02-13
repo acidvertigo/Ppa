@@ -52,11 +52,11 @@ public:
     
 /*
  * Methods: ReadContentAt
- * Usage: ch.ReadContentAt("piano.wav", 15);
+ * Usage: ch.ReadContentAt(const int& start, const int);
  * ----------------------------------
  * Reads vector<char> content from file
  */
-    virtual std::vector<char> ReadContentAt(const char* filename, int byte) = 0;    
+    virtual std::vector<char> ReadContentAt(const int& start, const int& end) = 0;    
 
 };
 
