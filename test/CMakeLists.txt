@@ -34,4 +34,7 @@ endif()
 include_directories(${CMAKE_BINARY_DIR}/exports/)
 
 # import test directories
-ADD_SUBDIRECTORY(audio/)
+ADD_SUBDIRECTORY(
+  audio/
+  os/
+)
