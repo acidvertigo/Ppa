@@ -41,7 +41,7 @@ namespace Os {
 
 //———————————————————————————————————————————————————————----------
    vector<char> FSystem::ReadContent () const {
-       if (file)
+       if (fl)
        {
            vector<char> contents;
            fl.seekg(0, ios::end);
