@@ -29,6 +29,7 @@ public:
 
 protected:
    std::string filename;
+   fstream file;
 
    void OpenFile (const char* filename, std::ios::openmode mode = std::ios::in | std::ios::out) const override;
    void CloseFile () const override;
