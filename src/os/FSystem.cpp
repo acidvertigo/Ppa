@@ -16,7 +16,6 @@ namespace Os {
 
    FSystem::~FSystem() {
        file.close();
-       throw(errno);
    }
 
 //————————————————————————————————————
@@ -51,6 +50,7 @@ namespace Os {
            file.read(&contents[0], contents.size());
            return(contents);
        }
+       throw(errno);
    }
 
 //----------------------------------------------------------------------------
