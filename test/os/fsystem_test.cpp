@@ -14,7 +14,7 @@ class FsystemTest : public ::testing::Test {
   FSystem* fs2;
 
   virtual void SetUp() override {
-    fs = new FSystem("piano.waw");
+    fs = new FSystem("piano.wav");
     fs2 = new FSystem("piano.wav");
   }
 
