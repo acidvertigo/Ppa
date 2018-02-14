@@ -23,6 +23,8 @@ SET( PROJ_INCLUDES
   include
   ${CMAKE_BINARY_DIR}/exports
 )
+ADD_DEFINITIONS(-Dos_EXPORTS)
+ADD_DEFINITIONS(-Daudio_EXPORTS)
 PROJECT( ${PROJ_NAME} VERSION 0.0.1 )
 ENABLE_TESTING()
 
@@ -67,7 +69,6 @@ source_group(resources REGULAR_EXPRESSION ".*[.][q]?rc")
 source_group(source REGULAR_EXPRESSION ".*[.]cpp")
 source_group(headers REGULAR_EXPRESSION ".*[.]h")
 source_group(continuous-integration REGULAR_EXPRESSION ".*[.]yml")
-
 
 #-------------------------------------------------------------------------------
 #	GENERATE EXECUTABLES
