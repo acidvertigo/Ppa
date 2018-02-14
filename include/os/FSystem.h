@@ -39,6 +39,30 @@ protected:
    std::fstream fl;
 };
 
+/*
+ * Operator: <<
+ * Usage: cout << sr;
+ * ------------------
+ * Overloads the << operator so that it is able to display BitDepth values.
+ */
+OS_EXPORT std::ostream& operator<<(std::ostream&, const FSystem&);
+
+/*
+ * Operator: ==
+ * Usage: sr1 == sr2
+ * -----------------
+ * This operator supports equality testing for BitDepths.
+ */
+OS_EXPORT bool operator==(const FSystem&, const FSystem&);
+
+/*
+ * Operator: !=
+ * Usage: sr1 != sr2
+ * -----------------
+ * This operator implements the != operator for BitDepth.
+ */
+OS_EXPORT bool operator!=(const FSystem&, const FSystem&);
+
 } // namespace Audio end
 } // namespace Ppa end
 
