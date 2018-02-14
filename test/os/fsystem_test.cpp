@@ -28,3 +28,24 @@ TEST_F(FsystemTest, testGetFileName) {
   EXPECT_EQ(fs->GetFilename(), "piano.wav");
 }
 
+//-----------------------------------
+TEST_F(FsystemTest, testIsEqual) {
+  ASSERT_TRUE(*ch == *ch2);
+}
+
+TEST_F(FsystemTest, testNotEqual) {
+  Channel* fs;
+  Channel* fs2;
+
+  ch = new FSystem("piano.wav");
+  ch2 = new FSystem("guitar.wav");
+
+  ASSERT_FALSE(*fs == *fs2);
+}
+
+TEST_F(FsystemTest, testSstream) {
+    std::stringstream out;
+    FSystem fsys("piano.wav");
+    out << fsys;
+    ASSERT_TRUE(out.str() == "piano.wav");
+}

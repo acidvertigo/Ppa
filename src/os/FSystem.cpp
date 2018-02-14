@@ -70,5 +70,21 @@ namespace Os {
        throw(errno);
    }
 
+//----------------------------------——————————————————————-
+
+bool operator==(const FSystem& fs1, const FSystem& fs2) {
+  return fs1.filename == fs2.filename;
+}
+
+//————————————————————————————————————————————————————————-
+bool operator!=(const FSystem& fs1, const FSystem& fs2) {
+  return !(fs1 == fs2);
+}
+
+//———————————————————————————————————————————————————-
+ostream& operator<<(ostream& os, const FSystem& fs) {
+  return os << fs.GetFilename();
+}
+
 } // namespace Os end
 } // namespace Ppa end

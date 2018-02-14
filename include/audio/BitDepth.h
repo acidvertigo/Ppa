@@ -26,7 +26,7 @@ class BitDepth : public IBitDepth {
 
   AUDIO_EXPORT int GetBitDepth() const override;
 
-  std::string AUDIO_EXPORT toString() const override;
+  AUDIO_EXPORT std::string toString() const override;
 
   /*
    * friend method needed from comparison operator

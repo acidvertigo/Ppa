@@ -32,6 +32,8 @@ public:
  */
    OS_EXPORT static bool FileExists (const std::string& filenamec);
 
+   friend bool operator==(const FSystem& fs1, const FSystem& fs2);
+
 protected:
    std::string filename;
    std::fstream fl;
