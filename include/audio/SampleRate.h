@@ -30,7 +30,7 @@ class SampleRate : public ISampleRate {
   /*
    * friend method needed from comparison operator
    */
-  friend bool operator==(const SampleRate&, const SampleRate&);
+  AUDIO_EXPORT friend bool operator==(const SampleRate&, const SampleRate&);
 
  protected:
   int samplerate; /* samplerate in Hz */

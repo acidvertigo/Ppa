@@ -26,7 +26,7 @@ public:
   /*
    * friend method needed from comparison operator
    */
-  friend bool operator==(const Channel&, const Channel&);
+  AUDIO_EXPORT friend bool operator==(const Channel&, const Channel&);
 
 protected:
    std::string name;

@@ -31,7 +31,7 @@ class BitDepth : public IBitDepth {
   /*
    * friend method needed from comparison operator
    */
-  friend bool operator==(const BitDepth&, const BitDepth&);
+  AUDIO_EXPORT friend bool operator==(const BitDepth&, const BitDepth&);
 
  protected:
   int bitdepth;    /* integer bit depth */
