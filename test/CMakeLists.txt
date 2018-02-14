@@ -31,7 +31,10 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # include export headers for shared libraries
-include_directories(${CMAKE_BINARY_DIR}/exports/)
+include_directories(
+  ${CMAKE_BINARY_DIR}/exports/
+  ${CMAKE_BINARY_DIR}/googletest-src/include/
+  )
 
 # import test directories
 ADD_SUBDIRECTORY(audio/)
