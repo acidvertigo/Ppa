@@ -7,10 +7,11 @@ using namespace ::Ppa::Os;
 class FsystemTest : public ::testing::Test {
  public:
   FsystemTest() {}
-  ~ FsystemTest() {}
+  ~FsystemTest() {}
 
  protected:
-  FSystem* fs, fs2;
+  FSystem* fs
+  FSystem* fs2;
 
   virtual void SetUp() override {
     fs = new FSystem("piano.waw");
