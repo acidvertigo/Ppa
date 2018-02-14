@@ -34,11 +34,11 @@ TEST_F(FsystemTest, testIsEqual) {
 }
 
 TEST_F(FsystemTest, testNotEqual) {
-  Channel* fs;
-  Channel* fs2;
+  FSystem* fs;
+  FSystem* fs2;
 
-  ch = new FSystem("piano.wav");
-  ch2 = new FSystem("guitar.wav");
+  fs = new FSystem("piano.wav");
+  fs2 = new FSystem("guitar.wav");
 
   ASSERT_FALSE(*fs == *fs2);
 }
