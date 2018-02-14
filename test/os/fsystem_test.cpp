@@ -10,7 +10,7 @@ class FsystemTest : public ::testing::Test {
   ~FsystemTest() {}
 
  protected:
-  FSystem* fs
+  FSystem* fs;
   FSystem* fs2;
 
   virtual void SetUp() override {
@@ -24,7 +24,7 @@ class FsystemTest : public ::testing::Test {
   }
 };
 
-TEST_F(ChannelTest, testGetFileName) {
-  EXPECT_EQ(ch->GetFilename(), "piano.wav");
+TEST_F(FsystemTest, testGetFileName) {
+  EXPECT_EQ(fs->GetFilename(), "piano.wav");
 }
 
