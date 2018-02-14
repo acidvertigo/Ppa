@@ -30,7 +30,7 @@ TEST_F(FsystemTest, testGetFileName) {
 
 //-----------------------------------
 TEST_F(FsystemTest, testIsEqual) {
-  ASSERT_TRUE(*ch == *ch2);
+  ASSERT_TRUE(*fs == *fs2);
 }
 
 TEST_F(FsystemTest, testNotEqual) {
