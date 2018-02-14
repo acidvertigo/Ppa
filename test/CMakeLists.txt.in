@@ -13,3 +13,6 @@ ExternalProject_Add(googletest
   INSTALL_COMMAND   ""
   TEST_COMMAND      ""
 )
+
+# I couldn't make it work with INTERFACE_INCLUDE_DIRECTORIES
+include_directories("${CMAKE_BINARY_DIR}/googletest-src/include")
