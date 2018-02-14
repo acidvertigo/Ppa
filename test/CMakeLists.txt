@@ -33,7 +33,7 @@ endif()
 # include export headers for shared libraries
 include_directories(
   ${CMAKE_BINARY_DIR}/exports/
-  ${CMAKE_BINARY_DIR}/googletest-src/include/
+  ${CMAKE_BINARY_DIR}/googletest-src/googletest/include/
   )
 
 # import test directories
