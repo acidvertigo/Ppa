@@ -32,7 +32,7 @@ public:
  */
    OS_EXPORT static bool FileExists (const std::string& filenamec);
 
-   AUDIO_EXPORT friend bool operator==(const FSystem& fs1, const FSystem& fs2);
+   OS_EXPORT friend bool operator==(const FSystem& fs1, const FSystem& fs2);
 
 protected:
    std::string filename;
