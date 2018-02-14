@@ -27,12 +27,12 @@ public:
     virtual bool FileIsOpen () const = 0;
 
 /*
- * Methods: getFilaname()
- * Usage: ch.getFikename();
+ * Methods: GetFilaname()
+ * Usage: fs.GetFilename();
  * ----------------------------------
  * Returns the current filename
  */
-    virtual std::string getFilename() const = 0;  
+    virtual std::string GetFilename() const = 0;  
 
 /*
  * Methods: WriteContent
